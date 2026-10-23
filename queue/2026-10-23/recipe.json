@@ -1,68 +1,74 @@
 {
   "kind": "edible",
-  "dry_run": true,
-  "title": "Miso Butter Roast Squash Orzo",
-  "tagline": "Autumn in a bowl, with a sneaky umami punch.",
+  "dry_run": false,
+  "title": "Marmite-Glazed Chicken with Crispy Chickpeas",
+  "tagline": "Love it, hate it, then eat the lot. One tray, no drama.",
   "servings": "Serves 4",
-  "time": "45 min",
+  "time": "60 min",
   "ingredients": [
     {
-      "qty": "1 medium",
-      "item": "butternut squash, peeled and cut into 2cm cubes"
+      "qty": "8 (about 1.2kg)",
+      "item": "bone-in, skin-on chicken thighs"
+    },
+    {
+      "qty": "1 tbsp",
+      "item": "Marmite"
     },
     {
       "qty": "2 tbsp",
-      "item": "white miso paste"
+      "item": "runny honey"
     },
     {
-      "qty": "40g",
-      "item": "unsalted butter, softened"
+      "qty": "2 tbsp",
+      "item": "olive oil"
     },
     {
-      "qty": "300g",
-      "item": "orzo"
+      "qty": "2 x 400g tins",
+      "item": "chickpeas, drained"
     },
     {
-      "qty": "800ml",
-      "item": "hot vegetable stock"
+      "qty": "2",
+      "item": "red onions, cut into wedges"
     },
     {
-      "qty": "2 cloves",
-      "item": "garlic, finely grated"
-    },
-    {
-      "qty": "50g",
-      "item": "parmesan, finely grated, plus extra to serve"
-    },
-    {
-      "qty": "1 handful",
-      "item": "sage leaves, crisped in a little oil"
+      "qty": "1 tsp",
+      "item": "smoked paprika"
     },
     {
       "qty": "1",
-      "item": "lemon, zest and a squeeze of juice"
+      "item": "lemon"
+    },
+    {
+      "qty": "150g",
+      "item": "Greek yoghurt"
+    },
+    {
+      "qty": "small handful",
+      "item": "flat-leaf parsley, roughly chopped"
     }
   ],
   "steps": [
-    "Heat the oven to 200°C fan. Mash the miso into the butter, toss half with the squash and roast for 30 minutes until golden and soft.",
-    "Meanwhile, melt the rest of the miso butter in a wide pan and soften the garlic for a minute.",
-    "Add the orzo, stir to coat, then add the stock a ladle at a time, stirring, for 10 to 12 minutes until tender and creamy.",
-    "Fold in half the roast squash, mashing a little into the orzo, then stir through the parmesan and lemon.",
-    "Top with the remaining squash, crispy sage and more parmesan. Serve straight away."
+    "Heat the oven to 200°C (180°C fan). Pat the drained chickpeas very dry with a clean tea towel. Dry chickpeas crisp. Wet ones sulk.",
+    "Toss chickpeas and onion wedges with the paprika and 1 tbsp oil on a large tray. Rub the chicken with the remaining oil and nestle it on top, skin up.",
+    "Roast for 25 minutes. Meanwhile, stir the Marmite, honey, the juice of half the lemon and 1 tbsp hot water into a loose glaze.",
+    "Brush the glaze over the chicken skin. Roast 15–20 minutes more, until lacquered and the juices run clear, with no pink near the bone.",
+    "Stir the zest of the lemon and a squeeze of its juice into the yoghurt. Rest the chicken for 5 minutes.",
+    "Spoon the lemon yoghurt onto plates, pile on the chickpeas, onions and chicken, then scatter with parsley. Spoon over any tray juices."
   ],
   "allergens": [
-    "dairy",
-    "gluten",
-    "soy"
+    "gluten (Marmite)",
+    "dairy"
   ],
-  "image_prompt": "A shallow bowl of creamy orzo studded with caramelised roast butternut squash cubes, topped with crispy sage leaves, shaved parmesan and lemon zest, a spoon resting in the bowl.",
-  "alt_text": "A bowl of creamy orzo with golden roast squash cubes, crispy sage and shaved parmesan.",
-  "caption_hook": "Butter, miso and squash walked into a pan. Nobody walked out hungry.\nWould you swap the orzo for risotto rice?",
+  "image_prompt": "Roasted bone-in chicken thighs with deep mahogany sticky glazed skin, resting on crisp golden chickpeas and soft red onion wedges, a swirl of lemony white yoghurt beside them, scattered with chopped parsley, served on a wide white ceramic plate with a lemon wedge.",
+  "alt_text": "Glossy glazed chicken thighs on crisp chickpeas and red onion, with lemon yoghurt and parsley on a white plate.",
+  "caption_hook": "Marmite on chicken. Stay with us.\nIt turns sticky, savoury and faintly sweet, like a very good gravy that learned to crisp.\nAre you a lover or a hater?",
   "hashtags": [
-    "#orzo",
-    "#butternutsquash",
-    "#autumnrecipes",
-    "#comfortfood",
-    "#weeknightdinner"
+    "#YummersGrubbers",
+    "#Traybake",
+    "#MarmiteRecipe",
+    "#ChickenThighs",
+    "#WeeknightDinner",
+    "#BritishFood",
+    "#OnePanDinner"
   ]
 }
