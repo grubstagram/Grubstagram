@@ -172,7 +172,7 @@ def slide_ingredients(recipe: dict, kind: str, handle: str, page: int, total: in
         hazard(d, (0, H - 26, W, H))
     kicker = "INGREDIENTS" if kind == "edible" else "INGREDIENTS  /  DO NOT GATHER"
     top = _header(d, t, kicker, recipe, kind)
-    bottom = H - 130
+    bottom = H - 130 - (56 if kind == "edible" and recipe.get("allergens") else 0)
     qty_w = 250
     for size in range(40, 23, -2):
         qf, itf = font("bold", size), font("regular", size)
@@ -191,7 +191,7 @@ def slide_ingredients(recipe: dict, kind: str, handle: str, page: int, total: in
         y += max(len(lines), min(2, len(qlines))) * line_h(itf) + gap
     if kind == "edible" and recipe.get("allergens"):
         af = font("medium", 24)
-        d.text((M, bottom - 6), "Contains: " + ", ".join(recipe["allergens"]), font=af, fill=t["muted"])
+        d.text((M, H - 160), "Contains: " + ", ".join(recipe["allergens"]), font=af, fill=t["muted"])
     footer(d, t, handle, page, total, H - 70 if kind == "edible" else H - 84)
     return img
 
