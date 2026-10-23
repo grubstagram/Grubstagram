@@ -61,7 +61,7 @@ def cmd_generate(a, cfg) -> None:
 
     base = media_base()
     rel = f"queue/{date.isoformat()}"
-    pics = "\n".join(f'<img src="{base + "/" if base else "../../"}{rel}/{p.name}" width="240">' for p in paths)
+    pics = " ".join(f'<img src="{base + "/" if base else "../../"}{rel}/{p.name}" width="240">' for p in paths)
     (out / "issue.md").write_text(
         ("> **DRY RUN** with a sample recipe and placeholder photo. This will never be posted.\n\n" if a.dry_run else "")
         + f"**{recipe['title']}** · `{kind}`\n\n{pics}\n\n### Caption\n```\n{caption}\n```\n\n"
