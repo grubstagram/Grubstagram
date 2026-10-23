@@ -23,20 +23,69 @@ def env(name: str, required: bool = True) -> str | None:
     return val or None
 
 
-def active_theme(date: _dt.date, cfg: dict) -> dict | None:
-    """First [[themes]] entry whose MM-DD window contains the date (windows may wrap past New Year)."""
+def _in_window(date: _dt.date, start: str, end: str) -> bool:
+    """start/end are 'MM-DD' (every year, may wrap past New Year) or 'YYYY-MM-DD' (that year only)."""
+    if len(start) == 10:
+        return start <= date.isoformat() <= end
     md = date.strftime("%m-%d")
+    return start <= md <= end if start <= end else (md >= start or md <= end)
+
+
+def active_theme(date: _dt.date, cfg: dict) -> dict | None:
+    """First festival in [[themes]] whose window contains the date."""
     for t in cfg.get("themes", []):
-        start, end = t["start"], t["end"]
-        inside = start <= md <= end if start <= end else (md >= start or md <= end)
-        if inside:
+        if _in_window(date, t["start"], t["end"]):
             return t
     return None
 
 
+def week_theme(date: _dt.date, cfg: dict) -> dict | None:
+    """Outside festivals, weeks alternate: a country special, then a story-and-film week."""
+    w = cfg.get("weekly", {})
+    countries = w.get("countries", [])
+    if not countries:
+        return None
+    anchor = _dt.date.fromisoformat(w.get("first_country_week", "2026-11-09"))
+    week = (date - anchor).days // 7             # Monday-to-Sunday weeks counted from the anchor
+    if week % 2:
+        return None                              # story week: the normal inspiration list
+    country = countries[(week // 2) % len(countries)]
+    tag = "#" + "".join(ch for ch in country.lower() if ch.isalnum()) + "food"
+    return {
+        "name": f"{country} week",
+        "emoji": "🌍",
+        "hashtags": [tag, "#worldfood"],
+        "edible_inspiration": [w["edible"].format(country=country)],
+        "not_edible_inspiration": [w["not_edible"].format(country=country)],
+        "extra_check": w.get("check", ""),
+    }
+
+
+def course_for(date: _dt.date, kind: str, cfg: dict, history: list[dict]) -> str:
+    """Count this Monday-to-Sunday week's earlier posts of the same kind; the configured slots are desserts.
+    Defaults: the 1st and 3rd edible posts (alternate days give 3 or 4 a week, so always 2 desserts) and the
+    1st gross post (at least one revolting dessert a week)."""
+    sched = cfg.get("schedule", {})
+    slots = sched.get("dessert_slots", [0, 2]) if kind == "edible" else sched.get("gross_dessert_slots", [0])
+    monday = date - _dt.timedelta(days=date.weekday())
+    n = sum(1 for h in history
+            if h.get("kind") == kind and not h.get("dry_run")
+            and monday.isoformat() <= h.get("date", "") < date.isoformat())
+    return "dessert" if n in slots else "savoury"
+
+
+def theme_for(date: _dt.date, cfg: dict) -> dict | None:
+    return active_theme(date, cfg) or week_theme(date, cfg)
+
+
 def forced_kind(date: _dt.date, cfg: dict) -> str | None:
     theme = active_theme(date, cfg)
-    return (theme or {}).get("force_kind", {}).get(date.strftime("%m-%d"))
+    if not theme:
+        return None
+    if theme.get("edible_only"):
+        return "edible"
+    fk = theme.get("force_kind", {})
+    return fk.get(date.isoformat()) or fk.get(date.strftime("%m-%d"))
 
 
 def kind_for(date: _dt.date, cfg: dict, history: list[dict] | None = None) -> str:

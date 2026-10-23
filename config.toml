@@ -7,6 +7,10 @@ name = "Yummers Grubbers"
 [schedule]
 # Cycles by calendar day. Use e.g. ["edible", "edible", "not_edible"] for a 2:1 mix.
 pattern = ["edible", "not_edible"]
+# Which edible post of each Monday-to-Sunday week is a dessert (0 = the first). [0, 2] = two desserts a week.
+dessert_slots = [0, 2]
+# Which gross post of each week is a revolting fake dessert. [0] = at least one a week.
+gross_dessert_slots = [0]
 
 [llm]
 # Anthropic model strings. Writer makes the recipe, checker reviews it.
@@ -68,6 +72,33 @@ not_edible = [
   "a giant's sock-drawer stew from an English fairy tale",
   "a pirate ship's galley after six months lost at sea",
 ]
+
+[weekly]
+# Outside festivals, weeks alternate: a country special, then a story-and-film week (the [inspiration] lists).
+# Countries are taken in this order, one every other week, starting the week of first_country_week (a Monday).
+first_country_week = "2026-11-09"
+countries = ["Italy", "Japan", "Mexico", "India", "Greece", "Thailand", "Morocco", "South Korea", "Spain", "Peru",
+             "Vietnam", "Lebanon", "Ethiopia", "Brazil", "Turkey", "Jamaica", "Portugal", "Georgia", "the Philippines",
+             "Nigeria", "Sweden", "Indonesia", "France", "Poland", "Argentina", "the Black Country (West Midlands)",
+             "Hungary", "China", "the USA", "Ireland"]
+edible = "{country} week: an authentic home-style dish from {country} (classic or regional), explained simply for home cooks"
+not_edible = "{country} week: the folklore, legends and mythical creatures of {country}, as fantasy props (never its real dishes, people or customs)"
+check = "Also fail it if it mocks a real country's food, people, customs or religion, or relies on national stereotypes."
+
+[seasonal]
+# A light nudge for edible posts towards what's in season (Italy/UK).
+"01" = "leeks, cabbage, kale, parsnips, celeriac, blood oranges"
+"02" = "cauliflower, purple sprouting broccoli, forced rhubarb, leeks, blood oranges"
+"03" = "wild garlic, spring onions, purple sprouting broccoli, spinach, rhubarb"
+"04" = "asparagus, wild garlic, radishes, spring greens, new-season carrots"
+"05" = "asparagus, broad beans, new potatoes, rhubarb, first strawberries"
+"06" = "strawberries, cherries, peas, broad beans, courgettes"
+"07" = "tomatoes, courgettes, berries, apricots, peaches"
+"08" = "tomatoes, aubergines, peppers, sweetcorn, plums, blackberries"
+"09" = "figs, apples, blackberries, squash, plums, grapes"
+"10" = "pumpkin and squash, apples, pears, chestnuts, mushrooms"
+"11" = "chestnuts, parsnips, Brussels sprouts, pears, cavolo nero, quince"
+"12" = "Brussels sprouts, red cabbage, clementines, chestnuts, parsnips"
 
 [reel]
 # A post becomes a Reel (slides as a short video) when its type has either:
@@ -161,3 +192,140 @@ it targets or mocks a real person or group; anything implies it is safe to eat."
 edible_style = "Moody Halloween food photograph, 45-degree angle, dark slate or old wooden table, warm candlelight and soft window light, small pumpkins and autumn leaves, faint cobwebs softly out of focus in the background, appetising and true-to-life colours, magazine quality. No people, no hands, no text, no logos."
 
 not_edible_style = "Dark storybook Halloween photograph of a witch's kitchen: an old iron cauldron or chipped enamel pie dish on a gnarled wooden table, candlelight and an eerie green glow, wisps of mist, cobwebs, spell books and glass jars in the background. The 'food' is clearly theatrical props, slime and costume pieces, cartoonish and comedic rather than realistic. No people, no hands, no text, no logos, no blood, no real animals, no flames."
+
+
+# ---- Festival calendar (after Halloween). Windows are 'MM-DD' every year, or 'YYYY-MM-DD' for festivals
+# whose date moves (those need refreshing each year). edible_only = real food every day: used for religious and
+# cultural festivals, which the gross posts never touch.
+
+[[themes]]
+name = "Bonfire Night"
+emoji = "🎆"
+start = "11-02"
+end = "11-05"
+hashtags = ["#bonfirenight", "#guyfawkesnight"]
+edible_inspiration = ["Bonfire Night food: parkin, treacle toffee, toffee apples, jacket potatoes, sausages, warming soups for standing outside"]
+not_edible_inspiration = ["a Bonfire Night picnic made from garden-shed junk and soggy sparklers' wrappers (props only, no fire, no fireworks in the method)"]
+
+[[themes]]
+name = "Diwali"
+emoji = "🪔"
+start = "2026-11-06"
+end = "2026-11-09"
+edible_only = true
+hashtags = ["#diwali", "#diwalisweets"]
+edible_inspiration = ["Diwali: celebratory Indian sweets and festive dishes (barfi, ladoo, jalebi-style treats, chakli, festive curries), made respectfully and authentically"]
+
+[[themes]]
+name = "Thanksgiving"
+emoji = "🦃"
+start = "2026-11-23"
+end = "2026-11-26"
+hashtags = ["#thanksgiving", "#friendsgiving"]
+edible_inspiration = ["a Thanksgiving or Friendsgiving table: roast turkey crown, stuffing, sweet potato bakes, pecan or pumpkin pie, cornbread"]
+not_edible_inspiration = ["a troll family's Thanksgiving feast made from autumn leaves, garden debris and old boots"]
+
+[[themes]]
+name = "Hanukkah"
+emoji = "🕎"
+start = "2026-12-05"
+end = "2026-12-06"
+edible_only = true
+hashtags = ["#hanukkah", "#chanukah"]
+edible_inspiration = ["Hanukkah: latkes, sufganiyot and other foods fried in oil, made respectfully and authentically"]
+
+[[themes]]
+name = "Christmas"
+emoji = "🎄"
+start = "12-01"
+end = "12-26"
+force_kind = { "12-25" = "edible", "12-26" = "edible" }
+hashtags = ["#christmasfood", "#christmasrecipes"]
+edible_inspiration = [
+  "a Christmas dinner showstopper: roast, all the trimmings, and how to time it",
+  "Christmas baking: mince pies, stollen, gingerbread, panettone-style bakes, yule log",
+  "Christmas party food and festive canapes",
+  "an Italian Christmas: Feast of the Seven Fishes, tortellini in brodo, panettone and pandoro desserts",
+  "Boxing Day leftovers turned into something brilliant",
+  "festive drinks-party nibbles and edible gifts to give away",
+]
+not_edible_inspiration = [
+  "Krampus's Christmas dinner (Alpine folklore, 'a monster's menu')",
+  "a Christmas pudding made of tinsel, pine needles and an old jumper",
+  "the dreaded office Secret Santa buffet, built from stationery cupboard leftovers",
+  "a Christmas cracker 'dinner' assembled entirely from cracker toys and paper hats",
+  "a snowman's frozen feast made of ice, gravel and carrot noses",
+]
+
+[[themes]]
+name = "New Year"
+emoji = "🥂"
+start = "12-27"
+end = "01-01"
+hashtags = ["#newyearseve", "#newyear"]
+edible_inspiration = ["New Year's Eve party food, and the next morning's restorative brunch; Italian lentils and cotechino for luck"]
+not_edible_inspiration = ["a troll's New Year hangover cure, brewed from the morning-after mess (props only, no alcohol)"]
+
+[[themes]]
+name = "Burns Night"
+emoji = "🏴"
+start = "01-22"
+end = "01-25"
+hashtags = ["#burnsnight"]
+edible_inspiration = ["Burns Night: haggis (or veggie haggis), neeps and tatties, cock-a-leekie, cranachan, shortbread"]
+not_edible_inspiration = ["a Loch Ness monster's Burns Supper made of pondweed and old bagpipe bags"]
+
+[[themes]]
+name = "Lunar New Year"
+emoji = "🧧"
+start = "2027-02-01"
+end = "2027-02-07"
+edible_only = true
+hashtags = ["#lunarnewyear", "#chinesenewyear"]
+edible_inspiration = ["Lunar New Year: dumplings, spring rolls, longevity noodles, whole steamed fish, nian gao, tangyuan, made respectfully and authentically"]
+
+[[themes]]
+name = "Pancake Day and Carnevale"
+emoji = "🥞"
+start = "2027-02-08"
+end = "2027-02-09"
+hashtags = ["#pancakeday", "#carnevale"]
+edible_inspiration = ["Pancake Day and Italian Carnevale: crepes, fluffy pancakes, chiacchiere, frittelle, castagnole"]
+not_edible_inspiration = ["a pancake stack made of beer mats, carpet tiles and a frisbee, tossed by a troll"]
+
+[[themes]]
+name = "Valentine's"
+emoji = "💘"
+start = "02-10"
+end = "02-14"
+hashtags = ["#valentinesday", "#datenight"]
+edible_inspiration = ["a Valentine's date-night dinner for two, or a chocolate dessert to share"]
+not_edible_inspiration = ["an anti-Valentine's 'break-up cake' made of returned gifts, wilted roses and cringe love letters"]
+
+[[themes]]
+name = "Eid al-Fitr"
+emoji = "🌙"
+start = "2027-03-06"
+end = "2027-03-07"
+edible_only = true
+hashtags = ["#eid", "#eidalfitr"]
+edible_inspiration = ["Eid al-Fitr: celebratory dishes and sweets (maamoul, sheer khurma, biryani, kahk), made respectfully and authentically"]
+
+[[themes]]
+name = "St Patrick's"
+emoji = "☘️"
+start = "03-14"
+end = "03-17"
+hashtags = ["#stpatricksday"]
+edible_inspiration = ["St Patrick's Day: Irish stew, colcannon, soda bread, boxty, barmbrack, Irish coffee-flavoured desserts"]
+not_edible_inspiration = ["a leprechaun's pot-of-gold pie made of chocolate coins' foil, shamrock lawn clippings and a wellington boot (no alcohol)"]
+
+[[themes]]
+name = "Easter"
+emoji = "🐣"
+start = "2027-03-22"
+end = "2027-03-29"
+force_kind = { "2027-03-28" = "edible" }
+hashtags = ["#easter", "#easterbaking"]
+edible_inspiration = ["Easter: roast lamb, hot cross buns, simnel cake, colomba, Easter egg desserts, spring vegetables"]
+not_edible_inspiration = ["a hollow chocolate egg filled with craft-cupboard chaos: pom-poms, glitter glue and googly eyes (props only)"]

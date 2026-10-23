@@ -13,7 +13,7 @@ import json
 import os
 import sys
 
-from . import active_theme, day_dir, forced_kind, kind_for, load_config, load_history, save_history, env
+from . import course_for, theme_for, day_dir, forced_kind, kind_for, load_config, load_history, save_history, env
 from . import image as img
 from . import recipe as rec
 from . import reel as reels
@@ -57,7 +57,7 @@ def cmd_generate(a, cfg) -> None:
     date = dt.date.fromisoformat(a.date) if a.date else dt.date.today()
     history = load_history()
     kind = a.kind or kind_for(date, cfg, history)
-    theme = active_theme(date, cfg)
+    theme = theme_for(date, cfg)
     out = day_dir(date)
     existing = json.loads((out / "recipe.json").read_text()) if (out / "recipe.json").exists() else None
     if existing and not existing.get("dry_run") and not a.force:
@@ -75,6 +75,17 @@ def cmd_generate(a, cfg) -> None:
         img.placeholder(kind, out / "hero.jpg", seed=date.toordinal())
     else:
         inspiration = pick_inspiration(date, kind, cfg, theme, history)
+        course = course_for(date, kind, cfg, history)
+        if course == "dessert" and kind == "not_edible":
+            inspiration = "make it a revolting fake DESSERT (a custard, pie, trifle, jelly or cake that is obviously not food)" + (f", inspired by {inspiration}" if inspiration else "")
+        elif course == "dessert":
+            inspiration = "make it a DESSERT (a sweet bake, pudding, tart, cake, ice cream or similar)" + (f", inspired by {inspiration}" if inspiration else "")
+        elif kind == "edible":
+            inspiration = ("make it a savoury dish, not a dessert (if the inspiration below is sweet, find a savoury dish in the same spirit)"
+                           + (f", inspired by {inspiration}" if inspiration else ""))
+        season = cfg.get("seasonal", {}).get(date.strftime("%m"))
+        if kind == "edible" and season:
+            inspiration = (inspiration + "; " if inspiration else "") + f"lean on what's in season now in Europe: {season}"
         if inspiration:
             log(f"  inspiration: {inspiration}")
         owner_note = None
@@ -141,6 +152,7 @@ def cmd_generate(a, cfg) -> None:
     history = [h for h in history if h.get("date") != date.isoformat()]
     history.append({"date": date.isoformat(), "kind": kind, "title": recipe["title"], "status": "drafted",
                     "inspiration": inspiration,
+                    "course": course_for(date, kind, cfg, history) if not a.dry_run else None,
                     "forced": bool(forced_kind(date, cfg)) and not a.kind, "dry_run": a.dry_run})
     save_history(history)
     log(f"Done: {len(paths)} slides, caption {len(caption)} chars.")

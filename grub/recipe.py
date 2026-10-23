@@ -165,7 +165,7 @@ def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print, theme:
     llm = cfg["llm"]
     theme = theme or {}
     brief = theme.get(f"{kind}_brief") or BRIEF[kind]
-    checker = (theme.get(f"{kind}_checker") or CHECKER[kind]) + COPYRIGHT_CHECK
+    checker = (theme.get(f"{kind}_checker") or CHECKER[kind]) + COPYRIGHT_CHECK + (" " + theme["extra_check"] if theme.get("extra_check") else "")
     if inspiration:
         brief = f"{brief}\n\nToday's inspiration: {inspiration}.\n{COPYRIGHT_WRITER}"
     if owner_note is not None:
