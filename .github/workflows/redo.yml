@@ -1,0 +1,89 @@
+name: 5. Redo rejected post
+
+# Add the `reject` label to a day's post issue and this makes a fresh draft automatically.
+# Leave a comment on the issue first (e.g. "less gross", "no chicken") and the rewrite takes it into account.
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: grubstagram
+  cancel-in-progress: false
+
+jobs:
+  redo:
+    if: github.event.label.name == 'reject' && startsWith(github.event.issue.title, 'Post ')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Work out what to redo
+        id: info
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: ${{ github.event.issue.title }}
+          NUM: ${{ github.event.issue.number }}
+        run: |
+          DATE=$(printf '%s' "$TITLE" | sed -nE 's/^Post ([0-9]{4}-[0-9]{2}-[0-9]{2}).*/\1/p')
+          if [ -z "$DATE" ] || [ ! -f "queue/$DATE/recipe.json" ]; then
+            echo "No draft found for this issue."; echo "skip=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+          if [ -f "queue/$DATE/published.json" ]; then
+            gh issue comment "$NUM" --body "This one is already live on Instagram, so there's nothing to swap. Delete it in the app if you want it gone."
+            echo "skip=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          COUNT=$(gh issue list --state all --search "\"Post $DATE\" in:title" --json number --jq length)
+          if [ "$COUNT" -ge 4 ]; then
+            gh issue comment "$NUM" --body "That's 3 redos for $DATE already, so I've stopped to save credit. Run *1. Generate daily post* with **replace** ticked if you want another go."
+            echo "skip=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          # Only notes from you count (the repo is public, so strangers' comments are ignored).
+          gh api "repos/$GITHUB_REPOSITORY/issues/$NUM/comments" \
+            --jq '[.[] | select(.user.type != "Bot") | select(.author_association == "OWNER" or .author_association == "COLLABORATOR" or .author_association == "MEMBER") | .body] | join(" / ")' \
+            > "$RUNNER_TEMP/note.txt"
+          echo "kind=$(jq -r .kind "queue/$DATE/recipe.json")" >> "$GITHUB_OUTPUT"
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v6
+        if: steps.info.outputs.skip == 'false'
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Make a fresh draft
+        if: steps.info.outputs.skip == 'false'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FAL_KEY: ${{ secrets.FAL_KEY }}
+          KIND: ${{ steps.info.outputs.kind }}
+        run: |
+          pip install -q -r requirements.txt
+          command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          python -m grub generate --date "$DATE" --kind "$KIND" --force --feedback-file "$RUNNER_TEMP/note.txt"
+
+      - name: Commit and swap the issues
+        if: steps.info.outputs.skip == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OLD: ${{ github.event.issue.number }}
+        run: |
+          git config user.name "grubstagram-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add queue data
+          git commit -m "Redo draft for $DATE"
+          git pull --rebase -q && git push
+          TITLE="Post $DATE: $(jq -r .title "queue/$DATE/recipe.json")"
+          { echo "🔁 Fresh draft replacing #$OLD."; echo; cat "queue/$DATE/issue.md"; } > "$RUNNER_TEMP/body.md"
+          if [ "$(date -u +%H%M)" -gt 1637 ]; then
+            printf '\n⚠️ Today'"'"'s posting time has passed, so this won'"'"'t post by itself. If you like it, run **2. Publish to Instagram**.\n' >> "$RUNNER_TEMP/body.md"
+          fi
+          NEW=$(gh issue create --title "$TITLE" --body-file "$RUNNER_TEMP/body.md" --label draft)
+          gh issue comment "$OLD" --body "Swapped for a fresh draft: $NEW"
+          gh issue close "$OLD" --reason "not planned"

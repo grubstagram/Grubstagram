@@ -161,13 +161,17 @@ COPYRIGHT_CHECK = (" Also fail it if it names or depicts a copyrighted character
 
 
 def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print, theme: dict | None = None,
-                 inspiration: str | None = None) -> dict:
+                 inspiration: str | None = None, owner_note: str | None = None) -> dict:
     llm = cfg["llm"]
     theme = theme or {}
     brief = theme.get(f"{kind}_brief") or BRIEF[kind]
     checker = (theme.get(f"{kind}_checker") or CHECKER[kind]) + COPYRIGHT_CHECK
     if inspiration:
         brief = f"{brief}\n\nToday's inspiration: {inspiration}.\n{COPYRIGHT_WRITER}"
+    if owner_note is not None:
+        note = owner_note.strip()[:500]
+        brief += ("\n\nThe account owner rejected an earlier draft for today, so write something clearly different"
+                  + (f'. Their note about what they want: "{note}". Follow it unless it conflicts with the rules above.' if note else "."))
     extra_block = theme.get("block", []) if kind == "not_edible" else []
     avoid = "\n".join(f"- {t}" for t in past_titles[-llm["history_window"]:]) or "- (none yet)"
     feedback = ""

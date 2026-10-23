@@ -77,7 +77,11 @@ def cmd_generate(a, cfg) -> None:
         inspiration = pick_inspiration(date, kind, cfg, theme, history)
         if inspiration:
             log(f"  inspiration: {inspiration}")
-        recipe = rec.write_recipe(kind, [h["title"] for h in history], cfg, log, theme, inspiration)
+        owner_note = None
+        if a.feedback_file:
+            owner_note = open(a.feedback_file, encoding="utf-8").read()
+            log(f"  redo, owner note: {owner_note.strip()[:120] or '(none)'}")
+        recipe = rec.write_recipe(kind, [h["title"] for h in history], cfg, log, theme, inspiration, owner_note)
         img.generate(recipe["image_prompt"], kind, cfg, out / "hero.jpg", log, theme)
 
     caption = rec.build_caption(recipe, kind, cfg, theme)
@@ -270,6 +274,7 @@ def main() -> None:
     g.add_argument("--kind", choices=["edible", "not_edible"])
     g.add_argument("--dry-run", action="store_true", help="use sample recipe + placeholder photo, no API calls")
     g.add_argument("--force", action="store_true")
+    g.add_argument("--feedback-file", default="", help="redo after a rejection, with the owner's note in this file")
     pb = sub.add_parser("publish")
     pb.add_argument("--date")
     pb.add_argument("--dry-run", action="store_true")

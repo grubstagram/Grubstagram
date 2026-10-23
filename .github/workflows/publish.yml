@@ -40,7 +40,7 @@ jobs:
         run: |
           DATE="${IN_DATE:-$(date -u +%F)}"
           echo "DATE=$DATE" >> "$GITHUB_ENV"
-          ISSUE=$(gh issue list --state all --search "\"Post $DATE\" in:title" --json number,labels --jq '.[0] // {}')
+          ISSUE=$(gh issue list --state all --search "\"Post $DATE\" in:title" --json number,labels,createdAt --jq 'sort_by(.createdAt) | last // {}')
           echo "issue=$(echo "$ISSUE" | jq -r '.number // empty')" >> "$GITHUB_OUTPUT"
           if echo "$ISSUE" | jq -e '.labels // [] | map(.name) | index("reject")' > /dev/null; then
             echo "Rejected in review. Skipping $DATE."
