@@ -11,7 +11,7 @@ import json
 import os
 import sys
 
-from . import day_dir, kind_for, load_config, load_history, save_history, env
+from . import active_theme, day_dir, forced_kind, kind_for, load_config, load_history, save_history, env
 from . import image as img
 from . import recipe as rec
 from . import slides
@@ -34,7 +34,9 @@ def media_base() -> str:
 
 def cmd_generate(a, cfg) -> None:
     date = dt.date.fromisoformat(a.date) if a.date else dt.date.today()
-    kind = a.kind or kind_for(date, cfg)
+    history = load_history()
+    kind = a.kind or kind_for(date, cfg, history)
+    theme = active_theme(date, cfg)
     out = day_dir(date)
     existing = json.loads((out / "recipe.json").read_text()) if (out / "recipe.json").exists() else None
     if existing and not existing.get("dry_run") and not a.force:
@@ -43,20 +45,19 @@ def cmd_generate(a, cfg) -> None:
     out.mkdir(parents=True, exist_ok=True)
     for old in out.glob("slide_*.jpg"):
         old.unlink()
-    log(f"Generating {kind} post for {date} -> {out}")
+    log(f"Generating {kind} post for {date}{' (' + theme['name'] + ' theme)' if theme else ''} -> {out}")
 
-    history = load_history()
     if a.dry_run:
         from .fixtures import SAMPLES
         recipe = SAMPLES[kind]
         img.placeholder(kind, out / "hero.jpg", seed=date.toordinal())
     else:
-        recipe = rec.write_recipe(kind, [h["title"] for h in history], cfg, log)
-        img.generate(recipe["image_prompt"], kind, cfg, out / "hero.jpg", log)
+        recipe = rec.write_recipe(kind, [h["title"] for h in history], cfg, log, theme)
+        img.generate(recipe["image_prompt"], kind, cfg, out / "hero.jpg", log, theme)
 
-    caption = rec.build_caption(recipe, kind, cfg)
+    caption = rec.build_caption(recipe, kind, cfg, theme)
     paths = slides.render_all(out / "hero.jpg", recipe, kind, cfg["brand"]["handle"], out)
-    (out / "recipe.json").write_text(json.dumps({"kind": kind, "dry_run": a.dry_run, **recipe}, indent=2, ensure_ascii=False) + "\n")
+    (out / "recipe.json").write_text(json.dumps({"kind": kind, "theme": (theme or {}).get("name"), "dry_run": a.dry_run, **recipe}, indent=2, ensure_ascii=False) + "\n")
     (out / "caption.txt").write_text(caption + "\n")
 
     base = media_base()
@@ -64,12 +65,13 @@ def cmd_generate(a, cfg) -> None:
     pics = " ".join(f'<img src="{base + "/" if base else "../../"}{rel}/{p.name}" width="240">' for p in paths)
     (out / "issue.md").write_text(
         ("> **DRY RUN** with a sample recipe and placeholder photo. This will never be posted.\n\n" if a.dry_run else "")
-        + f"**{recipe['title']}** · `{kind}`\n\n{pics}\n\n### Caption\n```\n{caption}\n```\n\n"
+        + f"**{recipe['title']}** · `{kind}`" + (f" · {theme.get('emoji', '🗓️')} {theme['name']} theme" if theme else "") + f"\n\n{pics}\n\n### Caption\n```\n{caption}\n```\n\n"
         "**Reject:** add the `reject` label before the publish time and it will be skipped.\n"
         "**Approve:** do nothing. It posts automatically.\n"
     )
     history = [h for h in history if h.get("date") != date.isoformat()]
-    history.append({"date": date.isoformat(), "kind": kind, "title": recipe["title"], "status": "drafted"})
+    history.append({"date": date.isoformat(), "kind": kind, "title": recipe["title"], "status": "drafted",
+                    "forced": bool(forced_kind(date, cfg)) and not a.kind, "dry_run": a.dry_run})
     save_history(history)
     log(f"Done: {len(paths)} slides, caption {len(caption)} chars.")
 

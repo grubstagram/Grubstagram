@@ -138,25 +138,33 @@ def _call(model: str, system: str, user: str, tool: dict, max_tokens: int = 4000
     raise RuntimeError(f"Anthropic call failed after {tries} tries: {last}")
 
 
-def blocklist_hits(recipe: dict) -> list[str]:
+def blocklist_hits(recipe: dict, extra: list[str] | None = None) -> list[str]:
     text = json.dumps(recipe, ensure_ascii=False)
-    return sorted({m.group(0).lower() for m in BLOCKLIST.finditer(text)})
+    hits = {m.group(0).lower() for m in BLOCKLIST.finditer(text)}
+    if extra:
+        rx = re.compile(r"\b(" + "|".join(re.escape(w) for w in extra) + r")s?\b", re.I)
+        hits |= {m.group(0).lower() for m in rx.finditer(text)}
+    return sorted(hits)
 
 
-def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print) -> dict:
+def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print, theme: dict | None = None) -> dict:
     llm = cfg["llm"]
+    theme = theme or {}
+    brief = theme.get(f"{kind}_brief") or BRIEF[kind]
+    checker = theme.get(f"{kind}_checker") or CHECKER[kind]
+    extra_block = theme.get("block", []) if kind == "not_edible" else []
     avoid = "\n".join(f"- {t}" for t in past_titles[-llm["history_window"]:]) or "- (none yet)"
     feedback = ""
     for attempt in range(1, llm["max_attempts"] + 1):
-        user = (f"{BRIEF[kind]}\n\nDo not repeat or closely echo any of these recent posts:\n{avoid}\n"
+        user = (f"{brief}\n\nDo not repeat or closely echo any of these recent posts:\n{avoid}\n"
                 f"{feedback}\nSave it with the save_recipe tool.")
         recipe = _call(llm["writer_model"], VOICE.format(brand=cfg["brand"]["name"]), user, RECIPE_TOOL)
         # Only the joke recipes need the word filter ("blood orange" and "a splash of rum" are fine for real food).
-        hits = blocklist_hits(recipe) if kind == "not_edible" else []
+        hits = blocklist_hits(recipe, extra_block) if kind == "not_edible" else []
         if hits:
             issues = [f"Blocked words used: {', '.join(hits)}"]
         else:
-            review = _call(llm["checker_model"], CHECKER[kind],
+            review = _call(llm["checker_model"], checker,
                            "Review this post:\n" + json.dumps(recipe, indent=2, ensure_ascii=False),
                            CHECK_TOOL, max_tokens=800)
             if review["pass"]:
@@ -168,7 +176,7 @@ def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print) -> dic
     raise RuntimeError(f"No safe recipe after {llm['max_attempts']} attempts")
 
 
-def build_caption(recipe: dict, kind: str, cfg: dict) -> str:
+def build_caption(recipe: dict, kind: str, cfg: dict, theme: dict | None = None) -> str:
     c = cfg["caption"]
     lines = [recipe["caption_hook"].strip(), ""]
     if kind == "edible":
@@ -179,7 +187,7 @@ def build_caption(recipe: dict, kind: str, cfg: dict) -> str:
     else:
         lines += ["Swipe for the 'method' 👉", "", c["not_edible_footer"]]
     tags = []
-    for t in list(recipe["hashtags"]) + c["base_hashtags"]:
+    for t in list((theme or {}).get("hashtags", [])) + list(recipe["hashtags"]) + c["base_hashtags"]:
         t = "#" + re.sub(r"[^\w]", "", t.lstrip("#"))
         if t.lower() not in {x.lower() for x in tags} and len(t) > 1:
             tags.append(t)

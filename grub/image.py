@@ -24,9 +24,10 @@ def fit_4x5(img: Image.Image) -> Image.Image:
     return img.resize((W, H), Image.LANCZOS)
 
 
-def generate(prompt: str, kind: str, cfg: dict, out: Path, log=print) -> Path:
+def generate(prompt: str, kind: str, cfg: dict, out: Path, log=print, theme: dict | None = None) -> Path:
     icfg = cfg["image"]
-    full_prompt = f"{prompt.strip()}\n\nStyle: {icfg['style'][kind]}"
+    style = (theme or {}).get(f"{kind}_style") or icfg["style"][kind]
+    full_prompt = f"{prompt.strip()}\n\nStyle: {style}"
     body = {"prompt": full_prompt, **icfg.get("params", {})}
     log(f"  image: calling {icfg['model']}")
     resp = httpx.post(f"https://fal.run/{icfg['model']}",
