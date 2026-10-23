@@ -1,2 +1,3 @@
 httpx>=0.27
 pillow>=10.4
+fal-client>=1.0

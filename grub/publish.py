@@ -55,6 +55,19 @@ class IG:
         info = self._req("GET", media_id, fields="permalink,timestamp")
         return {"media_id": media_id, **info}
 
+    def reel(self, video_url: str, caption: str, cover_url: str = "", audio_name: str = "", log=print) -> dict:
+        params = {"media_type": "REELS", "video_url": video_url, "caption": caption, "share_to_feed": "true"}
+        if cover_url:
+            params["cover_url"] = cover_url
+        if audio_name:
+            params["audio_name"] = audio_name
+        cid = self._req("POST", f"{self.user}/media", **params)["id"]
+        log(f"  reel container {cid}, waiting for Instagram to process the video")
+        self.wait(cid, tries=40, delay=15)   # video processing can take a few minutes
+        media_id = self._req("POST", f"{self.user}/media_publish", creation_id=cid)["id"]
+        info = self._req("GET", media_id, fields="permalink,timestamp")
+        return {"media_id": media_id, "format": "reel", **info}
+
     def limit(self) -> dict:
         return self._req("GET", f"{self.user}/content_publishing_limit", fields="quota_usage,config")
 

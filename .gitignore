@@ -3,3 +3,8 @@ __pycache__/
 .env
 .venv/
 *.token
+
+# Reels are hosted on fal's CDN, not in git
+queue/*/reel.mp4
+queue/*/reel_frame_*.jpg
+queue/*/reel_hero.jpg

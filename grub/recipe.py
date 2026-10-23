@@ -147,11 +147,27 @@ def blocklist_hits(recipe: dict, extra: list[str] | None = None) -> list[str]:
     return sorted(hits)
 
 
-def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print, theme: dict | None = None) -> dict:
+COPYRIGHT_WRITER = (
+    "Use today's inspiration for mood, ideas and tone only. Invent your own dish names and words. "
+    "Never name, describe or depict copyrighted characters, and never quote or use the titles, catchphrases or "
+    "invented words of books, films or TV still in copyright (no Wonka, BFG, Twits, snozzcumbers, Hogwarts and so on). "
+    "Public-domain tales (Grimm, Andersen, English fairy tales, Alice in Wonderland, The Wind in the Willows, Peter Pan, "
+    "Dracula, Frankenstein, Macbeth) may be named. An author may be name-checked in the caption as homage "
+    "(e.g. 'a potion Roald Dahl would be proud of') but never in the image prompt, and no real people appear in the image."
+)
+COPYRIGHT_CHECK = (" Also fail it if it names or depicts a copyrighted character, quotes a copyrighted book or film, "
+                   "or uses a copyrighted title, catchphrase or invented word (public-domain tales and a passing author "
+                   "name-check in the caption are fine), or if the image prompt names an author, film or real person.")
+
+
+def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print, theme: dict | None = None,
+                 inspiration: str | None = None) -> dict:
     llm = cfg["llm"]
     theme = theme or {}
     brief = theme.get(f"{kind}_brief") or BRIEF[kind]
-    checker = theme.get(f"{kind}_checker") or CHECKER[kind]
+    checker = (theme.get(f"{kind}_checker") or CHECKER[kind]) + COPYRIGHT_CHECK
+    if inspiration:
+        brief = f"{brief}\n\nToday's inspiration: {inspiration}.\n{COPYRIGHT_WRITER}"
     extra_block = theme.get("block", []) if kind == "not_edible" else []
     avoid = "\n".join(f"- {t}" for t in past_titles[-llm["history_window"]:]) or "- (none yet)"
     feedback = ""

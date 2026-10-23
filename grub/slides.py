@@ -113,7 +113,7 @@ def badge(d, t, xy):
 
 # ---------------------------------------------------------------- slides
 
-def slide_hero(hero: Path, recipe: dict, kind: str, handle: str) -> Image.Image:
+def slide_hero(hero: Path, recipe: dict, kind: str, handle: str, swipe: bool = True) -> Image.Image:
     t = THEMES[kind]
     img = Image.open(hero).convert("RGB").resize((W, H))
     shade = Image.new("L", (1, H))
@@ -141,8 +141,9 @@ def slide_hero(hero: Path, recipe: dict, kind: str, handle: str) -> Image.Image:
         y += line_h(sf)
     f = font("medium", 24)
     d.text((M, H - 70), handle, font=f, fill=(200, 194, 184))
-    swipe = "SWIPE  >"
-    tracked(d, (W - M - sum(f.getlength(c) + 3 for c in swipe), H - 70), swipe, f, (200, 194, 184), 3)
+    if swipe:
+        hint = "SWIPE  >"
+        tracked(d, (W - M - sum(f.getlength(c) + 3 for c in hint), H - 70), hint, f, (200, 194, 184), 3)
     return img
 
 

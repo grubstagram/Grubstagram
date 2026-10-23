@@ -6,6 +6,8 @@
   python -m grub check
 """
 import argparse
+import re
+import random
 import datetime as dt
 import json
 import os
@@ -14,6 +16,7 @@ import sys
 from . import active_theme, day_dir, forced_kind, kind_for, load_config, load_history, save_history, env
 from . import image as img
 from . import recipe as rec
+from . import reel as reels
 from . import slides
 
 
@@ -32,6 +35,24 @@ def media_base() -> str:
     return ""
 
 
+def pick_inspiration(date, kind: str, cfg: dict, theme: dict | None, history: list[dict]) -> str | None:
+    """Work through a shuffled list, one per post of this kind, so nothing repeats until the list runs out.
+    Themes can bring their own list."""
+    pool = list((theme or {}).get(f"{kind}_inspiration") or cfg.get("inspiration", {}).get(kind, []))
+    if not pool:
+        return None
+    random.Random(f"{kind}-{(theme or {}).get('name', '')}").shuffle(pool)
+    n = sum(1 for h in history if h.get("kind") == kind and h.get("date", "") < date.isoformat())
+    return pool[n % len(pool)]
+
+
+def upload_media(path) -> str:
+    """Host a file on fal's CDN (kept 30 days) so Instagram can fetch it without bloating the repo."""
+    import fal_client
+    from fal_client.client import StorageSettings
+    return fal_client.upload_file(path, lifecycle=StorageSettings(expires_in="30d"))
+
+
 def cmd_generate(a, cfg) -> None:
     date = dt.date.fromisoformat(a.date) if a.date else dt.date.today()
     history = load_history()
@@ -47,22 +68,51 @@ def cmd_generate(a, cfg) -> None:
         old.unlink()
     log(f"Generating {kind} post for {date}{' (' + theme['name'] + ' theme)' if theme else ''} -> {out}")
 
+    inspiration = None
     if a.dry_run:
         from .fixtures import SAMPLES
         recipe = SAMPLES[kind]
         img.placeholder(kind, out / "hero.jpg", seed=date.toordinal())
     else:
-        recipe = rec.write_recipe(kind, [h["title"] for h in history], cfg, log, theme)
+        inspiration = pick_inspiration(date, kind, cfg, theme, history)
+        if inspiration:
+            log(f"  inspiration: {inspiration}")
+        recipe = rec.write_recipe(kind, [h["title"] for h in history], cfg, log, theme, inspiration)
         img.generate(recipe["image_prompt"], kind, cfg, out / "hero.jpg", log, theme)
 
     caption = rec.build_caption(recipe, kind, cfg, theme)
     paths = slides.render_all(out / "hero.jpg", recipe, kind, cfg["brand"]["handle"], out)
-    (out / "recipe.json").write_text(json.dumps({"kind": kind, "theme": (theme or {}).get("name"), "dry_run": a.dry_run, **recipe}, indent=2, ensure_ascii=False) + "\n")
+    for stale in ("reel.mp4", "cover.jpg"):
+        (out / stale).unlink(missing_ok=True)
+    meta = {"kind": kind, "theme": (theme or {}).get("name"), "dry_run": a.dry_run, "format": "carousel"}
+    reel_note = ""
+    music = reels.music_for(kind, cfg, theme)
+    if music:
+        try:
+            reel_slides = list(paths)
+            hero_frame = out / "reel_hero.jpg"
+            slides.slide_hero(out / "hero.jpg", recipe, kind, cfg["brand"]["handle"], swipe=False).save(hero_frame, "JPEG", quality=92)
+            reel_slides[0] = hero_frame
+            video, _cover = reels.render(reel_slides, out / "hero.jpg", music, out, cfg, log)
+            hero_frame.unlink()
+            meta.update(format="reel", music=music.name)
+            caption = (caption.replace("Full recipe in the slides 👉", "Pause to read the full recipe ⏸️")
+                       .replace("Swipe for the 'method' 👉", "Pause for the 'method', if you dare ⏸️"))
+            if env("FAL_KEY", required=False):
+                meta["reel_url"] = upload_media(video)
+                reel_note = f"▶️ **[Watch the Reel with music]({meta['reel_url']})** · this posts as a Reel\n\n"
+            else:
+                reel_note = "🎬 Reel rendered locally (no FAL_KEY, so not uploaded).\n\n"
+        except Exception as e:  # never lose the day's post over the video: fall back to the carousel
+            log(f"  reel failed, falling back to carousel: {e}")
+            meta["format"] = "carousel"
+            reel_note = f"⚠️ Reel failed ({str(e)[:120]}), so this will post as a carousel.\n\n"
+    (out / "recipe.json").write_text(json.dumps({**meta, **recipe}, indent=2, ensure_ascii=False) + "\n")
     (out / "caption.txt").write_text(caption + "\n")
 
     base = media_base()
     rel = f"queue/{date.isoformat()}"
-    pics = " ".join(f'<img src="{base + "/" if base else "../../"}{rel}/{p.name}" width="240">' for p in paths)
+    pics = reel_note + " ".join(f'<img src="{base + "/" if base else "../../"}{rel}/{p.name}" width="240">' for p in paths)
     (out / "issue.md").write_text(
         ("> **DRY RUN** with a sample recipe and placeholder photo. This will never be posted.\n\n" if a.dry_run else "")
         + f"**{recipe['title']}** · `{kind}`" + (f" · {theme.get('emoji', '🗓️')} {theme['name']} theme" if theme else "") + f"\n\n{pics}\n\n### Caption\n```\n{caption}\n```\n\n"
@@ -71,6 +121,7 @@ def cmd_generate(a, cfg) -> None:
     )
     history = [h for h in history if h.get("date") != date.isoformat()]
     history.append({"date": date.isoformat(), "kind": kind, "title": recipe["title"], "status": "drafted",
+                    "inspiration": inspiration,
                     "forced": bool(forced_kind(date, cfg)) and not a.kind, "dry_run": a.dry_run})
     save_history(history)
     log(f"Done: {len(paths)} slides, caption {len(caption)} chars.")
@@ -95,12 +146,17 @@ def cmd_publish(a, cfg) -> None:
     if not base:
         raise SystemExit("Set MEDIA_BASE_URL (or run inside GitHub Actions) so Instagram can fetch the images.")
     urls = [f"{base}/queue/{date.isoformat()}/{p.name}" for p in slides_]
-    log(f"Publishing {date}: {recipe['title']} ({len(urls)} slides)")
+    log(f"Publishing {date}: {recipe['title']} ({recipe.get('format', 'carousel')}, {len(urls)} slides)")
     if a.dry_run:
         for u in urls:
             log(f"  would post {u}")
         return
-    result = IG(cfg).carousel(urls, caption, recipe.get("alt_text", ""), log)
+    if recipe.get("format") == "reel" and recipe.get("reel_url"):
+        log(f"  as a Reel: {recipe['reel_url']}")
+        cover = f"{base}/queue/{date.isoformat()}/cover.jpg" if (out / "cover.jpg").exists() else ""
+        result = IG(cfg).reel(recipe["reel_url"], caption, cover, cfg.get("reel", {}).get("audio_name", ""), log)
+    else:
+        result = IG(cfg).carousel(urls, caption, recipe.get("alt_text", ""), log)
     (out / "published.json").write_text(json.dumps(result, indent=2) + "\n")
     history = load_history()
     for h in history:
@@ -121,6 +177,51 @@ def cmd_refresh(a, cfg) -> None:
     with open(a.out, "w") as f:
         f.write(token)
     log("Token refreshed and written to file (not printed).")
+
+
+def cmd_music(a, cfg) -> None:
+    from . import ROOT
+    mcfg = cfg["music"]
+    folder = ROOT / "brand" / "music"
+    cand = folder / "candidates"
+    cand.mkdir(parents=True, exist_ok=True)
+    if a.use:
+        src = cand / f"{a.kind}-{a.use}.mp3"
+        if not src.exists():
+            raise SystemExit(f"No candidate {src.name}. Generate some first.")
+        rel = cfg["reel"].get(f"{a.kind}_music") or f"brand/music/{a.kind}.mp3"
+        dest = ROOT / rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_bytes(src.read_bytes())
+        # Point the config at the track if it wasn't set yet.
+        conf = ROOT / "config.toml"
+        text = conf.read_text()
+        new = re.sub(rf'^{a.kind}_music = ""', f'{a.kind}_music = "{rel}"', text, count=1, flags=re.M)
+        if new != text:
+            conf.write_text(new)
+        log(f"Now using {src.name} as {dest.relative_to(ROOT)}. {a.kind} posts will go out as Reels with it.")
+        return
+    prompt = a.prompt or mcfg["prompts"][a.kind]
+    import httpx
+    lines = [f"Music candidates for **{a.kind}** posts, model `{mcfg['model']}`.", "", f"> {prompt}", ""]
+    base = media_base()
+    for i in range(1, a.count + 1):
+        log(f"  generating candidate {i}/{a.count}")
+        resp = httpx.post(f"https://fal.run/{mcfg['model']}", headers={"Authorization": f"Key {env('FAL_KEY')}"},
+                          json={"prompt": prompt, **mcfg.get("params", {})}, timeout=600)
+        if resp.status_code >= 400:
+            raise RuntimeError(f"fal.ai {resp.status_code}: {resp.text[:400]}")
+        audio = resp.json().get("audio")
+        url = audio.get("url") if isinstance(audio, dict) else audio
+        if not url:
+            raise RuntimeError(f"fal.ai returned no audio: {resp.text[:300]}")
+        dest = cand / f"{a.kind}-{i}.mp3"
+        dest.write_bytes(httpx.get(url, timeout=120, follow_redirects=True).content)
+        link = f"{base}/brand/music/candidates/{dest.name}" if base else dest.name
+        lines.append(f"{i}. ▶️ [Listen to candidate {i}]({link})")
+    lines += ["", "**To choose one:** run *4. Make music* with `use` set to the number (e.g. `2`), or tell Claude which you liked."]
+    (cand / "issue.md").write_text("\n".join(lines) + "\n")
+    log("Done.")
 
 
 def cmd_check(a, cfg) -> None:
@@ -150,12 +251,17 @@ def main() -> None:
     pb = sub.add_parser("publish")
     pb.add_argument("--date")
     pb.add_argument("--dry-run", action="store_true")
+    m = sub.add_parser("music")
+    m.add_argument("--kind", choices=["edible", "not_edible"], default="edible")
+    m.add_argument("--prompt", default="")
+    m.add_argument("--count", type=int, default=3)
+    m.add_argument("--use", default="", help="promote candidate N to the live track")
     r = sub.add_parser("refresh-token")
     r.add_argument("--out", required=True)
     sub.add_parser("check")
     a = p.parse_args()
     cfg = load_config()
-    {"generate": cmd_generate, "publish": cmd_publish, "refresh-token": cmd_refresh, "check": cmd_check}[a.cmd](a, cfg)
+    {"generate": cmd_generate, "publish": cmd_publish, "music": cmd_music, "refresh-token": cmd_refresh, "check": cmd_check}[a.cmd](a, cfg)
 
 
 if __name__ == "__main__":
