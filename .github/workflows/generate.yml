@@ -1,0 +1,87 @@
+name: 1. Generate daily post
+
+on:
+  schedule:
+    - cron: "13 7 * * *"   # 07:13 UTC every day (morning in Italy)
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: "edible or not_edible (blank = follow the schedule)"
+        required: false
+        default: ""
+      date:
+        description: "YYYY-MM-DD (blank = today)"
+        required: false
+        default: ""
+      dry_run:
+        description: "Sample recipe + placeholder photo, no API spend"
+        type: boolean
+        default: false
+      replace:
+        description: "Replace that day's existing draft (e.g. after rejecting it)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: grubstagram
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Generate recipe, photo and slides
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FAL_KEY: ${{ secrets.FAL_KEY }}
+          IN_KIND: ${{ inputs.kind }}
+          IN_DATE: ${{ inputs.date }}
+          IN_DRY: ${{ inputs.dry_run }}
+          IN_REPLACE: ${{ inputs.replace }}
+        run: |
+          DATE="${IN_DATE:-$(date -u +%F)}"
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+          ARGS=()
+          [ -n "$IN_KIND" ] && ARGS+=(--kind "$IN_KIND")
+          [ "$IN_DRY" = "true" ] && ARGS+=(--dry-run --force)
+          [ "$IN_REPLACE" = "true" ] && ARGS+=(--force)
+          python -m grub generate --date "$DATE" "${ARGS[@]}"
+
+      - name: Commit draft
+        id: commit
+        run: |
+          git config user.name "grubstagram-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add queue data
+          if git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Draft for $DATE"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open review issue
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create draft --color FBCA04 --description "Waiting to be posted" --force
+          gh label create reject --color B60205 --description "Do not post" --force
+          gh label create posted --color 0E8A16 --description "Live on Instagram" --force
+          TITLE="Post $DATE: $(jq -r .title "queue/$DATE/recipe.json")"
+          gh issue create --title "$TITLE" --body-file "queue/$DATE/issue.md" --label draft
