@@ -48,7 +48,7 @@ CHECK_TOOL = {
     },
 }
 
-VOICE = ("You write for Grubstagram, an Instagram account that posts one AI-invented recipe a day. "
+VOICE = ("You write for {brand}, an Instagram account that posts one AI-invented recipe a day. "
          "Voice: warm, witty, British-dry, never cringe. Short sentences. UK spelling, metric units.")
 
 BRIEF = {
@@ -125,7 +125,7 @@ def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print) -> dic
     for attempt in range(1, llm["max_attempts"] + 1):
         user = (f"{BRIEF[kind]}\n\nDo not repeat or closely echo any of these recent posts:\n{avoid}\n"
                 f"{feedback}\nSave it with the save_recipe tool.")
-        recipe = _call(llm["writer_model"], VOICE, user, RECIPE_TOOL)
+        recipe = _call(llm["writer_model"], VOICE.format(brand=cfg["brand"]["name"]), user, RECIPE_TOOL)
         # Only the joke recipes need the word filter ("blood orange" and "a splash of rum" are fine for real food).
         hits = blocklist_hits(recipe) if kind == "not_edible" else []
         if hits:
