@@ -95,22 +95,47 @@ BLOCKLIST = re.compile(
 )
 
 
-def _call(model: str, system: str, user: str, tool: dict, max_tokens: int = 2000) -> dict:
-    resp = httpx.post(
-        API,
-        headers={"x-api-key": env("ANTHROPIC_API_KEY"), "anthropic-version": "2023-06-01",
-                 "content-type": "application/json"},
-        json={"model": model, "max_tokens": max_tokens, "system": system,
-              "tools": [tool], "tool_choice": {"type": "tool", "name": tool["name"]},
-              "messages": [{"role": "user", "content": user}]},
-        timeout=120,
-    )
-    if resp.status_code >= 400:
-        raise RuntimeError(f"Anthropic API {resp.status_code}: {resp.text[:500]}")
-    for block in resp.json()["content"]:
-        if block["type"] == "tool_use":
+def _extract(content: list, tool: dict) -> dict | None:
+    """Prefer the tool call; fall back to a JSON object in plain text."""
+    for block in content:
+        if block.get("type") == "tool_use" and block.get("name") == tool["name"]:
             return block["input"]
-    raise RuntimeError("Anthropic response had no tool output")
+    text = "".join(b.get("text", "") for b in content if b.get("type") == "text")
+    m = re.search(r"\{.*\}", text, re.S)
+    if m:
+        try:
+            data = json.loads(m.group(0))
+            if all(k in data for k in tool["input_schema"].get("required", [])):
+                return data
+        except json.JSONDecodeError:
+            pass
+    return None
+
+
+def _call(model: str, system: str, user: str, tool: dict, max_tokens: int = 4000, tries: int = 3) -> dict:
+    # Newer Claude models reject a forced tool_choice, so we ask firmly and let the model pick the tool.
+    system = f"{system}\n\nAlways answer by calling the `{tool['name']}` tool exactly once. Do not reply with plain text."
+    last = ""
+    for _ in range(tries):
+        resp = httpx.post(
+            API,
+            headers={"x-api-key": env("ANTHROPIC_API_KEY"), "anthropic-version": "2023-06-01",
+                     "content-type": "application/json"},
+            json={"model": model, "max_tokens": max_tokens, "system": system,
+                  "tools": [tool], "tool_choice": {"type": "auto"},
+                  "messages": [{"role": "user", "content": user}]},
+            timeout=180,
+        )
+        if resp.status_code in (429, 500, 502, 503, 529):
+            last = f"Anthropic API {resp.status_code}: {resp.text[:300]}"
+            continue
+        if resp.status_code >= 400:
+            raise RuntimeError(f"Anthropic API {resp.status_code}: {resp.text[:500]}")
+        out = _extract(resp.json().get("content", []), tool)
+        if out is not None:
+            return out
+        last = "model replied without using the tool"
+    raise RuntimeError(f"Anthropic call failed after {tries} tries: {last}")
 
 
 def blocklist_hits(recipe: dict) -> list[str]:
