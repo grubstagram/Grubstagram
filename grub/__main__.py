@@ -87,7 +87,8 @@ def cmd_generate(a, cfg) -> None:
     meta = {"kind": kind, "theme": (theme or {}).get("name"), "dry_run": a.dry_run, "format": "carousel"}
     reel_note = ""
     music = reels.music_for(kind, cfg, theme)
-    if music:
+    song = None if music else reels.manual_song(kind, cfg)
+    if music or song:
         try:
             reel_slides = list(paths)
             hero_frame = out / "reel_hero.jpg"
@@ -95,16 +96,30 @@ def cmd_generate(a, cfg) -> None:
             reel_slides[0] = hero_frame
             video, _cover = reels.render(reel_slides, out / "hero.jpg", music, out, cfg, log)
             hero_frame.unlink()
-            meta.update(format="reel", music=music.name)
             caption = (caption.replace("Full recipe in the slides 👉", "Pause to read the full recipe ⏸️")
                        .replace("Swipe for the 'method' 👉", "Pause for the 'method', if you dare ⏸️"))
+            if music:
+                meta.update(format="reel", music=music.name)
+            else:
+                meta.update(format="manual_reel", song=song)
             if env("FAL_KEY", required=False):
                 meta["reel_url"] = upload_media(video)
-                reel_note = f"▶️ **[Watch the Reel with music]({meta['reel_url']})** · this posts as a Reel\n\n"
+                if music:
+                    reel_note = f"▶️ **[Watch the Reel with music]({meta['reel_url']})** · this posts as a Reel\n\n"
+                else:
+                    reel_note = (
+                        f"## 📲 You post this one (it's a \"{song}\" day)\n"
+                        f"1. **[Download the Reel]({meta['reel_url']})** on your phone: open the link, then Share → **Save Video**.\n"
+                        "2. Copy the caption below.\n"
+                        "3. Instagram (as yummers.grubbers) → ➕ → **Reel** → pick the video → **Add audio** → "
+                        f"search **{song}** → choose the catchy part → Next → paste the caption → **Share**.\n"
+                        "4. Close this issue when it's live.\n\n"
+                        "The bot won't post it, and you'll get a reminder at the usual posting time.\n\n")
             else:
                 reel_note = "🎬 Reel rendered locally (no FAL_KEY, so not uploaded).\n\n"
         except Exception as e:  # never lose the day's post over the video: fall back to the carousel
             log(f"  reel failed, falling back to carousel: {e}")
+            meta.pop("song", None)
             meta["format"] = "carousel"
             reel_note = f"⚠️ Reel failed ({str(e)[:120]}), so this will post as a carousel.\n\n"
     (out / "recipe.json").write_text(json.dumps({**meta, **recipe}, indent=2, ensure_ascii=False) + "\n")
@@ -139,6 +154,13 @@ def cmd_publish(a, cfg) -> None:
     recipe = json.loads((out / "recipe.json").read_text())
     if recipe.get("dry_run"):
         log(f"{date} is a dry-run draft (sample recipe, placeholder photo). Not posting it.")
+        return
+    if recipe.get("format") == "manual_reel":
+        log(f"{date} is a post-it-yourself day ({recipe.get('song')}). Not posting; reminding you instead.")
+        gh_out = os.environ.get("GITHUB_OUTPUT")
+        if gh_out:
+            with open(gh_out, "a") as f:
+                f.write("manual=true\n")
         return
     caption = (out / "caption.txt").read_text().strip()
     slides_ = sorted(out.glob("slide_*.jpg"), key=lambda p: int(p.stem.split("_")[1]))

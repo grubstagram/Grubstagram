@@ -70,11 +70,16 @@ not_edible = [
 ]
 
 [reel]
-# A post becomes a Reel (slides as a short video with music) when its type has a track here
-# AND that file exists in the repo. No track = it posts as a swipeable carousel, as before.
+# A post becomes a Reel (slides as a short video) when its type has either:
+#   *_music        a track file in the repo that the bot bakes in and posts automatically, or
+#   *_manual_song  a song you add yourself in the Instagram app: the bot makes a silent Reel and
+#                  hands it to you in the morning issue instead of posting it.
+# Neither = it posts automatically as a swipeable carousel.
 # Instagram's API can't add songs from Instagram's own music library, so the track is baked into the video.
 enabled = true
-edible_music = "brand/music/edible.mp3"
+edible_music = ""                # no baked-in track for edible posts...
+edible_manual_song = "Yummy - Justin Bieber"   # ...you add this in the Instagram app (licensed there), so you post edible Reels yourself
+not_edible_manual_song = ""
 not_edible_music = ""            # undecided: set to "brand/music/not_edible.mp3" once you've picked one
 audio_name = "Yummers Grubbers – Kitchen Theme"
 hero_seconds = 3.5               # slow push-in on the photo

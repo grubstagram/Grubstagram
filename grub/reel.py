@@ -45,7 +45,15 @@ def _probe_seconds(path: Path) -> float:
     return float(out)
 
 
-def render(slides: list[Path], hero: Path, music: Path, out_dir: Path, cfg: dict, log=print) -> tuple[Path, Path]:
+def manual_song(kind: str, cfg: dict) -> str | None:
+    """Song you add yourself in the Instagram app (licensed via Instagram's music library)."""
+    rcfg = cfg.get("reel", {})
+    if not rcfg.get("enabled", False):
+        return None
+    return rcfg.get(f"{kind}_manual_song") or None
+
+
+def render(slides: list[Path], hero: Path, music: Path | None, out_dir: Path, cfg: dict, log=print) -> tuple[Path, Path]:
     if not shutil.which("ffmpeg"):
         raise RuntimeError("ffmpeg is not installed")
     rcfg = cfg.get("reel", {})
@@ -62,7 +70,8 @@ def render(slides: list[Path], hero: Path, music: Path, out_dir: Path, cfg: dict
     cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error"]
     for f, d in zip(frames, durations):
         cmd += ["-loop", "1", "-framerate", str(fps), "-t", f"{d:.3f}", "-i", str(f)]
-    cmd += ["-stream_loop", "-1", "-i", str(music)]
+    if music:
+        cmd += ["-stream_loop", "-1", "-i", str(music)]
 
     parts = []
     # Slow push-in on the hero shot (upscaled first so the zoom doesn't judder).
@@ -78,15 +87,17 @@ def render(slides: list[Path], hero: Path, music: Path, out_dir: Path, cfg: dict
         parts.append(f"[{prev}][v{i}]xfade=transition=fade:duration={fade}:offset={offset:.3f}[{label}]")
         prev = label
     a = len(frames)
-    parts.append(f"[{a}:a]atrim=0:{total:.3f},asetpts=PTS-STARTPTS,afade=t=in:d=0.3,"
-                 f"afade=t=out:st={max(0, total - 1.8):.3f}:d=1.8,aresample=48000[aout]")
+    if music:
+        parts.append(f"[{a}:a]atrim=0:{total:.3f},asetpts=PTS-STARTPTS,afade=t=in:d=0.3,"
+                     f"afade=t=out:st={max(0, total - 1.8):.3f}:d=1.8,aresample=48000[aout]")
 
     video = out_dir / "reel.mp4"
-    cmd += ["-filter_complex", ";".join(parts), "-map", f"[{prev}]", "-map", "[aout]",
+    audio = ["-map", "[aout]", "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2"] if music else ["-an"]
+    cmd += ["-filter_complex", ";".join(parts), "-map", f"[{prev}]",
             "-t", f"{total:.3f}", "-r", str(fps),
             "-c:v", "libx264", "-preset", "medium", "-crf", str(rcfg.get("crf", 24)), "-pix_fmt", "yuv420p",
             "-profile:v", "high", "-level", "4.1", "-g", str(fps * 2), "-bf", "2",
-            "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2",
+            *audio,
             "-movflags", "+faststart", "-use_editlist", "0", str(video)]
     subprocess.run(cmd, check=True)
 
@@ -94,5 +105,6 @@ def render(slides: list[Path], hero: Path, music: Path, out_dir: Path, cfg: dict
     shutil.copy(frames[0], cover)
     for f in frames:
         f.unlink()
-    log(f"  reel: {_probe_seconds(video):.1f}s, {video.stat().st_size / 1e6:.1f} MB, music {music.name}")
+    log(f"  reel: {_probe_seconds(video):.1f}s, {video.stat().st_size / 1e6:.1f} MB, "
+        f"{'music ' + music.name if music else 'silent (music added in the app)'}")
     return video, cover

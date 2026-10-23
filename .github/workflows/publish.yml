@@ -57,8 +57,16 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
         run: python -m grub publish --date "$DATE"
 
+      - name: Remind me to post it myself
+        if: steps.pub.outputs.manual == 'true' && steps.gate.outputs.issue != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE: ${{ steps.gate.outputs.issue }}
+        run: |
+          gh issue comment "$ISSUE" --body "⏰ Posting time! Today's Reel is waiting for you to add the music and share it (steps at the top). Close this issue once it's live."
+
       - name: Record result
-        if: steps.gate.outputs.skip == 'false'
+        if: steps.gate.outputs.skip == 'false' && steps.pub.outputs.permalink != ''
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE: ${{ steps.gate.outputs.issue }}
