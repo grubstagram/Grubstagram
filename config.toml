@@ -314,8 +314,8 @@ not_edible_inspiration = ["an anti-Valentine's 'break-up cake' made of returned 
 [[themes]]
 name = "Eid al-Fitr"
 emoji = "🌙"
-start = "2027-03-06"
-end = "2027-03-07"
+start = "2027-03-09"
+end = "2027-03-10"
 edible_only = true
 hashtags = ["#eid", "#eidalfitr"]
 edible_inspiration = ["Eid al-Fitr: celebratory dishes and sweets (maamoul, sheer khurma, biryani, kahk), made respectfully and authentically"]
