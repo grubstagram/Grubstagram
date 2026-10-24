@@ -114,7 +114,8 @@ def _extract(content: list, tool: dict) -> dict | None:
 
 def _call(model: str, system: str, user: str, tool: dict, max_tokens: int = 4000, tries: int = 3) -> dict:
     # Newer Claude models reject a forced tool_choice, so we ask firmly and let the model pick the tool.
-    system = f"{system}\n\nAlways answer by calling the `{tool['name']}` tool exactly once. Do not reply with plain text."
+    system = (f"{system}\n\nAnswer ONLY by calling the `{tool['name']}` tool, straight away and exactly once. "
+              "Do not write any analysis or plain text before or after it; put your reasons inside the tool call.")
     last = ""
     for _ in range(tries):
         resp = httpx.post(
@@ -131,10 +132,12 @@ def _call(model: str, system: str, user: str, tool: dict, max_tokens: int = 4000
             continue
         if resp.status_code >= 400:
             raise RuntimeError(f"Anthropic API {resp.status_code}: {resp.text[:500]}")
-        out = _extract(resp.json().get("content", []), tool)
+        body = resp.json()
+        out = _extract(body.get("content", []), tool)
         if out is not None:
             return out
-        last = "model replied without using the tool"
+        text = "".join(b.get("text", "") for b in body.get("content", []) if b.get("type") == "text")
+        last = f"model replied without using the tool (stop: {body.get('stop_reason')}; said: {text[:160]!r})"
     raise RuntimeError(f"Anthropic call failed after {tries} tries: {last}")
 
 
@@ -184,9 +187,12 @@ def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print, theme:
         if hits:
             issues = [f"Blocked words used: {', '.join(hits)}"]
         else:
-            review = _call(llm["checker_model"], checker,
-                           "Review this post:\n" + json.dumps(recipe, indent=2, ensure_ascii=False),
-                           CHECK_TOOL, max_tokens=800)
+            post = "Review this post:\n" + json.dumps(recipe, indent=2, ensure_ascii=False)
+            try:
+                review = _call(llm["checker_model"], checker, post, CHECK_TOOL, max_tokens=2000)
+            except RuntimeError as e:   # the small model misbehaved: let the writer model do the check
+                log(f"  checker fell back to {llm['writer_model']}: {e}")
+                review = _call(llm["writer_model"], checker, post, CHECK_TOOL, max_tokens=2000)
             if review["pass"]:
                 log(f"  recipe ok on attempt {attempt}: {recipe['title']}")
                 return recipe
