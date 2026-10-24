@@ -1,0 +1,770 @@
+{
+  "as_of": "2026-10-24",
+  "sources": {
+    "ipsos": {
+      "title": "Ipsos AI Monitor 2026 (32 countries)",
+      "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2026-06/Ipsos-AI-Monitor-2026.pdf"
+    },
+    "ig_countries": {
+      "title": "Technology Checker: Instagram users by country (Oct 2025 data)",
+      "url": "https://technologychecker.io/blog/instagram-user-statistics"
+    },
+    "dr_es": {
+      "title": "DataReportal: Digital 2026 Spain",
+      "url": "https://datareportal.com/reports/digital-2026-spain"
+    },
+    "dr_pt": {
+      "title": "DataReportal: Digital 2026 Portugal",
+      "url": "https://datareportal.com/reports/digital-2026-portugal"
+    },
+    "forbes_br": {
+      "title": "Forbes Brasil: TikTok and food trends (TikTok users by country)",
+      "url": "https://forbes.com.br/forbesagro/2025/01/por-que-o-tik-tok-tem-um-poder-colossal-de-ditar-tendencias-alimentares/"
+    },
+    "remitly": {
+      "title": "Remitly: The World's Funniest Nations (Humour Styles Questionnaire, 30 countries, 2025)",
+      "url": "https://remitly.com/gb/en/landing/worlds-funniest-nations"
+    },
+    "ambitos": {
+      "title": "Ámbitos (2024): humour on TikTok, five Spanish creators",
+      "url": "https://revistascientificas.us.es/index.php/Ambitos/article/view/24546"
+    },
+    "plma_es": {
+      "title": "PLMA: Spanish food retail social media engagement (2025)",
+      "url": "https://plmainternational.com/article/spanish-food-retail-hit-record-social-media-engagement-last-year"
+    },
+    "paella": {
+      "title": "CBC: Jamie Oliver's chorizo paella backlash (2016)",
+      "url": "https://amp.cbc.ca/news/entertainment/jamie-oliver-social-media-1.3792196"
+    },
+    "preply_pt": {
+      "title": "Líder Magazine / Preply: how the Portuguese laugh (survey of 500, 2024)",
+      "url": "https://lidermagazine.sapo.pt/anatomia-do-riso-conheca-o-perfil-dos-portugueses-no-humor/"
+    },
+    "gv_br": {
+      "title": "Global Voices: to understand Brazil, check out its memes",
+      "url": "https://globalvoices.org/2017/09/29/if-you-want-to-understand-brazil-you-should-check-out-its-memes/"
+    },
+    "tiktok_br": {
+      "title": "Jornal Grande Bahia: what works on Brazilian TikTok (opinion, 2025)",
+      "url": "https://jornalgrandebahia.com.br/2025/08/tendencias-virais-brasileiras-o-que-funciona-no-tiktok-nacional/"
+    },
+    "katadata_id": {
+      "title": "Katadata: culinary content on TikTok Indonesia (Jul 2026)",
+      "url": "https://katadata.co.id/amp/digital/teknologi/6a4f496dcfac0/konten-kuliner-ramai-di-tiktok-foodbank-indonesia-dorong-promosi-pangan-lokal"
+    },
+    "comedy_id": {
+      "title": "Asia News Network: Indonesian comedians and the Netflix police report (Jan 2026)",
+      "url": "https://asianews.network/?p=251904"
+    },
+    "receh_id": {
+      "title": "IDN Times: 'humor receh' dad jokes",
+      "url": "https://www.idntimes.com/hype/humor/12-humor-receh-bapak-bapak-netizen-bikin-selera-humormu-anjlok-01-s9vzz-zrmsr8"
+    },
+    "ramadan": {
+      "title": "Wego: Ramadan 2027 expected dates",
+      "url": "https://blog.wego.com/ramadan-2027/"
+    },
+    "rpm": {
+      "title": "TT Calculator: TikTok RPM by country (estimates, 2026)",
+      "url": "https://ttcalculator.net/learn/tiktok-rpm-by-country/"
+    }
+  },
+  "markets": [
+    {
+      "id": "BR",
+      "name": "Brazil",
+      "language": "Portuguese (Brazil)",
+      "priority": 1,
+      "instagram": "147M",
+      "tiktok": "98.6M monthly users",
+      "ai_nervous": 41,
+      "pay": "Mid",
+      "humour": [
+        "Zoeira: playful self-irony, 'we laugh so we don't cry'",
+        "Memes built on soap operas, catchphrases and nursery rhymes",
+        "Self-deprecating jokes about everyday frustrations, with resilient optimism"
+      ],
+      "food": [
+        "feijoada",
+        "pão de queijo",
+        "coxinha",
+        "brigadeiro",
+        "moqueca",
+        "açaí",
+        "Nordeste street food"
+      ],
+      "dates": [
+        "Carnaval 6-10 Feb 2027",
+        "Festa Junina, June",
+        "Christmas in summer, Dec"
+      ],
+      "watch": [
+        "Polarised politics: stay out",
+        "Football rivalries: light touch only"
+      ],
+      "verdict": "Biggest opportunity: a huge audience, among the least nervous about AI, and meme-mad.",
+      "sources": [
+        "ig_countries",
+        "forbes_br",
+        "ipsos",
+        "gv_br",
+        "tiktok_br",
+        "rpm"
+      ],
+      "ai_view": "Among the least nervous of the 32 countries surveyed; Latin America leans positive on AI."
+    },
+    {
+      "id": "ES",
+      "name": "Spain",
+      "language": "Spanish (Spain)",
+      "priority": 2,
+      "instagram": "26.4M",
+      "tiktok": "20.9M adults",
+      "ai_nervous": 52,
+      "pay": "Mid",
+      "humour": [
+        "Affiliative humour about everyday situations wins on TikTok",
+        "Fast-paced, dynamic edits",
+        "Absurd and surreal humour travels well"
+      ],
+      "food": [
+        "tortilla de patatas",
+        "paella",
+        "croquetas",
+        "gazpacho and salmorejo",
+        "churros",
+        "turrón"
+      ],
+      "dates": [
+        "Reyes 6 Jan (roscón)",
+        "Semana Santa 21-28 Mar 2027 (torrijas)",
+        "San Juan 23 Jun",
+        "Nochevieja 12 grapes"
+      ],
+      "watch": [
+        "Food purists: the 2016 chorizo-paella backlash",
+        "Regional politics and bullfighting: avoid"
+      ],
+      "verdict": "Strong second language: a big TikTok audience and mid-range pay. Respect the classics.",
+      "sources": [
+        "dr_es",
+        "ipsos",
+        "ambitos",
+        "plma_es",
+        "paella",
+        "remitly"
+      ],
+      "ai_view": "Slightly more nervous than the 50% average; Europe leans cautious."
+    },
+    {
+      "id": "ID",
+      "name": "Indonesia",
+      "language": "Indonesian",
+      "priority": 3,
+      "instagram": "107.6M",
+      "tiktok": "123.8M monthly users",
+      "ai_nervous": 44,
+      "pay": "Low",
+      "humour": [
+        "'Receh' humour: silly, cheap-and-cheerful puns",
+        "Dad jokes (jokes bapak-bapak) shared everywhere",
+        "Satire set in fictional worlds rather than real ones"
+      ],
+      "food": [
+        "nasi goreng",
+        "rendang",
+        "sate",
+        "bakso",
+        "martabak",
+        "Indomie hacks",
+        "sambal"
+      ],
+      "dates": [
+        "Imlek 6 Feb 2027",
+        "Ramadan ~8 Feb to 8 Mar 2027",
+        "Lebaran ~9 Mar 2027",
+        "Independence Day 17 Aug"
+      ],
+      "watch": [
+        "Halal always: no pork or alcohol, not even in jokes",
+        "Religion, ethnicity and race (SARA) are off-limits",
+        "91% want AI use disclosed"
+      ],
+      "verdict": "Most AI-positive region and a huge audience, but pays little. Keep humour wholesome-silly, not gross.",
+      "sources": [
+        "ig_countries",
+        "forbes_br",
+        "ipsos",
+        "receh_id",
+        "comedy_id",
+        "katadata_id",
+        "ramadan",
+        "rpm"
+      ],
+      "ai_view": "Asia leads the world in AI optimism; 91% want AI use disclosed, the highest surveyed."
+    },
+    {
+      "id": "PT",
+      "name": "Portugal",
+      "language": "Portuguese (Portugal)",
+      "priority": 4,
+      "instagram": "6.35M",
+      "tiktok": "4.11M adults",
+      "ai_nervous": null,
+      "pay": "Mid",
+      "humour": [
+        "2nd most humour-oriented of 30 nations",
+        "Memes: everyday life (70%), fails and mistakes (56%), absurd (50%)",
+        "Brazilian humour is the favourite foreign humour"
+      ],
+      "food": [
+        "bacalhau",
+        "pastel de nata",
+        "francesinha",
+        "caldo verde",
+        "sardinhas",
+        "bolo-rei"
+      ],
+      "dates": [
+        "Santos Populares 13 and 24 Jun (sardines)",
+        "São Martinho 11 Nov (chestnuts)",
+        "Consoada 24 Dec (bacalhau)"
+      ],
+      "watch": [
+        "42% have been offended by a tasteless joke: keep it warm, not nasty",
+        "Small market: 10.4M people"
+      ],
+      "verdict": "Small but loves humour. Reach it through the Brazilian account first, then test its own.",
+      "sources": [
+        "dr_pt",
+        "remitly",
+        "preply_pt",
+        "gv_br"
+      ],
+      "ai_view": "Not in the Ipsos survey."
+    }
+  ],
+  "ideas": [
+    {
+      "market": "BR",
+      "type": "Edible",
+      "title": "Receita da vó",
+      "idea": "Comfort classics done properly (feijoada, pão de queijo, coxinha), framed as grandma's recipe.",
+      "why": "Nostalgia and family classics are safe, shareable and evergreen.",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": []
+    },
+    {
+      "market": "BR",
+      "type": "Edible",
+      "title": "Nordeste week",
+      "idea": "A week of Northeastern dishes: acarajé, tapioca, baião de dois, cuscuz.",
+      "why": "Northeastern street food and regional pride are trending themes on Brazilian TikTok.",
+      "risk": "Low",
+      "timing": "Country-week slot",
+      "sources": [
+        "tiktok_br"
+      ]
+    },
+    {
+      "market": "BR",
+      "type": "Edible",
+      "title": "Brigadeiro lab",
+      "idea": "Dessert-slot series of brigadeiro twists: pistachio, churros, ninho, bicho de pé.",
+      "why": "A national favourite that fits the two-desserts-a-week rhythm.",
+      "risk": "Low",
+      "timing": "Dessert slots",
+      "sources": []
+    },
+    {
+      "market": "BR",
+      "type": "Edible",
+      "title": "Festa Junina table",
+      "idea": "Pamonha, canjica, paçoca, pé de moleque and corn cake for the June festivals.",
+      "why": "The biggest food festival of the year outside Christmas.",
+      "risk": "Low",
+      "timing": "June",
+      "sources": []
+    },
+    {
+      "market": "BR",
+      "type": "Edible",
+      "title": "Christmas in summer",
+      "idea": "Rabanada, salpicão, chocotone desserts and cold dishes for a 35°C Christmas.",
+      "why": "A twist Northern-hemisphere content never covers.",
+      "risk": "Low",
+      "timing": "December",
+      "sources": []
+    },
+    {
+      "market": "BR",
+      "type": "Edible",
+      "title": "Geladeira vazia",
+      "idea": "'Empty fridge' budget dinners from whatever is left.",
+      "why": "Everyday frustrations like food prices are a top meme theme; cheap recipes meet them with optimism.",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": [
+        "tiktok_br"
+      ]
+    },
+    {
+      "market": "BR",
+      "type": "Humour",
+      "title": "Dishes named after everyday pains",
+      "idea": "Fake dishes like 'Torta do boleto atrasado' (overdue-bill pie) or 'Pudim de segunda-feira' (Monday pudding).",
+      "why": "Zoeira is self-irony about shared hardships, with resilient optimism.",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": [
+        "gv_br",
+        "tiktok_br"
+      ]
+    },
+    {
+      "market": "BR",
+      "type": "Humour",
+      "title": "Novela-drama recipe",
+      "idea": "A cursed dish told like a soap-opera cliffhanger, with dramatic captions or voiceover.",
+      "why": "Brazilian memes lean heavily on soap operas and catchphrases.",
+      "risk": "Medium",
+      "timing": "Evergreen",
+      "sources": [
+        "gv_br"
+      ],
+      "note": "Needs native-level writing to land."
+    },
+    {
+      "market": "BR",
+      "type": "Humour",
+      "title": "Cursed national icons",
+      "idea": "Affectionate NOT FOOD versions of coxinha, feijoada or açaí bowls.",
+      "why": "Brazilians mock what they love; pride and embarrassment mix in their humour.",
+      "risk": "Medium",
+      "timing": "Evergreen",
+      "sources": [
+        "gv_br"
+      ]
+    },
+    {
+      "market": "BR",
+      "type": "Insight",
+      "title": "Sound-led Reels, evening posting",
+      "idea": "Add trending Brazilian sounds in the app (funk, forró, sertanejo) and post 19:00-22:00 on weekdays.",
+      "why": "Music drives Brazilian TikTok trends; activity peaks in the evening.",
+      "risk": "Low",
+      "timing": "Always",
+      "sources": [
+        "tiktok_br"
+      ]
+    },
+    {
+      "market": "BR",
+      "type": "Rule",
+      "title": "Stay out of politics",
+      "idea": "No politicians, parties or election jokes; football banter only lightly.",
+      "why": "Political memes are huge in Brazil but deeply polarised.",
+      "risk": "High",
+      "timing": "Always",
+      "sources": [
+        "gv_br"
+      ]
+    },
+    {
+      "market": "ES",
+      "type": "Edible",
+      "title": "Con o sin cebolla",
+      "idea": "Perfect tortilla de patatas, with the caption asking: team onion or no onion?",
+      "why": "Everyday-situation humour and friendly debates drive comments on Spanish TikTok.",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": [
+        "ambitos"
+      ]
+    },
+    {
+      "market": "ES",
+      "type": "Edible",
+      "title": "Supermarket-shelf recipes",
+      "idea": "Recipes built around viral, seasonal and limited-edition supermarket products, plus high-protein and ready-meal upgrades.",
+      "why": "Seasonal, limited-edition and viral products drove 2025's record food engagement; TikTok alone had 160M+ interactions.",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": [
+        "plma_es"
+      ]
+    },
+    {
+      "market": "ES",
+      "type": "Edible",
+      "title": "Classics by the rules",
+      "idea": "Paella valenciana, fabada, salmorejo made strictly traditionally, with the rules on the slides.",
+      "why": "Spanish food purists punish shortcuts: the 2016 chorizo-paella backlash.",
+      "risk": "Medium",
+      "timing": "Evergreen",
+      "sources": [
+        "paella"
+      ],
+      "note": "Get a classic wrong and it gets roasted; have it checked."
+    },
+    {
+      "market": "ES",
+      "type": "Edible",
+      "title": "Roscón de Reyes",
+      "idea": "Three Kings ring cake, with the hidden figurine and bean.",
+      "why": "The big sweet of the Christmas season in Spain.",
+      "risk": "Low",
+      "timing": "6 Jan",
+      "sources": []
+    },
+    {
+      "market": "ES",
+      "type": "Edible",
+      "title": "Torrijas for Semana Santa",
+      "idea": "Spain's Holy Week French toast, plus variations.",
+      "why": "The signature Easter sweet.",
+      "risk": "Low",
+      "timing": "21-28 Mar 2027",
+      "sources": []
+    },
+    {
+      "market": "ES",
+      "type": "Edible",
+      "title": "Cold soups season",
+      "idea": "Gazpacho, salmorejo and ajoblanco through the heat.",
+      "why": "Seasonal staples from June to August.",
+      "risk": "Low",
+      "timing": "Jun-Aug",
+      "sources": []
+    },
+    {
+      "market": "ES",
+      "type": "Humour",
+      "title": "Family-dinner chaos",
+      "idea": "'La tortilla de la suegra', the mother-in-law's tortilla made of kitchen sponges, and other family-meal disasters.",
+      "why": "Affiliative humour about shared everyday situations performs best.",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": [
+        "ambitos"
+      ]
+    },
+    {
+      "market": "ES",
+      "type": "Humour",
+      "title": "Cursed paella (NOT FOOD)",
+      "idea": "A deliberately everything-in 'paella' labelled NOT FOOD, asking people to rate the crime.",
+      "why": "Turns purist outrage into the joke, on purpose.",
+      "risk": "Medium",
+      "timing": "Evergreen",
+      "sources": [
+        "paella"
+      ]
+    },
+    {
+      "market": "ES",
+      "type": "Humour",
+      "title": "Menú del día from another dimension",
+      "idea": "A chalkboard set menu of surreal dishes, revealed course by course.",
+      "why": "Absurd humour plus a format every Spaniard knows.",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": []
+    },
+    {
+      "market": "ES",
+      "type": "Humour",
+      "title": "Twelve grapes, but wrong",
+      "idea": "The New Year's Eve twelve grapes replaced with absurd props.",
+      "why": "A ritual everyone does at midnight on 31 December.",
+      "risk": "Low",
+      "timing": "31 Dec",
+      "sources": []
+    },
+    {
+      "market": "ES",
+      "type": "Rule",
+      "title": "No regional politics or bullfighting",
+      "idea": "Keep Catalan, Basque and independence topics, and bullfighting, out entirely.",
+      "why": "Divisive topics that split audiences.",
+      "risk": "High",
+      "timing": "Always",
+      "sources": []
+    },
+    {
+      "market": "ID",
+      "type": "Edible",
+      "title": "Takjil for buka puasa",
+      "idea": "Sweet snacks for breaking the fast: kolak, es buah, gorengan, bubur sumsum.",
+      "why": "Ramadan is the biggest food-content season of the year.",
+      "risk": "Low",
+      "timing": "~8 Feb to 8 Mar 2027",
+      "sources": [
+        "ramadan"
+      ]
+    },
+    {
+      "market": "ID",
+      "type": "Edible",
+      "title": "Kue Lebaran",
+      "idea": "Eid cookies: nastar, kastengel, putri salju.",
+      "why": "Every family bakes or buys them for Lebaran.",
+      "risk": "Low",
+      "timing": "Before ~9 Mar 2027",
+      "sources": [
+        "ramadan"
+      ]
+    },
+    {
+      "market": "ID",
+      "type": "Edible",
+      "title": "Nusantara week",
+      "idea": "Regional dishes from across the archipelago, with local ingredients.",
+      "why": "Indonesia has about 27,000 local foods; TikTok and the Ministry of Health are pushing local-food content (2026).",
+      "risk": "Low",
+      "timing": "Country-week slot",
+      "sources": [
+        "katadata_id"
+      ]
+    },
+    {
+      "market": "ID",
+      "type": "Edible",
+      "title": "Indomie upgrades",
+      "idea": "Instant-noodle hacks for students and boarding-house cooks (anak kos).",
+      "why": "Cheap, fast and universal.",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": [],
+      "note": "Editorial judgement; not from a cited study."
+    },
+    {
+      "market": "ID",
+      "type": "Edible",
+      "title": "Sambal levels",
+      "idea": "One base sambal, five heat levels, from mild to 'call the fire brigade'.",
+      "why": "Spice tolerance is a natural challenge format.",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": [],
+      "note": "Editorial judgement."
+    },
+    {
+      "market": "ID",
+      "type": "Humour",
+      "title": "Receh pun captions",
+      "idea": "Dad-joke puns about each dish in the caption and on the last slide.",
+      "why": "'Humor receh' and jokes bapak-bapak are among the most shared formats.",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": [
+        "receh_id"
+      ]
+    },
+    {
+      "market": "ID",
+      "type": "Humour",
+      "title": "Cute-weird, not gross",
+      "idea": "Absurd but wholesome fake dishes (a cloud-stuffed martabak, a karaoke bakso) instead of bodily gross-out.",
+      "why": "Silly, gentle humour fits better than shock.",
+      "risk": "Medium",
+      "timing": "Evergreen",
+      "sources": [
+        "receh_id"
+      ],
+      "note": "Test before committing to gross content here."
+    },
+    {
+      "market": "ID",
+      "type": "Humour",
+      "title": "17 Agustus lomba dishes",
+      "idea": "Silly dishes inspired by Independence Day village games, like the cracker-eating race.",
+      "why": "Everyone knows the games; they are playful by nature.",
+      "risk": "Low",
+      "timing": "17 Aug",
+      "sources": []
+    },
+    {
+      "market": "ID",
+      "type": "Rule",
+      "title": "Halal, always",
+      "idea": "No pork, lard or alcohol (including mirin, wine, rum), even in NOT FOOD jokes.",
+      "why": "A Muslim-majority audience; getting this wrong is not a joke.",
+      "risk": "High",
+      "timing": "Always",
+      "sources": []
+    },
+    {
+      "market": "ID",
+      "type": "Rule",
+      "title": "No religion or SARA",
+      "idea": "Keep religion, ethnicity, race and inter-group topics out entirely.",
+      "why": "A comedian was reported to police over religious jokes in January 2026; TV comics are advised to avoid SARA.",
+      "risk": "High",
+      "timing": "Always",
+      "sources": [
+        "comedy_id"
+      ]
+    },
+    {
+      "market": "ID",
+      "type": "Rule",
+      "title": "Label AI clearly",
+      "idea": "Say the recipes and photos are AI-made in the bio and every caption.",
+      "why": "91% of Indonesians want AI use disclosed, the highest of 32 countries.",
+      "risk": "High",
+      "timing": "Always",
+      "sources": [
+        "ipsos"
+      ]
+    },
+    {
+      "market": "PT",
+      "type": "Edible",
+      "title": "Bacalhau, one of 365 ways",
+      "idea": "A running series of salt-cod dishes: à Brás, com natas, à Gomes de Sá.",
+      "why": "The saying goes there's a bacalhau recipe for every day of the year.",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": []
+    },
+    {
+      "market": "PT",
+      "type": "Edible",
+      "title": "Pastel de nata at home",
+      "idea": "Custard tarts and variations for the dessert slots.",
+      "why": "The national sweet, loved worldwide too.",
+      "risk": "Low",
+      "timing": "Dessert slots",
+      "sources": []
+    },
+    {
+      "market": "PT",
+      "type": "Edible",
+      "title": "Santos Populares sardines",
+      "idea": "Grilled sardines on bread, caldo verde and festival food.",
+      "why": "Lisbon and Porto's June street festivals.",
+      "risk": "Low",
+      "timing": "13 and 24 Jun",
+      "sources": []
+    },
+    {
+      "market": "PT",
+      "type": "Edible",
+      "title": "São Martinho chestnuts",
+      "idea": "Roast chestnuts and autumn dishes.",
+      "why": "The St Martin's Day tradition.",
+      "risk": "Low",
+      "timing": "11 Nov",
+      "sources": []
+    },
+    {
+      "market": "PT",
+      "type": "Edible",
+      "title": "Consoada",
+      "idea": "Christmas Eve bacalhau with greens, then rabanadas and bolo-rei.",
+      "why": "The main Christmas meal is on the 24th.",
+      "risk": "Low",
+      "timing": "24 Dec",
+      "sources": []
+    },
+    {
+      "market": "PT",
+      "type": "Humour",
+      "title": "Receita que correu mal",
+      "idea": "Kitchen-fail stories: the recipe that went wrong, as a NOT FOOD post.",
+      "why": "Mistakes and failures are the second most popular meme type (56%).",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": [
+        "preply_pt"
+      ]
+    },
+    {
+      "market": "PT",
+      "type": "Humour",
+      "title": "Sunday lunch at avó's",
+      "idea": "Everyday family-meal situations: the overfeeding grandmother, the leftovers that never end.",
+      "why": "Everyday-life memes are the most popular (70%); family is where 78% laugh most.",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": [
+        "preply_pt"
+      ]
+    },
+    {
+      "market": "PT",
+      "type": "Humour",
+      "title": "Absurd pastelaria",
+      "idea": "Surreal fake pastries in a bakery window.",
+      "why": "Half of meme fans (50%) pick absurd humour.",
+      "risk": "Low",
+      "timing": "Evergreen",
+      "sources": [
+        "preply_pt"
+      ]
+    },
+    {
+      "market": "PT",
+      "type": "Humour",
+      "title": "Portugal vs Brazil banter",
+      "idea": "Friendly food rivalry: whose pastel, whose bacalhau.",
+      "why": "A long-running playful rivalry, including the 2016 'meme war'.",
+      "risk": "Medium",
+      "timing": "Evergreen",
+      "sources": [
+        "gv_br"
+      ]
+    },
+    {
+      "market": "PT",
+      "type": "Insight",
+      "title": "Reach Portugal via Brazil first",
+      "idea": "Run Brazilian Portuguese first; launch a European Portuguese account only if Portuguese followers show up.",
+      "why": "Brazilian humour is Portugal's favourite foreign humour; Porto prefers Brazilian content.",
+      "risk": "Medium",
+      "timing": "Launch plan",
+      "sources": [
+        "preply_pt"
+      ]
+    },
+    {
+      "market": "PT",
+      "type": "Rule",
+      "title": "Warm, not nasty",
+      "idea": "Avoid aggressive or tasteless jokes; laugh with people, not at them.",
+      "why": "42% have been offended by a tasteless joke.",
+      "risk": "High",
+      "timing": "Always",
+      "sources": [
+        "preply_pt"
+      ]
+    },
+    {
+      "market": "ALL",
+      "type": "Rule",
+      "title": "Write natively, never translate",
+      "idea": "Claude writes each market's recipes and jokes in the language, with local ingredients, units and references.",
+      "why": "Many memes only make sense locally and don't translate.",
+      "risk": "High",
+      "timing": "Always",
+      "sources": [
+        "gv_br"
+      ]
+    },
+    {
+      "market": "ALL",
+      "type": "Rule",
+      "title": "Disclose AI everywhere",
+      "idea": "Keep the AI note in bios and captions in every language.",
+      "why": "80% across 32 countries want AI use disclosed.",
+      "risk": "High",
+      "timing": "Always",
+      "sources": [
+        "ipsos"
+      ]
+    }
+  ]
+}
