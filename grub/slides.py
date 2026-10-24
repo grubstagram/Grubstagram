@@ -158,8 +158,11 @@ def _header(d, t, kicker: str, recipe: dict, kind: str, meta: bool = True) -> in
         y += line_h(tf, 1.08)
     if meta:
         y += 10
-        d.text((M, y), f"{recipe['servings']}  ·  {recipe['time']}", font=font("regular", 30), fill=t["muted"])
-        y += 50
+        mf = font("regular", 30)
+        for ln in wrap(f"{recipe['servings']}  ·  {recipe['time']}", mf, W - 2 * M)[:2]:
+            d.text((M, y), ln, font=mf, fill=t["muted"])
+            y += line_h(mf, 1.1)
+        y += 8
     y += 18
     d.line((M, y, W - M, y), fill=t["rule"], width=3)
     return y + 40
