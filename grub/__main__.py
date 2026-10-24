@@ -94,16 +94,13 @@ def cmd_generate(a, cfg) -> None:
             log(f"  redo, owner note: {owner_note.strip()[:120] or '(none)'}")
         recipe = rec.write_recipe(kind, [h["title"] for h in history], cfg, log, theme, inspiration, owner_note)
         labels = cfg["image"].get("hidden_labels", []) if kind == "not_edible" else []
-        hidden = random.Random(date.toordinal() * 31).choice(labels) if labels else None
+        rng = random.Random(date.toordinal() * 31)
+        hidden = rng.choice(labels) if labels and rng.random() < cfg["image"].get("hidden_label_chance", 0.25) else None
         if hidden:
             log(f"  hidden label: {hidden}")
         img.generate(recipe["image_prompt"], kind, cfg, out / "hero.jpg", log, theme, hidden)
-        if hidden and cfg["image"].get("spot_line"):
-            recipe["_spot_line"] = cfg["image"]["spot_line"]
 
     caption = rec.build_caption(recipe, kind, cfg, theme)
-    if recipe.pop("_spot_line", None):
-        caption = caption.replace("Swipe for the 'method' 👉", "Swipe for the 'method' 👉\n" + cfg["image"]["spot_line"], 1)
     paths = slides.render_all(out / "hero.jpg", recipe, kind, cfg["brand"]["handle"], out)
     for stale in ("reel.mp4", "cover.jpg"):
         (out / stale).unlink(missing_ok=True)
