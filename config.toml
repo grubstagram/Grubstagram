@@ -24,7 +24,8 @@ history_window = 90   # how many past titles to show the writer so it avoids rep
 #   "fal-ai/nano-banana-2"  (~$0.08)   "fal-ai/nano-banana-pro" (~$0.15)
 model = "fal-ai/nano-banana-2"
 # Extra JSON fields sent to the model. Unknown fields: remove if fal returns 422.
-params = { aspect_ratio = "4:5", num_images = 1 }
+params = { aspect_ratio = "1:1", num_images = 1 }
+size = [1080, 1080]   # saved photo size; the cover slide shows it untouched above the title band
 
 [image.style]
 edible = "Editorial food photograph, 45-degree angle, soft natural window light from the left, shallow depth of field, rustic ceramic plate on a linen-covered wooden table, a few raw ingredients scattered nearby, appetising, true-to-life colours, magazine quality. No people, no hands, no text, no logos."

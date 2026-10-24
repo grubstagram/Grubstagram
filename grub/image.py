@@ -11,23 +11,25 @@ from . import env
 W, H = 1080, 1350
 
 
-def fit_4x5(img: Image.Image) -> Image.Image:
+def fit(img: Image.Image, w: int = W, h: int = H) -> Image.Image:
+    """Centre-crop to w:h and resize."""
     img = img.convert("RGB")
-    target = W / H
-    w, h = img.size
-    if w / h > target:            # too wide: trim the sides
-        nw = int(h * target)
-        img = img.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
+    target = w / h
+    iw, ih = img.size
+    if iw / ih > target:            # too wide: trim the sides
+        nw = int(ih * target)
+        img = img.crop(((iw - nw) // 2, 0, (iw - nw) // 2 + nw, ih))
     else:                         # too tall: trim top and bottom
-        nh = int(w / target)
-        img = img.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
-    return img.resize((W, H), Image.LANCZOS)
+        nh = int(iw / target)
+        img = img.crop((0, (ih - nh) // 2, iw, (ih - nh) // 2 + nh))
+    return img.resize((w, h), Image.LANCZOS)
 
 
 def generate(prompt: str, kind: str, cfg: dict, out: Path, log=print, theme: dict | None = None) -> Path:
     icfg = cfg["image"]
     style = (theme or {}).get(f"{kind}_style") or icfg["style"][kind]
-    full_prompt = f"{prompt.strip()}\n\nStyle: {style}"
+    full_prompt = (f"{prompt.strip()}\n\nStyle: {style}\n\nComposition: the whole dish fully in frame and centred, "
+                   "with a little breathing room around it; nothing important touching the edges.")
     body = {"prompt": full_prompt, **icfg.get("params", {})}
     log(f"  image: calling {icfg['model']}")
     resp = httpx.post(f"https://fal.run/{icfg['model']}",
@@ -39,7 +41,8 @@ def generate(prompt: str, kind: str, cfg: dict, out: Path, log=print, theme: dic
     if not url:
         raise RuntimeError(f"fal.ai returned no image: {str(data)[:300]}")
     raw = httpx.get(url, timeout=120, follow_redirects=True).content
-    fit_4x5(Image.open(io.BytesIO(raw))).save(out, "JPEG", quality=92)
+    size = icfg.get("size", [1080, 1080])
+    fit(Image.open(io.BytesIO(raw)), size[0], size[1]).save(out, "JPEG", quality=94)
     return out
 
 

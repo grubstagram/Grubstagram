@@ -113,37 +113,47 @@ def badge(d, t, xy):
 
 # ---------------------------------------------------------------- slides
 
+PHOTO_H = 1020   # the photo gets the top 1080 x 1020; nothing is ever drawn over it
+
+
+def _cover(img: Image.Image, w: int, h: int) -> Image.Image:
+    iw, ih = img.size
+    scale = max(w / iw, h / ih)
+    img = img.resize((round(iw * scale), round(ih * scale)), Image.LANCZOS)
+    left, top = (img.width - w) // 2, (img.height - h) // 2
+    return img.crop((left, top, left + w, top + h))
+
+
 def slide_hero(hero: Path, recipe: dict, kind: str, handle: str, swipe: bool = True) -> Image.Image:
     t = THEMES[kind]
-    img = Image.open(hero).convert("RGB").resize((W, H))
-    shade = Image.new("L", (1, H))
-    for y in range(H):
-        p = max(0.0, (y - H * 0.42) / (H * 0.58))
-        shade.putpixel((0, y), int(235 * min(1.0, p ** 1.25)))
-    dark = Image.new("RGB", (W, H), (12, 10, 8))
-    img = Image.composite(dark, img, shade.resize((W, H)))
+    img = Image.new("RGB", (W, H), t["bg"])
+    img.paste(_cover(Image.open(hero).convert("RGB"), W, PHOTO_H), (0, 0))
     d = ImageDraw.Draw(img)
+    band_top = PHOTO_H
     if kind == "not_edible":
-        hazard(d, (0, 0, W, 26))
-    badge(d, t, (M - 20, 64))
+        hazard(d, (0, H - 22, W, H))
 
-    style = "serif" if t["title"] == "serif" else "bold"
-    tf, tlines = fit_title(title_text(recipe, kind), style, W - 2 * M, 104, 64, 3)
-    sf = font("serif-italic" if kind == "edible" else "regular", 38)
-    slines = wrap(recipe["tagline"], sf, W - 2 * M)[:2]
-    y = H - 120 - len(slines) * line_h(sf) - 26 - len(tlines) * line_h(tf, 1.05)
-    for ln in tlines:
-        d.text((M, y), ln, font=tf, fill=(255, 255, 255) if kind == "edible" else t["accent"])
-        y += line_h(tf, 1.05)
-    y += 26
-    for ln in slines:
-        d.text((M, y), ln, font=sf, fill=(232, 226, 216))
-        y += line_h(sf)
+    # Row 1: badge left, handle (and swipe hint) right
+    y = band_top + 28
+    badge(d, t, (M - 20, y))
     f = font("medium", 24)
-    d.text((M, H - 70), handle, font=f, fill=(200, 194, 184))
-    if swipe:
-        hint = "SWIPE  >"
-        tracked(d, (W - M - sum(f.getlength(c) + 3 for c in hint), H - 70), hint, f, (200, 194, 184), 3)
+    right = handle + ("   SWIPE >" if swipe else "")
+    d.text((W - M - f.getlength(right), y + 18), right, font=f, fill=t["muted"])
+
+    # Title: up to 2 lines, then the tagline on one line
+    style = "serif" if t["title"] == "serif" else "bold"
+    tf, tlines = fit_title(title_text(recipe, kind), style, W - 2 * M, 64, 40, 2)
+    y = band_top + 104
+    colour = t["ink"] if kind == "edible" else t["accent"]
+    for ln in tlines[:2]:
+        d.text((M, y), ln, font=tf, fill=colour)
+        y += line_h(tf, 1.02)
+    sf = font("serif-italic" if kind == "edible" else "regular", 28)
+    tag = recipe["tagline"]
+    while sf.getlength(tag) > W - 2 * M and " " in tag:
+        tag = tag.rsplit(" ", 1)[0].rstrip(",;:") + "…"
+    if y + line_h(sf) <= H - 30:
+        d.text((M, y + 6), tag, font=sf, fill=t["muted"])
     return img
 
 
