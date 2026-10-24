@@ -5,5 +5,15 @@
     "title": "Marmite-Glazed Chicken with Crispy Chickpeas",
     "status": "published",
     "permalink": "https://www.instagram.com/p/De19DtWlZSW/"
+  },
+  {
+    "date": "2026-10-24",
+    "kind": "not_edible",
+    "title": "Haunted Gloop Trifle",
+    "status": "drafted",
+    "inspiration": "make it a revolting fake DESSERT (a custard, pie, trifle, jelly or cake that is obviously not food), inspired by 1980s kids' film ghost slime and ectoplasm",
+    "course": "dessert",
+    "forced": false,
+    "dry_run": false
   }
 ]

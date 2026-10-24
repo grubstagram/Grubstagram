@@ -1,0 +1,69 @@
+{
+  "kind": "not_edible",
+  "theme": "Halloween",
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Haunted Gloop Trifle",
+  "tagline": "A ghost's leftovers, layered in a bowl. Absolutely not food.",
+  "servings": "Serves 0 (display on a windowsill, ideally one with a draught)",
+  "time": "13 min (plus one midnight)",
+  "ingredients": [
+    {
+      "qty": "1 ladleful",
+      "item": "ghost gloop, wrung from a spectral bedsheet"
+    },
+    {
+      "qty": "4 spoonfuls",
+      "item": "goblin bogey custard, freshly sneezed"
+    },
+    {
+      "qty": "500 ml",
+      "item": "swamp sludge, the greener the better"
+    },
+    {
+      "qty": "1",
+      "item": "witch's old sock, left-footed, unwashed since the Tudors"
+    },
+    {
+      "qty": "3",
+      "item": "troll toenails, curled like party horns"
+    },
+    {
+      "qty": "1 cloud",
+      "item": "cobweb candyfloss, collected from a haunted attic"
+    },
+    {
+      "qty": "1",
+      "item": "jellied cyclops eyeball, the size of a football"
+    },
+    {
+      "qty": "1 pinch",
+      "item": "powdered dragon scales, for shimmer and regret"
+    },
+    {
+      "qty": "6",
+      "item": "gargoyle-wing wafers, stale on purpose"
+    }
+  ],
+  "steps": [
+    "Wait for a gibbous moon. Hold the sock at arm's length and whisper 'sorry' to it. Drop it into a large bowl that has seen things.",
+    "Pour in the swamp sludge. Stir widdershins thirteen times with a spoon made of spooky silence until the sock stops complaining.",
+    "Dollop on the goblin bogey custard. Add the ghost gloop, which will wobble upwards. This is normal. Do not make eye contact.",
+    "Perch the cyclops eyeball on top. Rotate it until it faces the neighbours. Tuck in the troll toenails like a crown of mild disappointment.",
+    "Drape with cobweb candyfloss, dust with dragon scales, and lean the gargoyle wafers around the edge. Serve to nobody. Cackle once."
+  ],
+  "allergens": [],
+  "image_prompt": "A large glass trifle bowl of luminous green ghost gloop in wobbly layers, with swampy sludge at the bottom, yellow-green bogey custard in the middle, and a giant jellied eyeball on top. Grey cobweb candyfloss drapes over the rim, curled troll toenails and winged wafers poke out, and a stripy old sock hangs off the side.",
+  "alt_text": "A glass bowl of glowing green slime layers topped with a giant eyeball, cobwebby candyfloss, curly toenails, wafers and a hanging stripy sock.",
+  "caption_hook": "Today's pudding is a ghost's leftovers, a sock and one very nosy eyeball.\nStrictly a prop. Not food. Not even close.\nWould you dare to serve this at your Halloween party, or would the sock tell on you?",
+  "hashtags": [
+    "#YummersGrubbers",
+    "#HalloweenJokeRecipe",
+    "#NotFood",
+    "#WitchsBrew",
+    "#GhostGloop",
+    "#SpookyPudding",
+    "#GrossOutHalloween",
+    "#BritishHumour"
+  ]
+}
