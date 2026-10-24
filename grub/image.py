@@ -25,11 +25,16 @@ def fit(img: Image.Image, w: int = W, h: int = H) -> Image.Image:
     return img.resize((w, h), Image.LANCZOS)
 
 
-def generate(prompt: str, kind: str, cfg: dict, out: Path, log=print, theme: dict | None = None) -> Path:
+def generate(prompt: str, kind: str, cfg: dict, out: Path, log=print, theme: dict | None = None,
+             label: str | None = None) -> Path:
     icfg = cfg["image"]
     style = (theme or {}).get(f"{kind}_style") or icfg["style"][kind]
     full_prompt = (f"{prompt.strip()}\n\nStyle: {style}\n\nComposition: the whole dish fully in frame and centred, "
                    "with a little breathing room around it; nothing important touching the edges.")
+    if label:
+        full_prompt += (f"\n\nHidden joke: somewhere in the background, small but sharp and legible, one glass jar or bottle "
+                        f"has a neat printed label reading exactly \"{label}\". This is the ONE exception to the no-text rule; "
+                        "all other labels are blank or illegible.")
     body = {"prompt": full_prompt, **icfg.get("params", {})}
     log(f"  image: calling {icfg['model']}")
     resp = httpx.post(f"https://fal.run/{icfg['model']}",

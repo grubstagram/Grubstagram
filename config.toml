@@ -27,6 +27,14 @@ model = "fal-ai/nano-banana-2"
 params = { aspect_ratio = "1:1", num_images = 1 }
 size = [1080, 1080]   # saved photo size; the cover slide shows it untouched above the title band
 
+# Gross photos hide one joke label on a jar or bottle in the background ("spot the hidden label").
+# One is picked per post; add or remove freely. Leave the list empty to switch the gag off.
+hidden_labels = ["DIET SLUG JUICE", "SUGAR-FREE SLUG JUICE", "VEGAN EYE OF NEWT", "GLUTEN-FREE GRAVEL",
+                 "ORGANIC TOENAILS", "FREE-RANGE SOCKS", "KETO COBWEBS", "ZERO SWAMP WATER",
+                 "LOW-SALT BOGEYS", "ARTISANAL EARWAX", "SMALL-BATCH SNOT", "LOCALLY SOURCED DUST BUNNIES",
+                 "LIGHT TROLL SWEAT", "OAT-BASED GOBLIN MILK"]
+spot_line = "👀 Spot the hidden label."
+
 [image.style]
 edible = "Editorial food photograph, 45-degree angle, soft natural window light from the left, shallow depth of field, rustic ceramic plate on a linen-covered wooden table, a few raw ingredients scattered nearby, appetising, true-to-life colours, magazine quality. No people, no hands, no text, no logos."
 not_edible = "Editorial food photograph styled exactly like a glossy cookbook, 45-degree angle, soft window light, ceramic plate on a linen-covered table, BUT the dish is clearly built from non-food materials, surreal and comedic, gross-out but not gory, obviously inedible at a glance. No people, no hands, no text, no logos, no blood, no bodily fluids."
