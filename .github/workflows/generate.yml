@@ -62,7 +62,8 @@ jobs:
           [ -n "$IN_KIND" ] && ARGS+=(--kind "$IN_KIND")
           [ "$IN_DRY" = "true" ] && ARGS+=(--dry-run --force)
           [ "$IN_REPLACE" = "true" ] && ARGS+=(--force)
-          python -m grub generate --date "$DATE" "${ARGS[@]}"
+          set -o pipefail
+          python -m grub generate --date "$DATE" "${ARGS[@]}" 2>&1 | tee "$RUNNER_TEMP/generate.log"
 
       - name: Commit draft
         id: commit
@@ -88,3 +89,14 @@ jobs:
           gh label create posted --color 0E8A16 --description "Live on Instagram" --force
           TITLE="Post $DATE: $(jq -r .title "queue/$DATE/recipe.json")"
           gh issue create --title "$TITLE" --body-file "queue/$DATE/issue.md" --label draft
+
+      - name: Report a failure as an issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh label create failed --color B60205 --description "A bot run failed" --force
+          { echo "The bot couldn't make the post for ${DATE:-today}. [Run log]($RUN_URL)"; echo; echo '```'; tail -n 40 "$RUNNER_TEMP/generate.log" 2>/dev/null || echo "(no log captured)"; echo '```'; echo; echo "Claude can read this issue and fix it. To retry, run *1. Generate daily post* again."; } > "$RUNNER_TEMP/fail.md"
+          gh issue create --title "⚠️ Generate failed: ${DATE:-today}" --body-file "$RUNNER_TEMP/fail.md" --label failed
+
