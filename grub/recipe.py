@@ -55,7 +55,8 @@ BRIEF = {
     "edible": (
         "Invent a real, cookable, delicious recipe with a fresh twist, achievable by a home cook in under 90 minutes "
         "using supermarket ingredients. It must actually work: sensible quantities, correct order, safe cooking "
-        "(poultry and minced meat cooked through, no raw flour or raw egg eaten as-is). Steps must use every ingredient."
+        "(poultry and minced meat cooked through, no raw flour or raw egg eaten as-is). Steps must use every ingredient, "
+        "and every ingredient a step uses must be in the list (salt, pepper, water and cooking oil count: list them too)."
     ),
     "not_edible": (
         "Invent a gross-out JOKE recipe styled like a real cookbook entry, but built from things that are obviously "
@@ -73,7 +74,9 @@ CHECKER = {
         "You are a food-safety editor. Fail the recipe if ANY of these apply: unsafe cooking of meat, poultry, fish or "
         "eggs; raw flour or raw egg eaten uncooked; dangerous techniques (deep-frying without guidance, pressure "
         "cooking hazards); quantities or timings that are clearly wrong; steps that skip or invent ingredients; "
-        "allergens missing from the allergen list; anything not actually food. Minor style issues are not failures."
+        "allergens missing from the allergen list; anything not actually food. Minor style issues are not failures. "
+        "Pantry staples (salt, pepper, water, a little cooking oil) may appear in the steps without being listed: "
+        "that is never a failure."
     ),
     "not_edible": (
         "You are a safety editor for a comedy 'not food' recipe account. Fail the post if ANY of these apply: it could "
@@ -169,6 +172,9 @@ def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print, theme:
     theme = theme or {}
     brief = theme.get(f"{kind}_brief") or BRIEF[kind]
     checker = (theme.get(f"{kind}_checker") or CHECKER[kind]) + COPYRIGHT_CHECK + (" " + theme["extra_check"] if theme.get("extra_check") else "")
+    brand = cfg["brand"]["name"]
+    checker += (f" The account's own name ({brand}) and hashtags made from it (e.g. #{brand.replace(' ', '')}) "
+                "are ours to use and are never a copyright problem.")
     if inspiration:
         brief = f"{brief}\n\nToday's inspiration: {inspiration}.\n{COPYRIGHT_WRITER}"
     if owner_note is not None:
