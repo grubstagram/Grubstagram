@@ -173,6 +173,9 @@ def cmd_publish(a, cfg) -> None:
         log(f"{date} is already published: {json.loads((out / 'published.json').read_text()).get('permalink')}")
         return
     recipe = json.loads((out / "recipe.json").read_text())
+    if (out / "published.json").exists():
+        log(f"{date} is already live ({json.loads((out / 'published.json').read_text()).get('permalink')}). Not posting it again.")
+        return
     if recipe.get("dry_run"):
         log(f"{date} is a dry-run draft (sample recipe, placeholder photo). Not posting it.")
         return
