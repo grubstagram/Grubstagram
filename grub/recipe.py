@@ -30,9 +30,9 @@ RECIPE_TOOL = {
                           "description": "Edible only: main allergens (gluten, dairy, egg, nuts, ...). Empty for not-edible."},
             "image_prompt": {"type": "string", "description": "Describe ONLY the plated dish and its look, 40-70 words. No style words, no people."},
             "alt_text": {"type": "string", "description": "Plain description of the photo for screen readers, max 25 words."},
-            "caption_hook": {"type": "string", "description": "Caption opening, 1-3 short lines, in the account's voice. Ends with a question to drive comments."},
+            "caption_hook": {"type": "string", "description": "Caption opening, 1-2 short lines, in the account's voice, written like a real person would: no cheesy puns or AI-sounding phrases. Ends with a question to drive comments."},
             "hashtags": {"type": "array", "minItems": 4, "maxItems": 8, "items": {"type": "string"}},
-            "rhyme": {"type": "string", "description": "Joke recipes only: an original 4-8 line spooky, funny rhyme, one line per newline. Empty for edible."},
+            "rhyme": {"type": "string", "description": "Joke recipes only: the witch's 6-10 line spell, one line per newline. Empty for edible."},
         },
         "required": ["title", "tagline", "servings", "time", "ingredients", "steps", "allergens",
                      "image_prompt", "alt_text", "caption_hook", "hashtags"],
@@ -163,10 +163,13 @@ COPYRIGHT_WRITER = (
     "(e.g. 'a potion Roald Dahl would be proud of') but never in the image prompt, and no real people appear in the image."
 )
 RHYME_WRITER = (
-    "Also write `rhyme`: an original 4-8 line comic verse about this dish, darkly funny and a bit macabre, with a "
-    "galloping beat and strong end rhymes, in the spirit of Roald Dahl's gleefully nasty verse and Tim Burton's "
-    "gothic nursery rhymes. Every line must be your own: never quote or rework lines from their books or films. "
-    "Don't add a warning or say it isn't food anywhere (tagline, caption or rhyme): the made-up ingredients make that obvious."
+    "This recipe is a witch's spell, told in her voice as she tips each ingredient into the cauldron. "
+    "Write `rhyme`: an original 6-10 line verse in rhyming couplets with a bouncy, chantable beat that names the "
+    "ingredients one by one as they go in, gleefully gross in the way kids love (bogeys, lumps, slime, smelly socks, "
+    "toenails), cheeky and funny rather than scary. Think Roald Dahl's nasty verse and Tim Burton's gothic nursery "
+    "rhymes, but every line must be your own: never quote or rework lines from their books or films. "
+    "Write the `steps` the same way: each step a rhyming couplet in the witch's voice. "
+    "Never add a warning or say it isn't food anywhere: the made-up ingredients and the picture make that obvious."
 )
 
 COPYRIGHT_CHECK = (" Also fail it if it names or depicts a copyrighted character, quotes a copyrighted book or film, "
@@ -203,8 +206,8 @@ def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print, theme:
         rhyme_lines = [l for l in (recipe.get("rhyme") or "").splitlines() if l.strip()]
         if hits:
             issues = [f"Blocked words used: {', '.join(hits)}"]
-        elif kind == "not_edible" and not 4 <= len(rhyme_lines) <= 8:
-            issues = [f"The rhyme must be 4-8 lines, one per newline (got {len(rhyme_lines)})"]
+        elif kind == "not_edible" and not 6 <= len(rhyme_lines) <= 10:
+            issues = [f"The rhyme must be 6-10 lines, one per newline (got {len(rhyme_lines)})"]
         else:
             post = "Review this post:\n" + json.dumps(recipe, indent=2, ensure_ascii=False)
             try:
@@ -223,17 +226,19 @@ def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print, theme:
 
 def build_caption(recipe: dict, kind: str, cfg: dict, theme: dict | None = None) -> str:
     c = cfg["caption"]
-    lines = [recipe["caption_hook"].strip(), ""]
+    rhyme = "\n".join(l.strip() for l in (recipe.get("rhyme") or "").splitlines() if l.strip())
+    # Joke posts open with the witch's spell; the AI-written hook only stands in if there's no rhyme.
+    lines = [rhyme if (kind != "edible" and rhyme) else recipe["caption_hook"].strip(), ""]
     if kind == "edible":
         lines.append(f"{recipe['servings']} · {recipe['time']}")
         if recipe.get("allergens"):
             lines.append("Contains: " + ", ".join(recipe["allergens"]))
-        lines += ["Full recipe in the slides 👉", "", c["edible_footer"]]
+        lines += ["Full recipe in the slides 👉"]
     else:
-        rhyme = "\n".join(l.strip() for l in (recipe.get("rhyme") or "").splitlines() if l.strip())
-        if rhyme:
-            lines += [rhyme, ""]
-        lines += ["Swipe for the 'method' 👉", "", c["not_edible_footer"]]
+        lines += ["Swipe for the spell 👉"]
+    footer = c.get(f"{kind}_footer", "").strip()
+    if footer:
+        lines += ["", footer]
     tags = []
     for t in list((theme or {}).get("hashtags", [])) + list(recipe["hashtags"]) + c["base_hashtags"]:
         t = "#" + re.sub(r"[^\w]", "", t.lstrip("#"))
