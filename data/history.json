@@ -15,5 +15,15 @@
     "course": "dessert",
     "forced": false,
     "dry_run": false
+  },
+  {
+    "date": "2026-10-25",
+    "kind": "edible",
+    "title": "Churchyard Squash Trifle",
+    "status": "drafted",
+    "inspiration": "make it a savoury dish, not a dessert (if the inspiration below is sweet, find a savoury dish in the same spirit), inspired by a graveyard trifle or 'dirt' pudding for a Halloween party; lean on what's in season now in Europe: pumpkin and squash, apples, pears, chestnuts, mushrooms",
+    "course": "savoury",
+    "forced": false,
+    "dry_run": false
   }
 ]

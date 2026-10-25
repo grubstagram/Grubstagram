@@ -1,0 +1,80 @@
+{
+  "kind": "edible",
+  "theme": "Halloween",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0aafc6c2/whu7nOaWZhUVHGzuDPZ50_reel.mp4",
+  "title": "Churchyard Squash Trifle",
+  "tagline": "A savoury graveyard trifle. Dark on top, deeply cosy underneath.",
+  "servings": "Serves 4",
+  "time": "60 min",
+  "ingredients": [
+    {
+      "qty": "600g",
+      "item": "butternut squash, peeled and cubed"
+    },
+    {
+      "qty": "1",
+      "item": "eating apple, cored and cut into chunks"
+    },
+    {
+      "qty": "400g",
+      "item": "chestnut mushrooms, finely chopped"
+    },
+    {
+      "qty": "180g",
+      "item": "cooked peeled chestnuts"
+    },
+    {
+      "qty": "60g",
+      "item": "dark rye bread, torn"
+    },
+    {
+      "qty": "200g",
+      "item": "full-fat cream cheese"
+    },
+    {
+      "qty": "50g",
+      "item": "butter"
+    },
+    {
+      "qty": "2",
+      "item": "garlic cloves, finely chopped"
+    },
+    {
+      "qty": "6 sprigs",
+      "item": "fresh thyme, leaves picked, a few tips kept"
+    },
+    {
+      "qty": "4",
+      "item": "rye crispbreads, for tombstones"
+    }
+  ],
+  "steps": [
+    "Heat the oven to 200°C (180°C fan). Toss squash and apple with 15g melted butter, salt and pepper. Roast 30–35 minutes until completely soft and lightly caramelised.",
+    "Make the soil: blitz the rye bread with 100g chestnuts into rough crumbs. Fry in 20g butter with half the thyme for 8 minutes, until dark and crisp. Season and tip out.",
+    "Roughly chop the remaining chestnuts. Fry mushrooms in the last 15g butter for 10 minutes until dark and dry. Add garlic, chestnuts and remaining thyme, cook 2 minutes, then season well.",
+    "Mash the roasted squash and apple until nearly smooth. Beat the cream cheese with 2 tablespoons water, salt and plenty of black pepper until spoonable.",
+    "Layer four glasses: squash mash, mushroom mix, cream cheese, then a thick blanket of soil. Snap crispbreads into tombstone shapes and push them in, with thyme tips as grass.",
+    "Serve warm or at room temperature. Everything bar the soil can be made a day ahead. Make the soil fresh, so it stays crunchy."
+  ],
+  "allergens": [
+    "gluten (rye)",
+    "dairy (milk)",
+    "tree nuts (chestnuts)"
+  ],
+  "image_prompt": "Four clear glasses of layered savoury trifle: orange squash mash, dark glossy mushroom and chestnut layer, white peppered cream cheese, topped with crisp dark rye crumb soil. Rye crispbread tombstones stand in the top with fresh thyme sprigs like grass. Warm steam, scattered crumbs beside the glasses.",
+  "alt_text": "Four glasses of layered savoury trifle with orange squash, dark mushrooms, cream cheese and rye crumb soil, topped with crispbread tombstones and thyme.",
+  "caption_hook": "Dirt pudding, but make it dinner.\nSquash, mushrooms, chestnuts and a very respectable graveyard.\nWould you dig in, or leave it to rest in peace?",
+  "hashtags": [
+    "#YummersGrubbers",
+    "#HalloweenRecipes",
+    "#SavouryHalloween",
+    "#SquashRecipe",
+    "#MushroomLovers",
+    "#AutumnCooking",
+    "#SpookyFood",
+    "#UKFoodie"
+  ]
+}
