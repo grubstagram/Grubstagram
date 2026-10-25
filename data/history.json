@@ -10,11 +10,12 @@
     "date": "2026-10-24",
     "kind": "not_edible",
     "title": "Haunted Gloop Trifle",
-    "status": "drafted",
+    "status": "published",
     "inspiration": "make it a revolting fake DESSERT (a custard, pie, trifle, jelly or cake that is obviously not food), inspired by 1980s kids' film ghost slime and ectoplasm",
     "course": "dessert",
     "forced": false,
-    "dry_run": false
+    "dry_run": false,
+    "permalink": "https://www.instagram.com/p/De6X751Fmpc/"
   },
   {
     "date": "2026-10-25",
