@@ -15,7 +15,7 @@ RECIPE_TOOL = {
         "type": "object",
         "properties": {
             "title": {"type": "string", "description": "Dish name, max 6 words."},
-            "tagline": {"type": "string", "description": "One punchy line, max 12 words."},
+            "tagline": {"type": "string", "description": "One punchy line, max 12 words. For joke recipes, never say it isn't food or is a prop: let the absurdity do the work."},
             "servings": {"type": "string", "description": "e.g. 'Serves 4' or 'Serves 1 brave soul'"},
             "time": {"type": "string", "description": "e.g. '35 min'"},
             "ingredients": {
@@ -32,6 +32,7 @@ RECIPE_TOOL = {
             "alt_text": {"type": "string", "description": "Plain description of the photo for screen readers, max 25 words."},
             "caption_hook": {"type": "string", "description": "Caption opening, 1-3 short lines, in the account's voice. Ends with a question to drive comments."},
             "hashtags": {"type": "array", "minItems": 4, "maxItems": 8, "items": {"type": "string"}},
+            "rhyme": {"type": "string", "description": "Joke recipes only: an original 4-8 line spooky, funny rhyme, one line per newline. Empty for edible."},
         },
         "required": ["title", "tagline", "servings", "time", "ingredients", "steps", "allergens",
                      "image_prompt", "alt_text", "caption_hook", "hashtags"],
@@ -161,6 +162,13 @@ COPYRIGHT_WRITER = (
     "Dracula, Frankenstein, Macbeth) may be named. An author may be name-checked in the caption as homage "
     "(e.g. 'a potion Roald Dahl would be proud of') but never in the image prompt, and no real people appear in the image."
 )
+RHYME_WRITER = (
+    "Also write `rhyme`: an original 4-8 line comic verse about this dish, darkly funny and a bit macabre, with a "
+    "galloping beat and strong end rhymes, in the spirit of Roald Dahl's gleefully nasty verse and Tim Burton's "
+    "gothic nursery rhymes. Every line must be your own: never quote or rework lines from their books or films. "
+    "Don't add a warning or say it isn't food anywhere (tagline, caption or rhyme): the made-up ingredients make that obvious."
+)
+
 COPYRIGHT_CHECK = (" Also fail it if it names or depicts a copyrighted character, quotes a copyrighted book or film, "
                    "or uses a copyrighted title, catchphrase or invented word (public-domain tales and a passing author "
                    "name-check in the caption are fine), or if the image prompt names an author, film or real person.")
@@ -177,6 +185,8 @@ def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print, theme:
                 "are ours to use and are never a copyright problem.")
     if inspiration:
         brief = f"{brief}\n\nToday's inspiration: {inspiration}.\n{COPYRIGHT_WRITER}"
+    if kind == "not_edible":
+        brief = f"{brief}\n\n{RHYME_WRITER}"
     if owner_note is not None:
         note = owner_note.strip()[:500]
         brief += ("\n\nThe account owner rejected an earlier draft for today, so write something clearly different"
@@ -190,8 +200,11 @@ def write_recipe(kind: str, past_titles: list[str], cfg: dict, log=print, theme:
         recipe = _call(llm["writer_model"], VOICE.format(brand=cfg["brand"]["name"]), user, RECIPE_TOOL)
         # Only the joke recipes need the word filter ("blood orange" and "a splash of rum" are fine for real food).
         hits = blocklist_hits(recipe, extra_block) if kind == "not_edible" else []
+        rhyme_lines = [l for l in (recipe.get("rhyme") or "").splitlines() if l.strip()]
         if hits:
             issues = [f"Blocked words used: {', '.join(hits)}"]
+        elif kind == "not_edible" and not 4 <= len(rhyme_lines) <= 8:
+            issues = [f"The rhyme must be 4-8 lines, one per newline (got {len(rhyme_lines)})"]
         else:
             post = "Review this post:\n" + json.dumps(recipe, indent=2, ensure_ascii=False)
             try:
@@ -217,6 +230,9 @@ def build_caption(recipe: dict, kind: str, cfg: dict, theme: dict | None = None)
             lines.append("Contains: " + ", ".join(recipe["allergens"]))
         lines += ["Full recipe in the slides 👉", "", c["edible_footer"]]
     else:
+        rhyme = "\n".join(l.strip() for l in (recipe.get("rhyme") or "").splitlines() if l.strip())
+        if rhyme:
+            lines += [rhyme, ""]
         lines += ["Swipe for the 'method' 👉", "", c["not_edible_footer"]]
     tags = []
     for t in list((theme or {}).get("hashtags", [])) + list(recipe["hashtags"]) + c["base_hashtags"]:
