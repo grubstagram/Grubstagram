@@ -31,10 +31,11 @@
     "date": "2026-10-26",
     "kind": "not_edible",
     "title": "Headless Squire's Bogey Pie",
-    "status": "drafted",
+    "status": "published",
     "inspiration": "make it a revolting fake DESSERT (a custard, pie, trifle, jelly or cake that is obviously not food), inspired by the Headless Horseman's harvest supper from The Legend of Sleepy Hollow",
     "course": "dessert",
     "forced": false,
-    "dry_run": false
+    "dry_run": false,
+    "permalink": "https://www.instagram.com/p/De9zOdVkcGv/"
   }
 ]
