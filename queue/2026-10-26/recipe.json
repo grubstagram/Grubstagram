@@ -1,0 +1,65 @@
+{
+  "kind": "not_edible",
+  "theme": "Halloween",
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Headless Squire's Bogey Pie",
+  "tagline": "A harvest supper pudding that wobbles back at you.",
+  "servings": "Serves 1 headless squire",
+  "time": "13 min, plus one midnight",
+  "ingredients": [
+    {
+      "qty": "1",
+      "item": "spare ghostly pumpkin head, lost at a crossroads"
+    },
+    {
+      "qty": "3 ladles",
+      "item": "goblin bogey custard"
+    },
+    {
+      "qty": "13",
+      "item": "troll toenail clippings, crushed to a crust"
+    },
+    {
+      "qty": "400 ml",
+      "item": "swamp sludge"
+    },
+    {
+      "qty": "1",
+      "item": "witch's old sock, well wrung"
+    },
+    {
+      "qty": "7",
+      "item": "dragon scales, crushed to crunch"
+    },
+    {
+      "qty": "1 handful",
+      "item": "cobweb candyfloss"
+    },
+    {
+      "qty": "100 ml",
+      "item": "full-moon drizzle"
+    }
+  ],
+  "steps": [
+    "Carve the pumpkin head with a grin,\nthen tip the bogey custard in.",
+    "Crush troll toenails, crunchy and grey,\nand press them down for a crust this way.",
+    "Wring the sock till the sludge runs free,\nthen stir widdershins, thirteen times three.",
+    "Sprinkle the scales, then cobweb floss,\nand drizzle the moon on top, gloss by gloss.",
+    "Set it by the gate till the midnight bell,\nthen serve a squire who's lost his head as well."
+  ],
+  "allergens": [],
+  "rhyme": "Round the cauldron, stamp and hum,\nIn plops a pumpkin head, hollow and glum.\nThree green ladles of goblin snot,\nStirred till it wobbles, a gloopy lot.\nThirteen toenails from a troll's big feet,\nCrunch them up for a crusty treat.\nSwamp sludge next, and my old grey sock,\nWrung out slowly round the clock.\nA sprinkle of scales, a web of fluff,\nMoon-drizzle over: that's quite enough!",
+  "image_prompt": "A lopsided dark pie in a rustic tin, its crust made of grey crunchy troll toenail shards, oozing bright green bogey custard over the edge. A hollow carved pumpkin head sits on top, grinning, draped with pale cobweb candyfloss, shimmering dragon scales and a limp grey sock hanging off the side.",
+  "alt_text": "A wonky pie with a toenail crust, green slime oozing out, topped with a grinning pumpkin head, cobweb floss, shiny scales and a grey sock.",
+  "caption_hook": "Tonight's pudding comes with a toenail crust and a sock on top. A nod to the old Sleepy Hollow harvest supper, if the supper fought back.\nWould you take the first slice, or send the headless squire in first?",
+  "hashtags": [
+    "#YummersGrubbers",
+    "#HalloweenRecipe",
+    "#WitchsBrew",
+    "#GrossOutDessert",
+    "#SleepyHollow",
+    "#SpookyBaking",
+    "#BritishHumour"
+  ]
+}
