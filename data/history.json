@@ -37,5 +37,15 @@
     "forced": false,
     "dry_run": false,
     "permalink": "https://www.instagram.com/p/De9zOdVkcGv/"
+  },
+  {
+    "date": "2026-10-27",
+    "kind": "edible",
+    "title": "Gretel's Gingerbread Pear Cake",
+    "status": "drafted",
+    "inspiration": "make it a DESSERT (a sweet bake, pudding, tart, cake, ice cream or similar), inspired by Hansel and Gretel's gingerbread, done properly; lean on what's in season now in Europe: pumpkin and squash, apples, pears, chestnuts, mushrooms",
+    "course": "dessert",
+    "forced": false,
+    "dry_run": false
   }
 ]

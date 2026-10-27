@@ -1,0 +1,80 @@
+{
+  "kind": "edible",
+  "theme": "Halloween",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab008de/kpshnukee0vL5PeD32Da6_reel.mp4",
+  "title": "Gretel's Gingerbread Pear Cake",
+  "tagline": "Treacle-black, pumpkin-soft, and built to lure children. Politely.",
+  "servings": "Serves 8",
+  "time": "75 min",
+  "ingredients": [
+    {
+      "qty": "3 firm",
+      "item": "pears, peeled, halved and cored"
+    },
+    {
+      "qty": "175g, softened, plus extra for the tin",
+      "item": "unsalted butter"
+    },
+    {
+      "qty": "175g",
+      "item": "dark muscovado sugar"
+    },
+    {
+      "qty": "3 tbsp",
+      "item": "black treacle"
+    },
+    {
+      "qty": "2 large",
+      "item": "eggs"
+    },
+    {
+      "qty": "225g",
+      "item": "self-raising flour"
+    },
+    {
+      "qty": "2 tsp ground ginger and 1 tsp ground cinnamon",
+      "item": "warm spices"
+    },
+    {
+      "qty": "150g",
+      "item": "tinned pumpkin purée"
+    },
+    {
+      "qty": "4 tbsp",
+      "item": "milk"
+    },
+    {
+      "qty": "100g",
+      "item": "cooked peeled chestnuts, roughly chopped"
+    }
+  ],
+  "steps": [
+    "Heat the oven to 170°C fan. Grease and line a 22cm round tin. Melt 50g butter, 75g sugar and 1 tbsp treacle in a pan until bubbling, then pour into the tin.",
+    "Lay the pears cut side down over the toffee, then scatter the chestnuts into the gaps.",
+    "Beat the remaining 125g butter, 100g sugar and 2 tbsp treacle until fluffy. Add the eggs one at a time, beating well after each.",
+    "Fold in the flour and spices, then the pumpkin purée and milk, until just combined. Spoon over the pears and level gently.",
+    "Bake for 45 to 50 minutes, until a skewer comes out clean. Cool in the tin for 10 minutes, then turn out while still warm.",
+    "Serve warm with crème fraîche or custard. It keeps well for three days and gets stickier, which is the point."
+  ],
+  "allergens": [
+    "gluten",
+    "dairy",
+    "egg",
+    "nuts (chestnut)"
+  ],
+  "image_prompt": "A round upside-down gingerbread cake turned out onto a dark slate plate, glossy near-black treacle toffee glaze pooling around it, three caramelised pear halves on top studded with chopped chestnuts, one slice cut to show a dark, moist, spiced pumpkin crumb, a spoonful of crème fraîche beside it.",
+  "alt_text": "A glossy treacle-glazed upside-down pear gingerbread cake on a dark plate, with one slice cut to show the moist spiced crumb.",
+  "caption_hook": "Hansel left breadcrumbs. Gretel, frankly, should have left cake. This one's pear, chestnut and a lot of treacle. Who's brave enough to follow the trail?",
+  "hashtags": [
+    "#Halloweenbaking",
+    "#gingerbread",
+    "#pearcake",
+    "#autumnbaking",
+    "#pumpkinrecipe",
+    "#britishbaking",
+    "#hanselandgretel"
+  ]
+}
