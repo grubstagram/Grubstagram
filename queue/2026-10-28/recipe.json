@@ -1,0 +1,64 @@
+{
+  "kind": "not_edible",
+  "theme": "Halloween",
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Moonrot Cauldron Slime",
+  "tagline": "Troll toenails, cyclops eyes and one very tired sock.",
+  "servings": "Fills one bottomless cauldron",
+  "time": "One gibbous moon",
+  "ingredients": [
+    {
+      "qty": "13 clippings",
+      "item": "troll toenails, extra crusty"
+    },
+    {
+      "qty": "3",
+      "item": "cyclops eyeballs, still blinking"
+    },
+    {
+      "qty": "1 bootful",
+      "item": "swamp-ogre sludge"
+    },
+    {
+      "qty": "1",
+      "item": "witch's old stripy sock, well worn"
+    },
+    {
+      "qty": "2 fluffy handfuls",
+      "item": "cobweb candyfloss"
+    },
+    {
+      "qty": "1 pinch",
+      "item": "dragon scale glitter"
+    },
+    {
+      "qty": "1 jar",
+      "item": "goblin bogeys, the stringy sort"
+    },
+    {
+      "qty": "1 ladle",
+      "item": "moonbeam, slightly curdled"
+    }
+  ],
+  "steps": [
+    "Tip the toenails in with a clickety-clack, then stir to the left and never look back.",
+    "Drop three cyclops eyes in, plop, plop, plop, and watch them all bob round the top.",
+    "Tip the ogre's boot sludge in with a squelch, then add the goblin bogeys, one stringy belch.",
+    "Drape in my sock, it's a stinker, it's true, then fluff in the cobwebs, a sticky grey goo.",
+    "Stir thirteen times as the moonbeams pour, till the glitter goes bang and it burps once more."
+  ],
+  "allergens": [],
+  "rhyme": "Round the rim and widdershins we creep,\nTroll toenails in, a crusty heap.\nCyclops eyeballs, plop, plop, plop,\nBobbing round the slimy top.\nGoblin bogeys, stringy and green,\nThe grottiest jar you've ever seen.\nScoop of sludge from an ogre's boot,\nThen my old sock, a smelly hoot.\nCobweb fluff and a dragon-scale sprinkle,\nStir till the whole lot starts to twinkle.",
+  "image_prompt": "A big black iron cauldron on mossy stones, brimming with glowing lime-green slime. Three oversized cartoon eyeballs bob on top, a stripy holey sock droops over the rim, grey cobweb candyfloss clings to the handle, and glittering dragon scales sparkle in the ooze. Purple mist curls over the edge. No flames.",
+  "alt_text": "A black cauldron full of glowing green slime with bobbing giant eyeballs, a stripy sock over the rim, grey cobwebs and purple mist.",
+  "caption_hook": "The witch let me watch her make this one. I've never seen a sock do that before.\nWhich ingredient would you sneak into her cauldron?",
+  "hashtags": [
+    "#HalloweenRecipe",
+    "#WitchsBrew",
+    "#SpookySeason",
+    "#YummersGrubbers",
+    "#GrossOut",
+    "#CauldronCraft"
+  ]
+}

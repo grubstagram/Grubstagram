@@ -47,5 +47,15 @@
     "course": "dessert",
     "forced": false,
     "dry_run": false
+  },
+  {
+    "date": "2026-10-28",
+    "kind": "not_edible",
+    "title": "Moonrot Cauldron Slime",
+    "status": "drafted",
+    "inspiration": "the playground rhyme: scab and matter custard, green pus pie",
+    "course": "savoury",
+    "forced": false,
+    "dry_run": false
   }
 ]
