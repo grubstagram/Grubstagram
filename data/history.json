@@ -58,5 +58,15 @@
     "forced": false,
     "dry_run": false,
     "permalink": "https://www.instagram.com/p/DfC9XOdmlUs/"
+  },
+  {
+    "date": "2026-10-29",
+    "kind": "edible",
+    "title": "Hollow Head Stuffed Squash",
+    "status": "drafted",
+    "inspiration": "make it a savoury dish, not a dessert (if the inspiration below is sweet, find a savoury dish in the same spirit), inspired by a pumpkin supper from The Legend of Sleepy Hollow; lean on what's in season now in Europe: pumpkin and squash, apples, pears, chestnuts, mushrooms",
+    "course": "savoury",
+    "forced": false,
+    "dry_run": false
   }
 ]

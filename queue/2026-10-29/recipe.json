@@ -1,0 +1,79 @@
+{
+  "kind": "edible",
+  "theme": "Halloween",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab04cb3/C2dYKhqtDljhwtVqFrD04_reel.mp4",
+  "title": "Hollow Head Stuffed Squash",
+  "tagline": "Roast squash lanterns, packed with black rice, chestnuts and sage.",
+  "servings": "Serves 4",
+  "time": "75 min",
+  "ingredients": [
+    {
+      "qty": "4 small (about 400g each)",
+      "item": "round squash, such as onion or harlequin"
+    },
+    {
+      "qty": "3 tbsp",
+      "item": "olive oil, plus extra for brushing"
+    },
+    {
+      "qty": "150g",
+      "item": "black rice"
+    },
+    {
+      "qty": "450ml",
+      "item": "hot vegetable stock"
+    },
+    {
+      "qty": "1",
+      "item": "onion, finely chopped"
+    },
+    {
+      "qty": "250g",
+      "item": "chestnut mushrooms, chopped"
+    },
+    {
+      "qty": "1",
+      "item": "firm eating apple, diced small"
+    },
+    {
+      "qty": "200g",
+      "item": "cooked peeled chestnuts, roughly broken"
+    },
+    {
+      "qty": "12",
+      "item": "sage leaves, finely chopped, plus 4 whole"
+    },
+    {
+      "qty": "80g",
+      "item": "mature Cheddar, grated"
+    }
+  ],
+  "steps": [
+    "Heat oven to 200°C/180°C fan. Slice the tops off the squash, keep them as lids, and scoop out the seeds. Brush inside and out with oil, season, and roast cut-side up for 35 minutes.",
+    "Meanwhile, simmer the black rice in the stock, covered, for 30 minutes until tender and the liquid has mostly gone. Take off the heat and leave it covered.",
+    "Fry the onion in 2 tbsp oil for 5 minutes. Add the mushrooms and cook hard until golden and dry. Add the apple, chestnuts and chopped sage for 3 minutes, then season well.",
+    "Fold the rice into the mushroom mix. Pack it into the squash, mounding it up, and top with Cheddar. Fry the whole sage leaves in a little oil for 20 seconds until crisp.",
+    "Roast the filled squash, with the lids alongside, for 15 minutes until the cheese is bubbling and the flesh gives easily to a knife. Perch the lids at a jaunty angle and top with crisp sage."
+  ],
+  "allergens": [
+    "dairy",
+    "nuts (chestnuts)",
+    "celery (check stock)"
+  ],
+  "image_prompt": "Four small roasted squash with scorched orange skins, hollowed and brimming with glossy black rice, golden mushrooms, apple and chestnut, topped with melted Cheddar and crisp sage leaves. Lids tilted beside them. Served on a dark slate board with a few scattered chestnuts and sage.",
+  "alt_text": "Four roasted squash filled with black rice, mushrooms and melted Cheddar, topped with crisp sage, their lids tilted beside them on a dark board.",
+  "caption_hook": "Ichabod Crane was offered a fine autumn spread in Washington Irving's Sleepy Hollow, and we think he'd have stayed for this one.\nWould you eat the lid, or is that just us?",
+  "hashtags": [
+    "#Halloween",
+    "#HalloweenRecipes",
+    "#StuffedSquash",
+    "#SleepyHollow",
+    "#AutumnCooking",
+    "#BlackRice",
+    "#VegetarianDinner",
+    "#YummersGrubbers"
+  ]
+}
