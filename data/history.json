@@ -68,5 +68,15 @@
     "course": "savoury",
     "forced": false,
     "dry_run": false
+  },
+  {
+    "date": "2026-10-30",
+    "kind": "not_edible",
+    "title": "Grand High Coven Gunge Stew",
+    "status": "drafted",
+    "inspiration": "a grand coven of witches in the gleefully nasty spirit of Roald Dahl (invent everything)",
+    "course": "savoury",
+    "forced": false,
+    "dry_run": false
   }
 ]

@@ -1,0 +1,66 @@
+{
+  "kind": "not_edible",
+  "theme": "Halloween",
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Grand High Coven Gunge Stew",
+  "tagline": "Thirteen witches stirred it. None of them washed their hands.",
+  "servings": "Serves 13 cackling witches",
+  "time": "13 hours, or one full moon",
+  "ingredients": [
+    {
+      "qty": "3 dollops",
+      "item": "goblin bogeys, freshly picked"
+    },
+    {
+      "qty": "9",
+      "item": "troll toenails, crunchy and curly"
+    },
+    {
+      "qty": "1 bucket",
+      "item": "swamp sludge, well aged"
+    },
+    {
+      "qty": "1",
+      "item": "witch's old sock, left-footed, extra whiffy"
+    },
+    {
+      "qty": "2",
+      "item": "cyclops eyeballs, jelly-style"
+    },
+    {
+      "qty": "1 handful",
+      "item": "dragon scales, slightly burnt"
+    },
+    {
+      "qty": "4 skeins",
+      "item": "cobweb candyfloss"
+    },
+    {
+      "qty": "1 jar",
+      "item": "moonbeam pus, shaken"
+    }
+  ],
+  "steps": [
+    "Round the cauldron, witches, creep; tip in bogeys, green and deep.\nStir widdershins, one, two, three, beneath the moon's wide grin with glee.",
+    "Toenails next, all nine, kerplunk! Into the sludge they smell and clunk.\nDrop the sock, so old and grim; watch it wobble, swirl and swim.",
+    "Eyeballs now, both big and round; let them bob without a sound.\nSprinkle scales with a witchy sneeze; they'll sizzle in the bubbling breeze.",
+    "Cobweb floss goes in on top; wind it round the ladle, plop!\nPour the pus in, thirteen drips; smack your cackling, slimy lips.",
+    "Stir till the moon hides behind a cloud; chant the spell both low and loud.\nServe it up in a boot or a hat, and cackle, 'Now, how about that?'"
+  ],
+  "rhyme": "Thirteen witches round the pot, stirring up a stinky lot!\nIn go bogeys, green and thick, picked by goblins, nice and quick.\nTroll toenails, nine, go crunch and clack, then a sock that's gone all black.\nSwamp sludge slops in, glug by glug, with a cyclops eyeball in each mug.\nDragon scales go ping and pop, cobweb floss goes on the top.\nMoonbeam pus, a splash, a squirt, wipe your nose upon your shirt!\nStir it widdershins, thirteen times, and cackle out these gruesome rhymes.\nGloop, gloop, gloop, the brew is done. Who wants the sock? There's one for everyone!",
+  "allergens": [],
+  "image_prompt": "A huge black cauldron brimming with lumpy glowing green stew, with two jelly cyclops eyeballs bobbing on top, curly troll toenails, shimmering dragon scales, a stripy old sock draped over the rim, and pink cobweb candyfloss swirled on top, with a wooden ladle standing in it.",
+  "alt_text": "A black cauldron of glowing green lumpy stew topped with giant eyeballs, curly toenails, a stripy sock and pink cobweb candyfloss.",
+  "caption_hook": "A potion Roald Dahl would be proud of, stirred by thirteen witches with questionable hygiene.\nWould you take the sock or the eyeball?",
+  "hashtags": [
+    "#HalloweenRecipe",
+    "#WitchesBrew",
+    "#CauldronStew",
+    "#SpookySeason",
+    "#GrossOutFood",
+    "#YummersGrubbers",
+    "#WitchyRhymes",
+    "#HalloweenHumour"
+  ]
+}
