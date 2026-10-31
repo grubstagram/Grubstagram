@@ -79,5 +79,15 @@
     "forced": false,
     "dry_run": false,
     "permalink": "https://www.instagram.com/p/DfIGRb2FJQs/"
+  },
+  {
+    "date": "2026-10-31",
+    "kind": "not_edible",
+    "title": "Stitchwork Lunchbox Lumps",
+    "status": "drafted",
+    "inspiration": "Frankenstein's laboratory packed lunch (the 1818 novel)",
+    "course": "savoury",
+    "forced": true,
+    "dry_run": false
   }
 ]

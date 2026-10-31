@@ -1,0 +1,66 @@
+{
+  "kind": "not_edible",
+  "theme": "Halloween",
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Stitchwork Lunchbox Lumps",
+  "tagline": "A mad doctor's packed lunch, sewn together and sulking in a sock.",
+  "servings": "Serves 1 brave soul and a very patient ghoul",
+  "time": "13 min (plus one midnight)",
+  "rhyme": "Stitch a lunch and stir it right,\nCyclops eyeball, wobbly, bright!\nTroll toenails clatter, crunchy and yellow,\nGoblin bogeys, green and mellow.\nA witch's old sock, darned at the heel,\nLends the lot a whiff of last week's meal.\nCobweb floss in a sticky grey fluff,\nSwamp sludge splat, and that's enough!\nDragon scales jingle, clink and chime,\nPantomime bolt, and lunch is on time!",
+  "ingredients": [
+    {
+      "qty": "1",
+      "item": "jellied cyclops eyeball, sliced thick"
+    },
+    {
+      "qty": "6",
+      "item": "troll toenails, extra crunchy"
+    },
+    {
+      "qty": "3 ladles",
+      "item": "goblin bogey gravy"
+    },
+    {
+      "qty": "1",
+      "item": "witch's old sock, darned at the heel"
+    },
+    {
+      "qty": "2 handfuls",
+      "item": "grey cobweb candyfloss"
+    },
+    {
+      "qty": "1 jar",
+      "item": "swamp sludge, well stirred"
+    },
+    {
+      "qty": "4",
+      "item": "dragon scales, polished"
+    },
+    {
+      "qty": "1",
+      "item": "cardboard pantomime lightning bolt"
+    }
+  ],
+  "steps": [
+    "Sew the sock to the cauldron's rim with moonbeam thread, then tip in the sludge till it gurgles and burps in its bed.",
+    "Slide in the eyeball and let it look round, then add the troll toenails with a crunchy great pound.",
+    "Ladle the bogeys, three glossy green spoons, and stir widdershins thirteen times to a creepy old tune.",
+    "Drape on the cobwebs, all sticky and grey, then scatter the scales and they'll jingle away.",
+    "Plant the cardboard bolt high with a theatrical cheer, then pack it all up and holler, 'Lunch is here!'"
+  ],
+  "allergens": [],
+  "image_prompt": "A battered tin lunchbox open on a stone laboratory bench, filled with a lumpy grey-green stew. A glossy jellied eyeball stares upward, yellow toenail crescents poke out, a patched woollen sock droops over the edge, grey cobweb fluff sits on top, shiny scales glint, and a cardboard zigzag bolt stands in the middle.",
+  "alt_text": "An open tin lunchbox of lumpy green-grey stew topped with a jelly eyeball, toenails, cobweb fluff, a darned sock and a cardboard zigzag bolt.",
+  "caption_hook": "Mary Shelley gave us a lab, a stitched-up guest and a rather lonely lunch hour. We've packed him a sandwich. Would you swap your lunchbox for this one?",
+  "hashtags": [
+    "#HalloweenRecipe",
+    "#WitchesBrew",
+    "#GrossOutFood",
+    "#YummersGrubbers",
+    "#SpookySeason",
+    "#CauldronCooking",
+    "#GothicLunchbox",
+    "#TrollToenails"
+  ]
+}
