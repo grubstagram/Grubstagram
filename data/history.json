@@ -90,5 +90,15 @@
     "forced": true,
     "dry_run": false,
     "permalink": "https://www.instagram.com/p/DfKqInWkSYA/"
+  },
+  {
+    "date": "2026-11-01",
+    "kind": "edible",
+    "title": "Barmbrack Pear Pudding with Whiskey",
+    "status": "drafted",
+    "inspiration": "make it a DESSERT (a sweet bake, pudding, tart, cake, ice cream or similar), inspired by Ireland week: an authentic home-style dish from Ireland (classic or regional), explained simply for home cooks; lean on what's in season now in Europe: chestnuts, parsnips, Brussels sprouts, pears, cavolo nero, quince",
+    "course": "dessert",
+    "forced": false,
+    "dry_run": false
   }
 ]

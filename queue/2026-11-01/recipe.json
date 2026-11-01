@@ -1,0 +1,81 @@
+{
+  "kind": "edible",
+  "theme": "Ireland week",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab0b1dd/iWTPSQQdil10EUYEw4HE3_reel.mp4",
+  "title": "Barmbrack Pear Pudding with Whiskey",
+  "tagline": "Irish tea loaf, soaked in custard, with pears and chestnuts.",
+  "servings": "Serves 6",
+  "time": "70 min",
+  "ingredients": [
+    {
+      "qty": "400g, sliced",
+      "item": "barmbrack or fruit loaf"
+    },
+    {
+      "qty": "50g, softened",
+      "item": "butter"
+    },
+    {
+      "qty": "3 firm-ripe",
+      "item": "pears"
+    },
+    {
+      "qty": "150g",
+      "item": "cooked peeled chestnuts"
+    },
+    {
+      "qty": "300ml",
+      "item": "whole milk"
+    },
+    {
+      "qty": "200ml",
+      "item": "double cream"
+    },
+    {
+      "qty": "3",
+      "item": "eggs"
+    },
+    {
+      "qty": "80g, divided",
+      "item": "light brown sugar"
+    },
+    {
+      "qty": "3 tbsp",
+      "item": "Irish whiskey"
+    },
+    {
+      "qty": "1 tsp",
+      "item": "mixed spice"
+    }
+  ],
+  "steps": [
+    "Heat the oven to 180°C (160°C fan). Butter both sides of each bread slice, using all the butter. Cut the slices in half. Grease nothing else: the butter does the job.",
+    "Peel, core and slice the pears into thin wedges. Roughly break up the chestnuts. Layer the bread, pears and chestnuts in a 1.5-litre ovenproof dish, finishing with bread.",
+    "Warm the milk and cream in a pan until steaming, not boiling. Whisk the eggs with 60g sugar, the whiskey and mixed spice. Slowly whisk in the hot milk.",
+    "Pour the custard over the bread and press down gently. Leave for 15 minutes so the loaf drinks it up. Sprinkle over the remaining 20g sugar.",
+    "Bake for 40 to 45 minutes, until the top is crisp and the middle just set with a slight wobble. Rest for 10 minutes before serving warm."
+  ],
+  "allergens": [
+    "gluten",
+    "dairy",
+    "egg",
+    "tree nuts (chestnut)",
+    "sulphites (possible, in fruit loaf)"
+  ],
+  "image_prompt": "A deep white ceramic baking dish of golden bread pudding, crisp caramelised sugar top with dark fruit-studded bread corners, soft pear slices and chestnut pieces peeking through, a spoonful lifted out to show creamy set custard, a little steam rising, on a rustic wooden table.",
+  "alt_text": "A baking dish of golden bread pudding with a crisp sugary top, pear slices and chestnuts showing, and a spoonful lifted out.",
+  "caption_hook": "Irish barmbrack makes a very good bread and butter pudding. Add pears, chestnuts and a splash of whiskey and it gets dangerous.\nWould you pour extra custard on top, or is that greedy?",
+  "hashtags": [
+    "#irishfood",
+    "#breadandbutterpudding",
+    "#barmbrack",
+    "#autumnbaking",
+    "#pearrecipes",
+    "#chestnuts",
+    "#comfortpudding",
+    "#yummersgrubbers"
+  ]
+}
