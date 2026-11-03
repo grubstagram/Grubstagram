@@ -1,0 +1,66 @@
+{
+  "kind": "not_edible",
+  "theme": "Bonfire Night",
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Soggy Sparkler Shed Cake",
+  "tagline": "Layers of limp wrappers, shed-floor crumb and a very confident slime glaze.",
+  "servings": "Serves 12 garden gnomes",
+  "time": "1 hour of stirring, 1 week of regret",
+  "ingredients": [
+    {
+      "qty": "12 limp, soggy",
+      "item": "sparkler wrappers (empty tubes)"
+    },
+    {
+      "qty": "1",
+      "item": "left trainer, well past retirement"
+    },
+    {
+      "qty": "1",
+      "item": "odd sock, wildly past it"
+    },
+    {
+      "qty": "2 scoops",
+      "item": "shed-floor sawdust"
+    },
+    {
+      "qty": "1",
+      "item": "cracked flowerpot, crumbled"
+    },
+    {
+      "qty": "2",
+      "item": "stiff old gardening gloves"
+    },
+    {
+      "qty": "1 tangle",
+      "item": "green garden twine"
+    },
+    {
+      "qty": "1 jar",
+      "item": "lime-green craft slime"
+    }
+  ],
+  "steps": [
+    "Line the cauldron with the drowned wrappers, flat, / then slap on the trainer and sit on it. Splat!",
+    "Drop in the odd sock, give it a good thump, / then bury it deep in a sawdust lump.",
+    "Crumble the flowerpot, terracotta and cracked, / and sprinkle it over till the whole thing's stacked.",
+    "Pull on the gloves and give twine a good twist, / then knot it in a bow with a flick of the wrist.",
+    "Pour the slime over, let it drip down the side, / then wobble it out with a witch's great pride."
+  ],
+  "allergens": [],
+  "rhyme": "Hop and stir the cauldron round,\nIn go wrappers, soggy, drowned!\nPlop goes a trainer, left and grey,\nThen one odd sock to join the fray.\nSprinkle sawdust from the shed,\nCrumbled flowerpot, brick-red.\nSquelch the gloves and twine in a knot,\nLime-green slime, a gloopy lot!\nStir it thrice and stack it tall,\nThe wobbliest wreck of a cake of all!",
+  "image_prompt": "A tall, lopsided cake on a chipped plate, built from layers of soggy grey cardboard tubes and a squashed old trainer sole, with sawdust crumbs and crushed terracotta on top. Bright lime-green slime drips down the sides. A tangled green twine bow sits at the top, with a few limp empty tubes poking out like candles.",
+  "alt_text": "A leaning cake of soggy cardboard tubes, an old trainer and sawdust, covered in dripping green slime and topped with a twine bow.",
+  "caption_hook": "Today's pudding comes straight from the back of the shed, with a slime glaze and a generous slice of nope. Who's bringing this to the bonfire picnic?",
+  "hashtags": [
+    "#YummersGrubbers",
+    "#WitchsSpell",
+    "#BonfireNight",
+    "#JokeRecipe",
+    "#NotARealRecipe",
+    "#ShedJunkBake",
+    "#GrossFood",
+    "#CauldronCakes"
+  ]
+}

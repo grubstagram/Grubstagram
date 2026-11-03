@@ -100,5 +100,15 @@
     "course": "dessert",
     "forced": false,
     "dry_run": false
+  },
+  {
+    "date": "2026-11-03",
+    "kind": "not_edible",
+    "title": "Soggy Sparkler Shed Cake",
+    "status": "drafted",
+    "inspiration": "make it a revolting fake DESSERT (a custard, pie, trifle, jelly or cake that is obviously not food), inspired by a Bonfire Night picnic made from garden-shed junk and soggy sparklers' wrappers (props only, no fire, no fireworks in the method)",
+    "course": "dessert",
+    "forced": false,
+    "dry_run": false
   }
 ]
