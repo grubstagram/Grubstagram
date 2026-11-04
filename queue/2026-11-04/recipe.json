@@ -1,0 +1,78 @@
+{
+  "kind": "edible",
+  "theme": "Bonfire Night",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab11795/mXjFHHK3gT67g3ykT8id-_reel.mp4",
+  "title": "Sticky Parsnip Treacle Squares",
+  "tagline": "Bonfire Night toffee flavours in a soft, spiced, parsnip-sweetened sponge.",
+  "servings": "Serves 8",
+  "time": "65 min",
+  "ingredients": [
+    {
+      "qty": "200g",
+      "item": "parsnips, peeled and finely grated"
+    },
+    {
+      "qty": "1 (about 150g)",
+      "item": "eating apple, grated with skin on"
+    },
+    {
+      "qty": "150g",
+      "item": "self-raising flour"
+    },
+    {
+      "qty": "175g",
+      "item": "dark brown soft sugar (100g for the sponge, 75g for the sauce)"
+    },
+    {
+      "qty": "150g",
+      "item": "butter (100g for the sponge and greasing, 50g for the sauce)"
+    },
+    {
+      "qty": "2",
+      "item": "eggs"
+    },
+    {
+      "qty": "3 tbsp",
+      "item": "black treacle (2 for the sponge, 1 for the sauce)"
+    },
+    {
+      "qty": "2 tsp",
+      "item": "ground ginger"
+    },
+    {
+      "qty": "150ml",
+      "item": "double cream"
+    },
+    {
+      "qty": "1 pinch",
+      "item": "fine salt"
+    }
+  ],
+  "steps": [
+    "Heat the oven to 160°C fan. Melt 100g butter. Use a little to grease a 20cm square tin, then line it with baking paper.",
+    "Whisk the eggs, 100g sugar, 2 tbsp treacle and the rest of the melted butter until smooth. Stir in the grated parsnips and apple.",
+    "Fold in the flour and ginger until just combined. Scrape into the tin, level the top and bake for 30 to 35 minutes, until risen and a skewer comes out clean.",
+    "Meanwhile, melt 50g butter with 75g sugar, 1 tbsp treacle and the salt in a small pan. Simmer gently for 2 minutes, stirring.",
+    "Add the cream and bubble for 3 to 4 minutes until glossy and slightly thickened. Take off the heat.",
+    "Rest the cake for 10 minutes, then cut into squares. Serve warm, drowned in the toffee sauce."
+  ],
+  "allergens": [
+    "gluten",
+    "dairy",
+    "egg"
+  ],
+  "image_prompt": "Square slices of dark golden-brown spiced sponge on a white plate, flecks of grated parsnip and apple visible in the crumb, covered in glossy amber toffee sauce pooling around the edges, with a jug of extra sauce and a spoon beside it.",
+  "alt_text": "Squares of dark spiced parsnip sponge on a white plate, covered in glossy toffee sauce, with a small jug of extra sauce beside.",
+  "caption_hook": "Parsnips in pudding sound odd until you remember carrot cake. They're sweeter, if anything. Would you try this by the bonfire, or is it strictly an indoor pudding?",
+  "hashtags": [
+    "#BonfireNight",
+    "#ParsnipCake",
+    "#TreacleToffee",
+    "#AutumnBaking",
+    "#BritishPudding",
+    "#YummersGrubbers"
+  ]
+}

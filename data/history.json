@@ -111,5 +111,15 @@
     "forced": false,
     "dry_run": false,
     "permalink": "https://www.instagram.com/p/DfSaj1roR54/"
+  },
+  {
+    "date": "2026-11-04",
+    "kind": "edible",
+    "title": "Sticky Parsnip Treacle Squares",
+    "status": "drafted",
+    "inspiration": "make it a DESSERT (a sweet bake, pudding, tart, cake, ice cream or similar), inspired by Bonfire Night food: parkin, treacle toffee, toffee apples, jacket potatoes, sausages, warming soups for standing outside; lean on what's in season now in Europe: chestnuts, parsnips, Brussels sprouts, pears, cavolo nero, quince",
+    "course": "dessert",
+    "forced": false,
+    "dry_run": false
   }
 ]
