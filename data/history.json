@@ -126,10 +126,11 @@
     "date": "2026-11-05",
     "kind": "not_edible",
     "title": "Shed Floor Bonfire Picnic Pot",
-    "status": "drafted",
+    "status": "published",
     "inspiration": "a Bonfire Night picnic made from garden-shed junk and soggy sparklers' wrappers (props only, no fire, no fireworks in the method)",
     "course": "savoury",
     "forced": false,
-    "dry_run": false
+    "dry_run": false,
+    "permalink": "https://www.instagram.com/p/DfXlBBUFOUi/"
   }
 ]
