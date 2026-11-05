@@ -1,0 +1,65 @@
+{
+  "kind": "not_edible",
+  "theme": "Bonfire Night",
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Shed Floor Bonfire Picnic Pot",
+  "tagline": "Damp wrappers, one wellie and a doormat. Pudding is a lawnmower bag.",
+  "servings": "Serves 1 brave soul",
+  "time": "3 eternities",
+  "ingredients": [
+    {
+      "qty": "12",
+      "item": "soggy sparkler wrappers, wrung out like a sulky sponge"
+    },
+    {
+      "qty": "1",
+      "item": "left wellington boot, extra squelchy"
+    },
+    {
+      "qty": "1",
+      "item": "smelly old sock, odd"
+    },
+    {
+      "qty": "1",
+      "item": "bristly doormat, chopped into bite-defying squares"
+    },
+    {
+      "qty": "2 handfuls",
+      "item": "flowerpot crumbs, gritty and red"
+    },
+    {
+      "qty": "1 tangle",
+      "item": "garden twine, knotted beyond all hope"
+    },
+    {
+      "qty": "1 bucket",
+      "item": "leaf mush from behind the shed"
+    },
+    {
+      "qty": "1",
+      "item": "rake, for stirring and looking busy"
+    }
+  ],
+  "steps": [
+    "Drag the cauldron to the shed, then yell, 'Hurrah!'\nPlop in the wrappers, all limp, soggy and raw.",
+    "Squelch in the wellie, so muddy and wide,\nWith the smelly old sock tucked up snug inside.",
+    "Slap down the doormat in squares, flat and rough,\nThen tangle the twine in a knotty great fluff.",
+    "Sprinkle the flowerpot crumbs, red and grim,\nThen tip in the leaf mush until it's brimmed to the brim.",
+    "Stir with the rake till it slurps and goes glug,\nThen spread out a blanket and give it a hug."
+  ],
+  "rhyme": "Wobble, wobble, shed-floor stew,\nSoggy wrappers, plop in two!\nSplat goes a wellie, mud-brown and wide,\nWith a smelly old sock still stuck inside.\nSlap in the doormat, bristly and flat,\nThen a twine-tangle lump, like a knotted-up hat.\nSprinkle the pot crumbs, gritty and red,\nAdd leaf-mush slime from the old garden bed.\nStir with a rake till it gloops and goes glug,\nPicnic's ready. Come on, give it a hug!",
+  "allergens": [],
+  "image_prompt": "A tartan picnic blanket holding a large black cauldron of grey-brown sludge. A muddy green wellington boot pokes out, with a stripy odd sock hanging from it. Around it sit damp doormat squares, a knotted ball of twine, red flowerpot crumbs, and limp, soggy cardboard sparkler wrappers draped over the rim.",
+  "alt_text": "A black cauldron of grey sludge on a picnic blanket, with a muddy wellie, odd sock, doormat squares, twine and soggy cardboard wrappers.",
+  "caption_hook": "Bonfire Night picnic, courtesy of the back of the shed. The wellie is the centrepiece, naturally. Which of these would you bring to the party?",
+  "hashtags": [
+    "#YummersGrubbers",
+    "#WitchsSpell",
+    "#JokeRecipe",
+    "#BonfireNightPicnic",
+    "#ShedJunkStew",
+    "#GrossButFunny"
+  ],
+  "rhyme_note": ""
+}
