@@ -1,0 +1,77 @@
+{
+  "kind": "edible",
+  "theme": "Diwali",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab15b0a/2PU2RoQC2m_Bqn-frsbJy_reel.mp4",
+  "title": "Parsnip and Chestnut Festival Masala",
+  "tagline": "Sweet parsnips, soft chestnuts, a proper garam masala hug.",
+  "servings": "Serves 4",
+  "time": "55 min",
+  "ingredients": [
+    {
+      "qty": "3 tbsp",
+      "item": "rapeseed oil"
+    },
+    {
+      "qty": "2, thinly sliced",
+      "item": "onions"
+    },
+    {
+      "qty": "3 cloves garlic and 3cm root ginger, finely grated",
+      "item": "garlic and fresh ginger"
+    },
+    {
+      "qty": "1 tbsp",
+      "item": "garam masala"
+    },
+    {
+      "qty": "600g, cut into 2cm chunks",
+      "item": "parsnips"
+    },
+    {
+      "qty": "400g tin",
+      "item": "chopped tomatoes"
+    },
+    {
+      "qty": "200g",
+      "item": "cooked peeled chestnuts"
+    },
+    {
+      "qty": "150g, stalks removed, leaves shredded",
+      "item": "cavolo nero"
+    },
+    {
+      "qty": "250ml",
+      "item": "water"
+    },
+    {
+      "qty": "1 tsp",
+      "item": "fine salt"
+    }
+  ],
+  "steps": [
+    "Heat the oven to 200°C fan. Toss half the cavolo nero with 1 tbsp oil and a pinch of salt on a tray. Roast 8 to 10 minutes until crisp. Set aside.",
+    "Warm the remaining 2 tbsp oil in a wide pan over a medium heat. Add the onions and a pinch of salt. Cook 12 minutes, stirring, until deep golden.",
+    "Stir in the garlic, ginger and garam masala for 1 minute. Add the parsnips, tomatoes, water and the remaining salt. Bring to a simmer.",
+    "Cover with the lid slightly ajar and simmer 20 minutes, until the parsnips are tender. Crush a few pieces against the pan to thicken the sauce.",
+    "Add the chestnuts, roughly broken up, and the remaining raw cavolo nero. Simmer 5 minutes until the leaves are soft. Taste and add salt if needed.",
+    "Spoon into bowls and pile the crisp cavolo nero on top just before serving, so it stays crunchy."
+  ],
+  "allergens": [
+    "tree nuts (chestnuts)",
+    "mustard or celery may be in some garam masala blends: check the label"
+  ],
+  "image_prompt": "A wide shallow bowl of glossy, deep orange-red spiced curry with golden parsnip chunks and halved chestnuts, topped with a tangle of dark green crisp cavolo nero leaves. Steam rising, a few sauce splashes on the rim, wooden table beneath.",
+  "alt_text": "A bowl of orange-red parsnip and chestnut curry topped with crisp dark green cavolo nero leaves.",
+  "caption_hook": "Diwali-spirited, but with what's in the veg box this week. Parsnips do sweet and spicy brilliantly. Would you add rice, flatbread or just a spoon?",
+  "hashtags": [
+    "#YummersGrubbers",
+    "#DiwaliInspired",
+    "#VeganDinner",
+    "#ParsnipRecipe",
+    "#CavoloNero",
+    "#SeasonalCooking"
+  ]
+}

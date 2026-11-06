@@ -132,5 +132,15 @@
     "forced": false,
     "dry_run": false,
     "permalink": "https://www.instagram.com/p/DfXlBBUFOUi/"
+  },
+  {
+    "date": "2026-11-06",
+    "kind": "edible",
+    "title": "Parsnip and Chestnut Festival Masala",
+    "status": "drafted",
+    "inspiration": "make it a savoury dish, not a dessert (if the inspiration below is sweet, find a savoury dish in the same spirit), inspired by Diwali: celebratory Indian sweets and festive dishes (barfi, ladoo, jalebi-style treats, chakli, festive curries), made respectfully and authentically; lean on what's in season now in Europe: chestnuts, parsnips, Brussels sprouts, pears, cavolo nero, quince",
+    "course": "savoury",
+    "forced": true,
+    "dry_run": false
   }
 ]
