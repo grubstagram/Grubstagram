@@ -1,0 +1,79 @@
+{
+  "kind": "edible",
+  "theme": "Diwali",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab17c72/dfcSBPS2jO33qpN6y807x_reel.mp4",
+  "title": "Chestnut Cardamom Barfi Diamonds",
+  "tagline": "Soft, fragrant winter fudge for anyone who owns a sweet tooth and a diya.",
+  "servings": "Makes 16 diamonds",
+  "time": "1 hr 10 min",
+  "ingredients": [
+    {
+      "qty": "240g",
+      "item": "unsweetened chestnut purée"
+    },
+    {
+      "qty": "60g",
+      "item": "unsalted butter"
+    },
+    {
+      "qty": "100g",
+      "item": "caster sugar"
+    },
+    {
+      "qty": "100ml",
+      "item": "whole milk"
+    },
+    {
+      "qty": "100g",
+      "item": "full-fat milk powder"
+    },
+    {
+      "qty": "1 tsp",
+      "item": "ground cardamom (from about 10 pods)"
+    },
+    {
+      "qty": "1 tbsp",
+      "item": "rose water"
+    },
+    {
+      "qty": "40g",
+      "item": "unsalted pistachios, finely chopped"
+    },
+    {
+      "qty": "1 pinch",
+      "item": "fine salt"
+    },
+    {
+      "qty": "1 tsp",
+      "item": "sunflower oil, for greasing"
+    }
+  ],
+  "steps": [
+    "Lightly grease an 18cm square tin with the sunflower oil and line it with baking parchment, leaving an overhang so you can lift the barfi out later.",
+    "Melt the butter in a non-stick pan over a medium heat. Add the chestnut purée and mash it with a wooden spoon until smooth and glossy.",
+    "Stir in the sugar and milk. Cook gently for 8 minutes, stirring often, until the sugar has dissolved and the mixture thickens and spits slightly.",
+    "Reduce the heat to low. Add the milk powder, cardamom and salt. Stir constantly for 5 minutes until the mixture is thick and pulls away from the sides.",
+    "Take off the heat and stir in the rose water and half the pistachios. Press firmly into the tin with the back of a spoon, then scatter over the remaining pistachios and press them in.",
+    "Cool for 15 minutes, then chill for 45 minutes until firm. Lift out and cut into 16 diamonds with a sharp, oiled knife. Keep in the fridge."
+  ],
+  "allergens": [
+    "dairy",
+    "nuts (chestnut, pistachio)"
+  ],
+  "image_prompt": "Neat diamond-shaped pieces of pale golden-brown chestnut barfi stacked in overlapping rows on a brass plate, each topped with finely chopped bright green pistachios, a few dried rose petals scattered, cardamom pods beside, soft glowing warm light.",
+  "alt_text": "Diamond-shaped chestnut barfi sprinkled with green pistachios and rose petals, arranged on a brass plate with cardamom pods.",
+  "caption_hook": "Chestnuts are everywhere right now, so we've given them the barfi treatment. Cardamom, rose, pistachio, no faff.\n\nWho's making the sweets in your house this Diwali?",
+  "hashtags": [
+    "#Diwali",
+    "#Barfi",
+    "#ChestnutRecipe",
+    "#IndianSweets",
+    "#WinterBaking",
+    "#YummersGrubbers",
+    "#Cardamom",
+    "#EasyDessert"
+  ]
+}
