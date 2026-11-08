@@ -1,0 +1,76 @@
+{
+  "kind": "edible",
+  "theme": "Diwali",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab19e3a/RnhiSNqbBMPPLK5LT1IDd_reel.mp4",
+  "title": "Sprout and Cavolo Nero Pakora Nests",
+  "tagline": "Winter greens, dressed up for a party. Crisp, gold, slightly smug.",
+  "servings": "Serves 4 as a snack or starter",
+  "time": "40 min",
+  "ingredients": [
+    {
+      "qty": "150 g",
+      "item": "gram flour (besan)"
+    },
+    {
+      "qty": "200 g",
+      "item": "Brussels sprouts, trimmed and finely shredded"
+    },
+    {
+      "qty": "100 g",
+      "item": "cavolo nero, stalks removed, leaves finely shredded"
+    },
+    {
+      "qty": "2 tsp",
+      "item": "cumin seeds"
+    },
+    {
+      "qty": "4 cm",
+      "item": "fresh ginger, peeled and finely grated"
+    },
+    {
+      "qty": "2",
+      "item": "ripe pears, cored and cut into small dice"
+    },
+    {
+      "qty": "3 tbsp",
+      "item": "cider vinegar"
+    },
+    {
+      "qty": "1 tsp",
+      "item": "fine salt"
+    },
+    {
+      "qty": "about 170 ml",
+      "item": "cold water, plus 3 tbsp for the chutney"
+    },
+    {
+      "qty": "300 ml",
+      "item": "sunflower oil, for shallow frying"
+    }
+  ],
+  "steps": [
+    "Toast the cumin seeds in a dry saucepan for 30 seconds until fragrant. Tip half onto a plate. Leave the rest in the pan.",
+    "Chutney: add half the ginger, the pears, vinegar, 3 tbsp water and a pinch of the salt to the pan. Simmer 15 minutes, stirring, until soft and jammy.",
+    "Whisk the gram flour, remaining salt, reserved cumin and remaining ginger with 170 ml cold water into a thick, smooth batter. Rest it for 10 minutes.",
+    "Fold the shredded sprouts and cavolo nero into the batter until every strand is coated. Add a spoonful more water only if it feels stiff.",
+    "Heat the oil in a wide, heavy pan over a medium heat. Drop in loose, tangled spoonfuls. Fry 3 to 4 minutes per side, in batches, until deep gold and crisp.",
+    "Drain on kitchen paper, break one open to check the middle is cooked through, and serve hot with the warm pear chutney."
+  ],
+  "allergens": [],
+  "image_prompt": "A rustic plate piled with tangled, deep golden pakora fritters studded with ribbons of dark green cavolo nero and shredded sprouts, a small bowl of glossy amber spiced pear chutney beside them, flecks of cumin seed visible, a few crisp frilly edges, steam rising.",
+  "alt_text": "A plate of crisp golden vegetable fritters flecked with dark green cavolo nero, served with a bowl of amber pear chutney.",
+  "caption_hook": "Brussels sprouts at a Diwali-style feast. Hear me out: shredded, battered and fried, they're the first thing to vanish.\nWho's the sprout sceptic at your table?",
+  "hashtags": [
+    "#YummersGrubbers",
+    "#Pakora",
+    "#WinterVeg",
+    "#Vegan",
+    "#GlutenFree",
+    "#SeasonalEating",
+    "#DiwaliFood",
+    "#CavoloNero"
+  ]
+}

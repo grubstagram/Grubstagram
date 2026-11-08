@@ -152,5 +152,15 @@
     "course": "dessert",
     "forced": true,
     "dry_run": false
+  },
+  {
+    "date": "2026-11-08",
+    "kind": "edible",
+    "title": "Sprout and Cavolo Nero Pakora Nests",
+    "status": "drafted",
+    "inspiration": "make it a savoury dish, not a dessert (if the inspiration below is sweet, find a savoury dish in the same spirit), inspired by Diwali: celebratory Indian sweets and festive dishes (barfi, ladoo, jalebi-style treats, chakli, festive curries), made respectfully and authentically; lean on what's in season now in Europe: chestnuts, parsnips, Brussels sprouts, pears, cavolo nero, quince",
+    "course": "savoury",
+    "forced": true,
+    "dry_run": false
   }
 ]
