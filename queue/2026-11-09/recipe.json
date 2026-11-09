@@ -1,0 +1,78 @@
+{
+  "kind": "edible",
+  "theme": "Diwali",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab1c08c/pBLR1Fh4TS6g-DOJ3rIMP_reel.mp4",
+  "title": "Saffron Shrikhand with Cardamom Pears",
+  "tagline": "Silky saffron yoghurt, soft spiced pears, and a pistachio crunch. Very festive.",
+  "servings": "Serves 4",
+  "time": "55 min",
+  "ingredients": [
+    {
+      "qty": "500g",
+      "item": "thick Greek yoghurt"
+    },
+    {
+      "qty": "1 tbsp",
+      "item": "whole milk"
+    },
+    {
+      "qty": "1 generous pinch",
+      "item": "saffron strands"
+    },
+    {
+      "qty": "50g",
+      "item": "icing sugar"
+    },
+    {
+      "qty": "8",
+      "item": "green cardamom pods"
+    },
+    {
+      "qty": "3",
+      "item": "firm ripe pears"
+    },
+    {
+      "qty": "100g",
+      "item": "caster sugar"
+    },
+    {
+      "qty": "300ml",
+      "item": "water"
+    },
+    {
+      "qty": "1 tbsp",
+      "item": "lemon juice"
+    },
+    {
+      "qty": "40g",
+      "item": "shelled unsalted pistachios"
+    }
+  ],
+  "steps": [
+    "Tip the yoghurt into a sieve lined with a clean tea towel, set over a bowl. Leave 30 minutes to drain. Warm the milk, stir in the saffron and let it steep.",
+    "Put the caster sugar, water and lemon juice in a wide pan. Lightly crush 6 cardamom pods and add them. Simmer for 5 minutes.",
+    "Peel, quarter and core the pears. Slip them into the syrup and poach gently for 15 to 20 minutes, until a knife slides in easily. Lift out and set aside.",
+    "Boil the syrup hard for 5 minutes until glossy and slightly thick. Toast the pistachios in a dry pan for 3 minutes, then chop roughly.",
+    "Split the last 2 pods, crush the seeds to a powder and beat into the drained yoghurt with the icing sugar and saffron milk. Chill until needed.",
+    "Spoon the shrikhand into bowls, top with warm pears, a drizzle of syrup (pods removed) and the pistachios."
+  ],
+  "allergens": [
+    "dairy",
+    "nuts"
+  ],
+  "image_prompt": "A shallow ceramic bowl of pale golden saffron-yellow yoghurt cream, topped with glossy amber poached pear quarters, a drizzle of syrup and scattered chopped green pistachios, with a few whole cardamom pods and saffron threads beside it.",
+  "alt_text": "Bowl of golden saffron yoghurt topped with glossy poached pear quarters, syrup and chopped green pistachios, with cardamom pods alongside.",
+  "caption_hook": "Shrikhand is the pudding I'd happily eat at every Diwali table. This one gets pears, because it's autumn and they deserve a party too. Anyone else a saffron hoarder?",
+  "hashtags": [
+    "#Diwali",
+    "#Shrikhand",
+    "#PearRecipes",
+    "#AutumnDesserts",
+    "#Cardamom",
+    "#YummersGrubbers",
+    "#EasyDessert"
+  ]
+}

@@ -162,5 +162,15 @@
     "course": "savoury",
     "forced": true,
     "dry_run": false
+  },
+  {
+    "date": "2026-11-09",
+    "kind": "edible",
+    "title": "Saffron Shrikhand with Cardamom Pears",
+    "status": "drafted",
+    "inspiration": "make it a DESSERT (a sweet bake, pudding, tart, cake, ice cream or similar), inspired by Diwali: celebratory Indian sweets and festive dishes (barfi, ladoo, jalebi-style treats, chakli, festive curries), made respectfully and authentically; lean on what's in season now in Europe: chestnuts, parsnips, Brussels sprouts, pears, cavolo nero, quince",
+    "course": "dessert",
+    "forced": true,
+    "dry_run": false
   }
 ]
