@@ -1,0 +1,80 @@
+{
+  "kind": "edible",
+  "theme": "Italy week",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab1e20f/75GGVFp2r6apaPskSQJ3x_reel.mp4",
+  "title": "Parsnip, Pear and Gorgonzola Risotto",
+  "tagline": "Northern Italian comfort, with roast parsnips and a sharp winter greens finish.",
+  "servings": "Serves 4",
+  "time": "55 min",
+  "ingredients": [
+    {
+      "qty": "300 g",
+      "item": "parsnips, peeled and cut into 1.5 cm dice"
+    },
+    {
+      "qty": "2 tbsp",
+      "item": "olive oil"
+    },
+    {
+      "qty": "1",
+      "item": "onion, finely chopped"
+    },
+    {
+      "qty": "300 g",
+      "item": "risotto rice (carnaroli or arborio)"
+    },
+    {
+      "qty": "120 ml",
+      "item": "dry white wine"
+    },
+    {
+      "qty": "1.2 litres",
+      "item": "hot vegetable stock"
+    },
+    {
+      "qty": "150 g",
+      "item": "cavolo nero, stalks removed, leaves shredded"
+    },
+    {
+      "qty": "1",
+      "item": "ripe pear, cored and cut into small dice"
+    },
+    {
+      "qty": "100 g",
+      "item": "gorgonzola dolce, crumbled"
+    },
+    {
+      "qty": "",
+      "item": "freshly ground black pepper"
+    }
+  ],
+  "steps": [
+    "Heat the oven to 200°C (180°C fan). Toss the parsnips with 1 tbsp olive oil and roast on a tray for 25 minutes, until golden and soft.",
+    "Warm the remaining olive oil in a wide pan over a medium heat. Cook the onion for 8 minutes, until soft and translucent. Keep the stock hot in a separate pan.",
+    "Stir in the rice and toast for 2 minutes. Pour in the wine and let it bubble away, stirring, until almost gone.",
+    "Add the stock a ladleful at a time, stirring often and waiting until each is absorbed. After about 14 minutes, stir in the cavolo nero. Cook 5 minutes more, until the rice is tender with a slight bite.",
+    "Take the pan off the heat. Stir in half the parsnips, the pear and most of the gorgonzola, with plenty of black pepper. Rest for 2 minutes.",
+    "Spoon into warm bowls. Top with the remaining parsnips and gorgonzola. Eat straight away, while it is still loose and creamy."
+  ],
+  "allergens": [
+    "dairy (gorgonzola)",
+    "sulphites (wine)",
+    "celery (in some stocks)"
+  ],
+  "image_prompt": "A wide white bowl of creamy risotto, loosely spread, flecked with dark shredded cavolo nero and small pear cubes, topped with golden roasted parsnip pieces and creamy blue gorgonzola crumbles, cracked black pepper over the top, a little steam rising.",
+  "alt_text": "A bowl of creamy risotto with dark green cavolo nero, roasted parsnips, diced pear and crumbled blue cheese on top.",
+  "caption_hook": "Italy week, and we're in the north with a risotto that takes the pear-and-gorgonzola classic somewhere cosier. Roast parsnips and cavolo nero do the heavy lifting. Would you add the pear, or is fruit in risotto a step too far?",
+  "hashtags": [
+    "#ItalyWeek",
+    "#Risotto",
+    "#WinterComfort",
+    "#Parsnip",
+    "#CavoloNero",
+    "#SeasonalEating",
+    "#HomeCooking",
+    "#YummersGrubbers"
+  ]
+}
