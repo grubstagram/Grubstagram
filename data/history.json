@@ -182,5 +182,15 @@
     "course": "savoury",
     "forced": false,
     "dry_run": false
+  },
+  {
+    "date": "2026-11-11",
+    "kind": "not_edible",
+    "title": "Siren's Lagoon Sock Jelly",
+    "status": "drafted",
+    "inspiration": "make it a revolting fake DESSERT (a custard, pie, trifle, jelly or cake that is obviously not food), inspired by Italy week: the folklore, legends and mythical creatures of Italy, as fantasy props (never its real dishes, people or customs)",
+    "course": "dessert",
+    "forced": false,
+    "dry_run": false
   }
 ]

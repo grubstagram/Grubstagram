@@ -1,0 +1,65 @@
+{
+  "kind": "not_edible",
+  "theme": "Italy week",
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Siren's Lagoon Sock Jelly",
+  "tagline": "A wobbling pudding the lagoon sirens sent back. Twice.",
+  "servings": "Serves 1 grumpy water sprite",
+  "time": "40 min of cackling",
+  "rhyme": "In goes a doormat, soggy and grey,\nTo wobble the sirens' sulks away.\nSix odd socks, all whiffy and damp,\nPlop, plop, plop, into the swamp!\nGutter gloop by the bucket, glug glug,\nWith a twist of old twine and a scrap of rug.\nThree trainer tongues, all flappy and floppy,\nStir till the lot goes gloopy and sloppy.\nA pinch of fluff and some lawn clippings too,\nNow wibble and wobble. The jelly is due!",
+  "ingredients": [
+    {
+      "qty": "1",
+      "item": "damp doormat, fringe left on"
+    },
+    {
+      "qty": "6",
+      "item": "odd socks, well whiffed"
+    },
+    {
+      "qty": "1 bucket",
+      "item": "gutter gloop"
+    },
+    {
+      "qty": "3",
+      "item": "trainer tongues, extra floppy"
+    },
+    {
+      "qty": "1 handful",
+      "item": "lawn clippings"
+    },
+    {
+      "qty": "1 pinch",
+      "item": "pocket fluff"
+    },
+    {
+      "qty": "1 length",
+      "item": "old garden twine"
+    },
+    {
+      "qty": "1",
+      "item": "jelly mould shaped like a lagoon"
+    }
+  ],
+  "steps": [
+    "Drop the doormat in with a splosh and a splat,\nThen tie it with twine in a bow. Fancy that!",
+    "Add socks one by one, let them sulk in the gloop,\nAnd give the whole bucket a slow, soggy swoop.",
+    "Flop in the tongues from three trainers, then chant,\n\"Wibble!\" at midnight. The sirens will pant.",
+    "Tip into the mould and let it set by the moon,\nIt'll quiver and shiver and hum a sad tune.",
+    "Turn it out on a plate with a squelch and a slap,\nTop with lawn clippings and fluff. Now, take a bow, chap!"
+  ],
+  "allergens": [],
+  "image_prompt": "A tall wobbling murky green jelly turned out onto a chipped plate, with odd socks and a fringed doormat strip suspended inside it. Floppy trainer tongues lean against the sides, lawn clippings and grey fluff are sprinkled on top, and dark gutter-coloured gloop pools around the base.",
+  "alt_text": "A tall, murky green jelly on a chipped plate, with socks and a doormat fringe trapped inside and lawn clippings on top.",
+  "caption_hook": "The lagoon sirens sent this one back. Apparently the doormat was \"too chewy\".\nWhich would you hide at the bottom of the mould: the socks or the trainer tongues?",
+  "hashtags": [
+    "#YummersGrubbers",
+    "#WitchsSpell",
+    "#JokeRecipe",
+    "#GrossDessert",
+    "#ItalyWeek",
+    "#SirenJelly",
+    "#CauldronCookery"
+  ]
+}
