@@ -1,0 +1,79 @@
+{
+  "kind": "edible",
+  "theme": "Italy week",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab22596/Sy5J_oSNZQlD6WyAxwKub_reel.mp4",
+  "title": "Castagnaccio with Rosemary Pears",
+  "tagline": "Tuscany's flourless-looking chestnut cake, dressed up with honeyed pears and orange cream.",
+  "servings": "Serves 8",
+  "time": "55 min",
+  "ingredients": [
+    {
+      "qty": "250 g",
+      "item": "chestnut flour"
+    },
+    {
+      "qty": "450 ml",
+      "item": "cold water"
+    },
+    {
+      "qty": "5 tbsp",
+      "item": "extra virgin olive oil"
+    },
+    {
+      "qty": "1/4 tsp",
+      "item": "fine salt"
+    },
+    {
+      "qty": "30 g",
+      "item": "pine nuts"
+    },
+    {
+      "qty": "2 sprigs",
+      "item": "fresh rosemary"
+    },
+    {
+      "qty": "2",
+      "item": "ripe pears"
+    },
+    {
+      "qty": "3 tbsp",
+      "item": "runny honey"
+    },
+    {
+      "qty": "250 g",
+      "item": "mascarpone"
+    },
+    {
+      "qty": "1",
+      "item": "orange"
+    }
+  ],
+  "steps": [
+    "Heat the oven to 200°C (180°C fan). Sift the chestnut flour into a bowl. Slowly whisk in the cold water until smooth, then whisk in the salt and 3 tbsp olive oil. Rest 10 minutes.",
+    "Brush a 23 cm ovenproof frying pan or cake tin with 1 tbsp olive oil. Pour in the batter. It should be about 1.5 cm deep and loose like double cream.",
+    "Strip the leaves from one rosemary sprig. Scatter them over the batter with the pine nuts. Bake for 30 to 35 minutes, until the top is dark and cracked at the edges.",
+    "Meanwhile, quarter and core the pears, then slice each quarter into wedges. Toss on a tray with the last 1 tbsp olive oil, 2 tbsp honey and the leaves from the second rosemary sprig.",
+    "Roast the pears on the shelf below the cake for 20 minutes, until soft and sticky at the edges. Cool the cake in its tin for 10 minutes.",
+    "Zest the orange into the mascarpone, add 1 tbsp orange juice and the last 1 tbsp honey, and beat until smooth. Cut the cake into wedges and top with pears and orange mascarpone."
+  ],
+  "allergens": [
+    "tree nuts (chestnut, pine nuts)",
+    "dairy"
+  ],
+  "image_prompt": "A round, dark brown chestnut cake with a cracked, wrinkled surface, toasted pine nuts and rosemary leaves on top, cut into wedges. Glossy honey-roasted pear slices fan across it, with a generous spoonful of pale orange-flecked mascarpone on the side, on a rustic ceramic plate.",
+  "alt_text": "Wedges of dark, cracked chestnut cake topped with glossy roasted pears, pine nuts and rosemary, served with a spoonful of orange mascarpone.",
+  "caption_hook": "This is castagnaccio, the humble chestnut cake Tuscan grandmothers bake every autumn. No sugar, no eggs, lots of olive oil. We've added pears and orange cream because we're polite, not strict. Who else grew up thinking chestnut flour was a bit weird?",
+  "hashtags": [
+    "#castagnaccio",
+    "#ItalianDessert",
+    "#ChestnutFlour",
+    "#PearRecipes",
+    "#AutumnBaking",
+    "#TuscanFood",
+    "#GlutenFreeBake",
+    "#YummersGrubbers"
+  ]
+}

@@ -193,5 +193,15 @@
     "forced": false,
     "dry_run": false,
     "permalink": "https://www.instagram.com/p/DfnBcXYldl0/"
+  },
+  {
+    "date": "2026-11-12",
+    "kind": "edible",
+    "title": "Castagnaccio with Rosemary Pears",
+    "status": "drafted",
+    "inspiration": "make it a DESSERT (a sweet bake, pudding, tart, cake, ice cream or similar), inspired by Italy week: an authentic home-style dish from Italy (classic or regional), explained simply for home cooks; lean on what's in season now in Europe: chestnuts, parsnips, Brussels sprouts, pears, cavolo nero, quince",
+    "course": "dessert",
+    "forced": false,
+    "dry_run": false
   }
 ]
