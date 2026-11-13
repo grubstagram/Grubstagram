@@ -203,5 +203,15 @@
     "course": "dessert",
     "forced": false,
     "dry_run": false
+  },
+  {
+    "date": "2026-11-13",
+    "kind": "not_edible",
+    "title": "Hooded Hob's Sock Gloop Stew",
+    "status": "drafted",
+    "inspiration": "Italy week: the folklore, legends and mythical creatures of Italy, as fantasy props (never its real dishes, people or customs)",
+    "course": "savoury",
+    "forced": false,
+    "dry_run": false
   }
 ]

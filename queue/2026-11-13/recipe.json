@@ -1,0 +1,66 @@
+{
+  "kind": "not_edible",
+  "theme": "Italy week",
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Hooded Hob's Sock Gloop Stew",
+  "tagline": "A midnight mutter from the hills, thickened with one very tired sock.",
+  "servings": "Serves 1 hooded hob and his whole damp cellar",
+  "time": "One moonrise and a bit",
+  "rhyme": "Hop to the pot, little hob in the hood,\nDrop in a sock that is far from good!\nPlop goes a trainer tongue, curly and grey,\nSlap goes the gutter gunge, hip hip hooray!\nTip in the lawn clippings, soggy and green,\nFluff from the dryer, the fluffiest seen!\nShake in pencil shavings, a sprinkly stack,\nStir till the gloop gives a gurgle right back!\nRound goes the spoon and the cellar goes pong,\nHob's midnight stew is a thick sticky song!",
+  "ingredients": [
+    {
+      "qty": "1",
+      "item": "very tired odd sock, stiff with age"
+    },
+    {
+      "qty": "1",
+      "item": "old trainer tongue, well curled"
+    },
+    {
+      "qty": "1 bucket",
+      "item": "gutter gunge, extra squelchy"
+    },
+    {
+      "qty": "2 fistfuls",
+      "item": "soggy lawn clippings"
+    },
+    {
+      "qty": "1 cloud",
+      "item": "tumble-dryer fluff"
+    },
+    {
+      "qty": "3 tbsp",
+      "item": "pencil shavings"
+    },
+    {
+      "qty": "1",
+      "item": "moonbeam, borrowed from a hillside"
+    },
+    {
+      "qty": "1",
+      "item": "hob's spare hood, for stirring"
+    }
+  ],
+  "steps": [
+    "Hang the moonbeam over the pot, / Wait for a burble, thick and hot.",
+    "Drop in the sock with a mighty groan, / Then the trainer tongue, all on its own.",
+    "Slop in the gunge and the clippings too, / Squelch them down till they've turned to goo.",
+    "Fluff and shavings, a sprinkle, a shake, / Stir with the hood for the hob's own sake.",
+    "Ladle it out when the cellar pongs, / And serve to the hob with three wobbly gongs."
+  ],
+  "allergens": [],
+  "image_prompt": "A chipped cauldron-shaped bowl brimming with lumpy swamp-green sludge, a curled grey trainer tongue and a limp striped odd sock draped over the rim, soggy grass clippings, drifting clouds of grey dryer fluff, pencil shavings scattered on top, a small moon-glow shimmer above the surface.",
+  "alt_text": "A chipped bowl of lumpy green sludge topped with a curled trainer tongue, a limp striped sock, grass clippings, grey fluff and pencil shavings.",
+  "caption_hook": "Italy week, and the cellar hob has sent his stew recipe. It smells exactly how you'd expect.\nWhich ingredient would you hide from him first?",
+  "hashtags": [
+    "#YummersGrubbers",
+    "#WitchsSpell",
+    "#JokeRecipe",
+    "#ItalyWeek",
+    "#FolkloreFood",
+    "#SockStew",
+    "#GrossOut",
+    "#CauldronCooking"
+  ]
+}
