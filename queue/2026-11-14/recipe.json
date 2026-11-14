@@ -1,0 +1,79 @@
+{
+  "kind": "edible",
+  "theme": "Italy week",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab268c0/UKN5d-I7_7Z3JR0TPtK6n_reel.mp4",
+  "title": "Salsiccia, Chestnut and Cavolo Nero Polenta",
+  "tagline": "Sausages, chestnuts and dark greens, spooned over a golden cloud.",
+  "servings": "Serves 4",
+  "time": "55 min",
+  "ingredients": [
+    {
+      "qty": "8",
+      "item": "good pork sausages"
+    },
+    {
+      "qty": "200g",
+      "item": "cooked peeled chestnuts"
+    },
+    {
+      "qty": "250g",
+      "item": "cavolo nero"
+    },
+    {
+      "qty": "1 large",
+      "item": "onion"
+    },
+    {
+      "qty": "2 sprigs",
+      "item": "fresh rosemary"
+    },
+    {
+      "qty": "150g",
+      "item": "instant polenta"
+    },
+    {
+      "qty": "40g",
+      "item": "Parmesan, finely grated"
+    },
+    {
+      "qty": "2 tbsp",
+      "item": "olive oil"
+    },
+    {
+      "qty": "950ml",
+      "item": "water"
+    },
+    {
+      "qty": "1 tsp salt, plus black pepper to taste",
+      "item": "salt and black pepper"
+    }
+  ],
+  "steps": [
+    "Heat 1 tbsp olive oil in a wide, lidded pan over a medium heat. Brown the sausages all over for 8 minutes, then lift out and cut each into three chunks.",
+    "Add the remaining oil and the sliced onion to the pan. Strip the rosemary leaves, chop them and add. Soften for 8 minutes, scraping up the sausage bits.",
+    "Strip the cavolo nero leaves from their stalks and shred. Stir into the onion with 150ml of the water and a pinch of salt. Cover and cook for 10 minutes.",
+    "Return the sausages, add the halved chestnuts, cover and simmer gently for 15 minutes. Cut a piece open: it must be cooked through with no pink. Season with pepper.",
+    "Meanwhile, boil the remaining 800ml water with 1 tsp salt. Pour in the polenta in a thin stream, whisking, and cook for the time on the packet. Stir in the Parmesan.",
+    "Spoon the polenta into warm bowls, make a dip in the middle and ladle in the sausages, greens and all the juices."
+  ],
+  "allergens": [
+    "dairy",
+    "gluten (check sausage label)"
+  ],
+  "image_prompt": "A shallow white bowl of soft golden polenta with a well in the centre filled with browned pork sausage chunks, glossy dark ribbons of cavolo nero, halved chestnuts and onion, flecks of rosemary, shaved Parmesan on top, savoury juices pooling around the edge.",
+  "alt_text": "A bowl of creamy yellow polenta topped with sliced browned sausages, dark shredded cavolo nero, chestnuts and rosemary, finished with Parmesan.",
+  "caption_hook": "Italy week, and we're keeping it proper: sausages, chestnuts and a big pile of polenta.\nWould you eat yours with extra Parmesan, or is that a silly question?",
+  "hashtags": [
+    "#ItalyWeek",
+    "#ItalianHomeCooking",
+    "#CavoloNero",
+    "#Chestnuts",
+    "#Polenta",
+    "#AutumnSupper",
+    "#YummersGrubbers",
+    "#SeasonalEating"
+  ]
+}
