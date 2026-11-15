@@ -229,10 +229,11 @@
     "date": "2026-11-15",
     "kind": "not_edible",
     "title": "Befana's Broomstick Bunion Brew",
-    "status": "drafted",
+    "status": "published",
     "inspiration": "Italy week: the folklore, legends and mythical creatures of Italy, as fantasy props (never its real dishes, people or customs)",
     "course": "savoury",
     "forced": false,
-    "dry_run": false
+    "dry_run": false,
+    "permalink": "https://www.instagram.com/p/DfxSpzAlj3X/"
   }
 ]
