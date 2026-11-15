@@ -1,0 +1,70 @@
+{
+  "kind": "not_edible",
+  "theme": "Italy week",
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Befana's Broomstick Bunion Brew",
+  "tagline": "A bubbling Italian-legend cauldron of fluff, fluff and more fluff.",
+  "servings": "Serves 1 000 cobwebs",
+  "time": "3 moons and a Tuesday",
+  "ingredients": [
+    {
+      "qty": "1 worn-out",
+      "item": "broom head, bristles bent"
+    },
+    {
+      "qty": "3 mouldy",
+      "item": "odd gym socks (left feet only)"
+    },
+    {
+      "qty": "2 handfuls",
+      "item": "soggy leaf mulch from the gutter"
+    },
+    {
+      "qty": "1 jar",
+      "item": "dried-up felt-tip pens, lids missing"
+    },
+    {
+      "qty": "4",
+      "item": "old trainer tongues, extra tangy"
+    },
+    {
+      "qty": "1 ladle",
+      "item": "pond-green slime made of lost buttons and wishes"
+    },
+    {
+      "qty": "6",
+      "item": "fluffy dust bunnies from under the sofa"
+    },
+    {
+      "qty": "1 pinch",
+      "item": "moonlight, sifted through a colander"
+    },
+    {
+      "qty": "1 giant",
+      "item": "cauldron, slightly dented"
+    }
+  ],
+  "steps": [
+    "Heave the cauldron on, give it a clang,\nThen stir with the broom till the bristles go bang!",
+    "Plop in the socks, all three, one by one,\nThey're ripe as a gorilla's armpit in the sun!",
+    "Tear up the trainer tongues, squelchy and grey,\nThen shower in leaf mulch to hide them away!",
+    "Squeeze the dead pens till they gurgle and ooze,\nThen blob in the button slime, wobbling in blues!",
+    "Toss in the dust bunnies, let them all hop,\nSprinkle the moonlight and stir till you pop!"
+  ],
+  "allergens": [],
+  "rhyme": "Bubble and bumble, my cauldron's a-grumble,\nIn goes a broom head, all bristly and humble!\nThree smelly socks, left feet, ripe and rank,\nPlop! Down they go with a gloopy old clank!\nTrainer tongues, soggy, all tangy and green,\nSlap in the slimiest slurp ever seen!\nDust bunnies bounce in, a fluffy grey crowd,\nStir with a cackle, a-ha-ha, out loud!\nA sprinkle of moonlight, a button-slime dollop,\nBrew up the bunion brew, glorp, glop and wallop!",
+  "image_prompt": "A huge dented black cauldron overflowing with lumpy grey-green sludge, a bristly broom head poking out, striped odd socks draped over the rim, soggy leaves, dust bunnies floating on top, and bright dried felt-tip pens stuck upright like candles in the goo.",
+  "alt_text": "A dented cauldron brimming with grey-green sludge, a broom head, draped socks, leaves, dust bunnies and felt-tip pens sticking out.",
+  "caption_hook": "Italy week, and the old Befana legend got a very messy makeover. Somebody's left socks have clearly been busy.\n\nWould you stir it, or run for the hills?",
+  "hashtags": [
+    "#WitchsSpell",
+    "#JokeRecipe",
+    "#ItalyWeek",
+    "#GrossOut",
+    "#CauldronBrew",
+    "#YummersGrubbers",
+    "#SpookyKitchen",
+    "#NotForEating"
+  ]
+}
