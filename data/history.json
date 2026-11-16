@@ -235,5 +235,15 @@
     "forced": false,
     "dry_run": false,
     "permalink": "https://www.instagram.com/p/DfxSpzAlj3X/"
+  },
+  {
+    "date": "2026-11-16",
+    "kind": "edible",
+    "title": "Hatter's Quince and Chestnut Tarts",
+    "status": "drafted",
+    "inspiration": "make it a DESSERT (a sweet bake, pudding, tart, cake, ice cream or similar), inspired by the Mad Hatter's tea party from Alice in Wonderland: tiny cakes, jam tarts fit for the Queen of Hearts; lean on what's in season now in Europe: chestnuts, parsnips, Brussels sprouts, pears, cavolo nero, quince",
+    "course": "dessert",
+    "forced": false,
+    "dry_run": false
   }
 ]

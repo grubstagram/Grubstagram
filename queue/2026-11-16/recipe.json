@@ -1,0 +1,79 @@
+{
+  "kind": "edible",
+  "theme": null,
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab2ae8a/FIsrAtDX09ZO5qoGdj-_3_reel.mp4",
+  "title": "Hatter's Quince and Chestnut Tarts",
+  "tagline": "Tiny tarts, jammy centres, and a cloud of chestnut cream.",
+  "servings": "Makes 12 tarts",
+  "time": "65 min",
+  "ingredients": [
+    {
+      "qty": "200 g",
+      "item": "plain flour"
+    },
+    {
+      "qty": "100 g",
+      "item": "cold butter, cubed"
+    },
+    {
+      "qty": "50 g",
+      "item": "icing sugar"
+    },
+    {
+      "qty": "1 pinch",
+      "item": "fine salt"
+    },
+    {
+      "qty": "1",
+      "item": "medium egg, beaten"
+    },
+    {
+      "qty": "200 g",
+      "item": "quince paste (membrillo), cubed"
+    },
+    {
+      "qty": "1",
+      "item": "ripe pear, peeled and coarsely grated"
+    },
+    {
+      "qty": "1 tbsp",
+      "item": "lemon juice"
+    },
+    {
+      "qty": "100 g",
+      "item": "sweetened chestnut purée"
+    },
+    {
+      "qty": "100 g",
+      "item": "mascarpone"
+    }
+  ],
+  "steps": [
+    "Rub the butter into the flour, icing sugar and salt until it looks like breadcrumbs. Stir in the beaten egg, bring together into a dough, wrap and chill for 20 minutes.",
+    "Heat the oven to 160°C fan. Roll the dough to 3 mm thick, cut 8 cm rounds, and press them into a 12-hole bun tin. Re-roll scraps as needed. Chill the tin.",
+    "Tip the quince paste, grated pear and lemon juice into a small pan over a low heat. Stir for 4 to 5 minutes until soft and jammy. Cool for 5 minutes.",
+    "Spoon the filling into the pastry cases, about a heaped teaspoon each. Bake for 18 to 20 minutes until the pastry is golden at the edges.",
+    "Cool the tarts in the tin for 10 minutes, then lift out onto a rack. Beat the mascarpone and chestnut purée until smooth and spoon a dollop onto each cooled tart."
+  ],
+  "allergens": [
+    "gluten",
+    "dairy",
+    "egg",
+    "nuts (chestnut)"
+  ],
+  "image_prompt": "A mismatched china plate of twelve small round shortcrust tarts with golden fluted edges, each filled with glossy amber quince and pear jam and topped with a soft swirl of pale beige chestnut cream. A few tarts sit on a cake stand beside a teacup, with a dusting of crumbs on the plate.",
+  "alt_text": "Small golden jam tarts with glossy amber quince filling and swirls of chestnut cream on a china plate beside a teacup.",
+  "caption_hook": "Jam tarts, but make them autumnal. Quince and pear underneath, chestnut cream on top, and no one has stolen any yet.\n\nWhich would you grab first, the tart or the teacup?",
+  "hashtags": [
+    "#jamtarts",
+    "#quince",
+    "#chestnut",
+    "#autumnbaking",
+    "#teapartybakes",
+    "#britishbaking",
+    "#yummersgrubbers"
+  ]
+}
