@@ -1,0 +1,69 @@
+{
+  "kind": "not_edible",
+  "theme": null,
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Bog Ogre's Wobbly Puddle Pudding",
+  "tagline": "A swampy centrepiece fit for a banquet nobody was invited to.",
+  "servings": "Serves 1 very large ogre",
+  "time": "3 centuries, plus setting",
+  "rhyme": "Into the cauldron, a muddy old boot,\nSquelch it down deep till it gives a wet hoot!\nAdd one damp doormat, all tufty and brown,\nAnd a bucket of pond-weed that's hung upside down.\nToss in three hundred odd socks, sad and grey,\nWith a mountain of lint that's been hiding away.\nStir in a slipper that's mouldered with age,\nAnd a soggy old comic, page after page.\nNow wobble it, jiggle it, tip it with glee:\nA pudding of puddle for ogres like me!",
+  "ingredients": [
+    {
+      "qty": "1",
+      "item": "muddy wellington boot, left foot, thoroughly sulking"
+    },
+    {
+      "qty": "1",
+      "item": "damp doormat, tufty"
+    },
+    {
+      "qty": "1 bucket",
+      "item": "pond-weed from a pond that has given up"
+    },
+    {
+      "qty": "300",
+      "item": "odd socks, mismatched and mournful"
+    },
+    {
+      "qty": "2 handfuls",
+      "item": "fluff from the back of a very old sofa"
+    },
+    {
+      "qty": "1",
+      "item": "mouldy slipper, chosen for its personality"
+    },
+    {
+      "qty": "1 soggy",
+      "item": "comic, pages stuck together"
+    },
+    {
+      "qty": "1 jar",
+      "item": "imaginary swamp jelly, wobbles on its own"
+    },
+    {
+      "qty": "1 pinch",
+      "item": "grumble dust, freshly sneezed by a gargoyle"
+    }
+  ],
+  "steps": [
+    "Drop the boot in the pot with a splosh and a thud,\nThen sit on the lid till it sinks in the mud.",
+    "Fold in the doormat and weeds from the pond,\nAnd wave a wet sock like a magical wand.",
+    "Tip in the fluff and the slipper, then stir,\nUntil the whole lot starts to wobble and purr.",
+    "Pour in the jelly, add grumble dust too,\nAnd chant at the pot till it burps out a 'boo'.",
+    "Tip it on a platter the size of a door,\nAnd let it set sulking on the swamp banquet floor."
+  ],
+  "allergens": [],
+  "image_prompt": "A gigantic, wobbling green-brown pudding on a huge dented silver platter, topped with a muddy wellington boot, tufts of pond-weed, a drooping pile of mismatched grey socks, a mouldy slipper and a soggy comic, with glossy swamp slime dripping down the sides.",
+  "alt_text": "A huge slimy green pudding on a platter, topped with a muddy boot, pond-weed, odd socks and a mouldy slipper.",
+  "caption_hook": "Today's pudding comes with a boot on top and no apology. An ogre would call it a triumph. Who's brave enough to bring the custard?",
+  "hashtags": [
+    "#YummersGrubbers",
+    "#JokeRecipe",
+    "#WitchsSpell",
+    "#SwampBanquet",
+    "#GrossOutDessert",
+    "#NotForEating",
+    "#FairyTaleFood"
+  ]
+}

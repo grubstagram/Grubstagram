@@ -245,5 +245,15 @@
     "course": "dessert",
     "forced": false,
     "dry_run": false
+  },
+  {
+    "date": "2026-11-17",
+    "kind": "not_edible",
+    "title": "Bog Ogre's Wobbly Puddle Pudding",
+    "status": "drafted",
+    "inspiration": "make it a revolting fake DESSERT (a custard, pie, trifle, jelly or cake that is obviously not food), inspired by an ogre's swampy fairy-tale banquet",
+    "course": "dessert",
+    "forced": false,
+    "dry_run": false
   }
 ]
