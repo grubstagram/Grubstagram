@@ -1,0 +1,79 @@
+{
+  "kind": "edible",
+  "theme": null,
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab2f01c/9OiGzqi2ps-mn239tHb70_reel.mp4",
+  "title": "Beanstalk Giant's Breakfast Hash",
+  "tagline": "A giant's fry-up, scaled down to fit through your front door.",
+  "servings": "Serves 3",
+  "time": "40 min",
+  "ingredients": [
+    {
+      "qty": "400g",
+      "item": "parsnips, peeled and cut into 1cm dice"
+    },
+    {
+      "qty": "150g",
+      "item": "smoked bacon lardons"
+    },
+    {
+      "qty": "2 tbsp",
+      "item": "rapeseed oil"
+    },
+    {
+      "qty": "200g",
+      "item": "Brussels sprouts, trimmed and finely shredded"
+    },
+    {
+      "qty": "180g",
+      "item": "cooked peeled chestnuts, roughly crumbled"
+    },
+    {
+      "qty": "100g",
+      "item": "cavolo nero, stalks removed, leaves shredded"
+    },
+    {
+      "qty": "1 firm pear",
+      "item": "cored and cut into 1cm dice"
+    },
+    {
+      "qty": "400g tin",
+      "item": "butter beans, drained and rinsed"
+    },
+    {
+      "qty": "1 tbsp",
+      "item": "cider vinegar"
+    },
+    {
+      "qty": "to taste",
+      "item": "salt and black pepper"
+    }
+  ],
+  "steps": [
+    "Heat the oil in a large, deep frying pan over a medium heat. Add the parsnips with a pinch of salt. Cover and cook for 6 minutes, stirring once.",
+    "Remove the lid and cook the parsnips 6 to 8 minutes more, stirring now and then, until golden and tender when pricked with a knife.",
+    "Add the lardons. Fry for 5 minutes, until the fat has rendered and the bacon is crisp at the edges and cooked through.",
+    "Stir in the sprouts and chestnuts. Cook for 4 minutes, until the sprouts turn bright and the chestnuts catch a little colour.",
+    "Add the pear, butter beans and cavolo nero. Cook for 3 to 4 minutes, turning often, until the cavolo has wilted and the beans are piping hot.",
+    "Pour in the vinegar and let it sizzle away for 30 seconds. Season well with salt and plenty of black pepper, then serve straight from the pan."
+  ],
+  "allergens": [
+    "sulphites (check bacon label)",
+    "chestnuts"
+  ],
+  "image_prompt": "A wide black iron frying pan heaped with golden diced parsnips, crisp smoked bacon lardons, crumbled chestnuts, shredded bright green sprouts, dark ribbons of cavolo nero, creamy butter beans and small cubes of pale pear, glistening with oil and flecked with black pepper, steam rising.",
+  "alt_text": "A black frying pan piled with golden parsnip, crisp bacon, butter beans, chestnuts, pear and dark green cavolo nero and sprouts.",
+  "caption_hook": "Jack's giant ate breakfast the size of a haystack. We've taken the idea, kept the beans and lost the lumbering. Would you add a fried egg on top, or leave well alone?",
+  "hashtags": [
+    "#YummersGrubbers",
+    "#BreakfastHash",
+    "#SeasonalEating",
+    "#CavoloNero",
+    "#Parsnips",
+    "#Chestnuts",
+    "#OnePanMeal",
+    "#BritishFood"
+  ]
+}

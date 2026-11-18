@@ -256,5 +256,15 @@
     "forced": false,
     "dry_run": false,
     "permalink": "https://www.instagram.com/p/Df2elc_GihM/"
+  },
+  {
+    "date": "2026-11-18",
+    "kind": "edible",
+    "title": "Beanstalk Giant's Breakfast Hash",
+    "status": "drafted",
+    "inspiration": "make it a savoury dish, not a dessert (if the inspiration below is sweet, find a savoury dish in the same spirit), inspired by a giant's breakfast from Jack and the Beanstalk, scaled down for humans; lean on what's in season now in Europe: chestnuts, parsnips, Brussels sprouts, pears, cavolo nero, quince",
+    "course": "savoury",
+    "forced": false,
+    "dry_run": false
   }
 ]
