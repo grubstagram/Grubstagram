@@ -1,0 +1,64 @@
+{
+  "kind": "not_edible",
+  "theme": null,
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Damp Arch Splodge",
+  "tagline": "A whole sofa, simmered until it sulks. Stir with great drama.",
+  "servings": "Makes 1 cauldronful, stirred by 1 witch",
+  "time": "1 soggy afternoon",
+  "rhyme": "Splish and splosh and bubble-bump,\nIn goes a sofa, soggy and slumped.\nDrip in a drainpipe, green and long,\nStir in a bagpipe's sulky song.\nSeven wellies, wet and squelchy,\nOne umbrella, inside-out and belchy.\nFetch a shed door, flat and grim,\nAdd a bridge-shadow, cold and dim.\nStir it thrice and stamp your feet,\nThe grumbliest splodge you'll ever meet!",
+  "ingredients": [
+    {
+      "qty": "1 enormous",
+      "item": "slumped old sofa, extra soggy"
+    },
+    {
+      "qty": "1, bus-length",
+      "item": "green drainpipe"
+    },
+    {
+      "qty": "7",
+      "item": "odd wellies, each full of puddle"
+    },
+    {
+      "qty": "1",
+      "item": "inside-out umbrella"
+    },
+    {
+      "qty": "12 metres",
+      "item": "damp, droopy bunting"
+    },
+    {
+      "qty": "1",
+      "item": "shed door, lid-sized and grumpy"
+    },
+    {
+      "qty": "1 sulky song",
+      "item": "bagpipes, played flat"
+    },
+    {
+      "qty": "1 bucketful",
+      "item": "chilled bridge-shadow"
+    }
+  ],
+  "steps": [
+    "Haul the sofa to the cauldron's brim,\nThen shove it in till it starts to swim.",
+    "Feed in the drainpipe, bus-long and green,\nThen seven wellies, the squelchiest seen.",
+    "Shake in the umbrella, inside-out,\nAnd bunting by the mile, no doubt.",
+    "Slide in the shadow, cold and deep,\nThen lean the shed door on top to keep.",
+    "Stir it thrice with a grumpy groan,\nThe splodge is done, and it's all your own."
+  ],
+  "allergens": [],
+  "image_prompt": "An enormous black cauldron overflowing with grey-green swampy splodge, a slumped sofa cushion sinking in the middle, a long green drainpipe curling over the rim, seven wellies bobbing on top, limp soggy bunting draped down the sides, and an inside-out umbrella poking out like a wilted flower.",
+  "alt_text": "A huge cauldron brimming with green-grey sludge, with a sofa cushion, drainpipe, wellies, limp bunting and an inside-out umbrella poking out.",
+  "caption_hook": "Today's spell comes from somewhere damp, dark and under a bridge. The sofa went in first and it hasn't stopped sulking.\nWhich ingredient would you chuck in the cauldron next?",
+  "hashtags": [
+    "#WitchsSpell",
+    "#JokeRecipe",
+    "#CauldronCapers",
+    "#YummersGrubbers",
+    "#GrossButFunny",
+    "#SpellBook"
+  ]
+}
