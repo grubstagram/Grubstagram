@@ -271,10 +271,11 @@
     "date": "2026-11-19",
     "kind": "not_edible",
     "title": "Damp Arch Splodge",
-    "status": "drafted",
+    "status": "published",
     "inspiration": "a troll's lunch from under the bridge in the Three Billy Goats Gruff",
     "course": "savoury",
     "forced": false,
-    "dry_run": false
+    "dry_run": false,
+    "permalink": "https://www.instagram.com/p/Df7npOhGpQE/"
   }
 ]
