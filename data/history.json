@@ -277,5 +277,15 @@
     "forced": false,
     "dry_run": false,
     "permalink": "https://www.instagram.com/p/Df7npOhGpQE/"
+  },
+  {
+    "date": "2026-11-20",
+    "kind": "edible",
+    "title": "Colossal Chestnut Chocolate Cake",
+    "status": "drafted",
+    "inspiration": "make it a DESSERT (a sweet bake, pudding, tart, cake, ice cream or similar), inspired by Roald Dahl-style whimsy made real: an outrageously chocolatey giant cake, fizzy pink drinks or marvellous sweets; lean on what's in season now in Europe: chestnuts, parsnips, Brussels sprouts, pears, cavolo nero, quince",
+    "course": "dessert",
+    "forced": false,
+    "dry_run": false
   }
 ]

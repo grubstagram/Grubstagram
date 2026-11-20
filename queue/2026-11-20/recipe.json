@@ -1,0 +1,76 @@
+{
+  "kind": "edible",
+  "theme": null,
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab3339a/W0eqJFKfuuJ-5eWijX_pn_reel.mp4",
+  "title": "Colossal Chestnut Chocolate Cake",
+  "tagline": "Dense, dark and faintly ridiculous, with a pink cloud on top.",
+  "servings": "Serves 10",
+  "time": "75 min",
+  "ingredients": [
+    {
+      "qty": "200g",
+      "item": "dark chocolate (70%), chopped"
+    },
+    {
+      "qty": "150g",
+      "item": "unsalted butter, plus a little extra for the tin"
+    },
+    {
+      "qty": "240g",
+      "item": "unsweetened chestnut purée"
+    },
+    {
+      "qty": "150g",
+      "item": "caster sugar, divided"
+    },
+    {
+      "qty": "4",
+      "item": "eggs"
+    },
+    {
+      "qty": "30g",
+      "item": "cocoa powder"
+    },
+    {
+      "qty": "1/2 tsp",
+      "item": "fine salt"
+    },
+    {
+      "qty": "300ml",
+      "item": "double cream"
+    },
+    {
+      "qty": "150g",
+      "item": "frozen raspberries, defrosted"
+    }
+  ],
+  "steps": [
+    "Heat the oven to 160°C fan. Grease a 20cm round tin with a little butter and line the base with baking paper. Defrost the raspberries now.",
+    "Melt the chocolate and 150g butter in a heatproof bowl over a pan of barely simmering water. Stir until glossy, then take off the heat to cool slightly.",
+    "Beat the chestnut purée with 130g sugar until smooth. Beat in the eggs one at a time, then the cooled chocolate, cocoa and salt until just combined.",
+    "Pour into the tin and bake for 35 to 40 minutes, until set at the edges with a slight wobble in the middle. Cool in the tin for 20 minutes.",
+    "Whip the cream with the remaining 20g sugar to soft peaks. Lightly crush the raspberries with a fork, then fold through for pink ripples.",
+    "Turn the cake out, peel off the paper and pile on the raspberry cream. Slice with a hot knife. Serve slightly warm."
+  ],
+  "allergens": [
+    "egg",
+    "dairy",
+    "tree nuts (chestnut)",
+    "soy (may be in chocolate)"
+  ],
+  "image_prompt": "A tall round dark chocolate chestnut cake, dense and fudgy with a cracked glossy top, crowned with a generous swirl of raspberry-ripple pink whipped cream and a few crushed raspberries. One thick slice cut out showing the moist, almost black crumb, on a plain white plate.",
+  "alt_text": "A dark, fudgy chocolate cake topped with pink raspberry-rippled cream, with one thick slice cut to show the dense crumb.",
+  "caption_hook": "A cake so chocolatey it should come with its own weather warning. Roald Dahl would have asked for a second slice. Who's brave enough to go back for thirds?",
+  "hashtags": [
+    "#chocolatecake",
+    "#chestnut",
+    "#winterbaking",
+    "#britishbaking",
+    "#glutenfreeish",
+    "#dessertoftheday",
+    "#yummersgrubbers"
+  ]
+}
