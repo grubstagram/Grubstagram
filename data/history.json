@@ -292,10 +292,11 @@
     "date": "2026-11-21",
     "kind": "not_edible",
     "title": "Gammer Grizzle's Cupboard Cure-All",
-    "status": "drafted",
+    "status": "published",
     "inspiration": "a wicked grandmother's 'marvellous medicine' brewed from the bathroom cupboard and garden shed (props only, nothing real or copyable)",
     "course": "savoury",
     "forced": false,
-    "dry_run": false
+    "dry_run": false,
+    "permalink": "https://www.instagram.com/p/DgAv7iZFimD/"
   }
 ]
