@@ -1,0 +1,66 @@
+{
+  "kind": "not_edible",
+  "theme": null,
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Gammer Grizzle's Cupboard Cure-All",
+  "tagline": "Brewed from the bathroom shelf and the bottom of the shed.",
+  "servings": "Serves 1 very cross cauldron",
+  "time": "3 full moons",
+  "ingredients": [
+    {
+      "qty": "1 old",
+      "item": "flannel, wrung out by a grumpy goblin"
+    },
+    {
+      "qty": "3",
+      "item": "lost sock-puppet eyebrows (felt, wobbly)"
+    },
+    {
+      "qty": "1 handful",
+      "item": "shed cobweb fluff, extra dusty"
+    },
+    {
+      "qty": "2",
+      "item": "mouldy-looking garden gloves (empty, thankfully)"
+    },
+    {
+      "qty": "1 tin",
+      "item": "imaginary toenail clippings, made of glitter"
+    },
+    {
+      "qty": "4 dollops",
+      "item": "pretend bogey gloop (green paint-coloured moonlight)"
+    },
+    {
+      "qty": "1",
+      "item": "rusty watering-can spout, whistling"
+    },
+    {
+      "qty": "1 pinch",
+      "item": "powdered grumble"
+    }
+  ],
+  "steps": [
+    "Wring the flannel till it squeaks and groans,\nThen drop it in with cackles and moans.",
+    "Add eyebrows three, all felty and fluffed,\nThen stir with a rake till the whole lot's puffed.",
+    "Fling in the fluff from the shed's dark nook,\nAnd the gloves, to give it a handshake look.",
+    "Sprinkle the glitter-clippings, snip-snap-snow,\nThen plop in the bogey gloop, nice and slow.",
+    "Pop in the spout and let it toot and blow,\nThen stir by the light of a cabbage-green glow."
+  ],
+  "allergens": [],
+  "image_prompt": "A huge black iron cauldron overflowing with lurid green gloop, a damp grey flannel draped over the rim, felt eyebrows floating on top, tangled cobweb fluff, two empty gardening gloves poking out like waving hands, glittery silver clippings and a rusty watering-can spout sticking out of the slime.",
+  "alt_text": "A bubbling cauldron of bright green gloop with a flannel, felt eyebrows, cobwebs, garden gloves and a rusty spout poking out.",
+  "caption_hook": "Gammer Grizzle has raided the bathroom cupboard and the shed again. Roald Dahl would have asked for seconds of the rhyme, not the brew.\n\nWhich ingredient would you hide from her first?",
+  "hashtags": [
+    "#YummersGrubbers",
+    "#WitchsSpell",
+    "#JokeRecipe",
+    "#GrossFood",
+    "#CauldronCooking",
+    "#SpookyKitchen",
+    "#NastyRhymes",
+    "#MarvellousMess"
+  ],
+  "rhyme": "Into the cauldron, a flannel, soggy and grey,\nWrung by a goblin who's had a bad day!\nThree felty eyebrows, all wobbly and bent,\nPlus cobweb fluff from the shed, dust-scented.\nGarden gloves waving, so floppy and green,\nGlittery toenails, the grandest I've seen!\nBogey-green gloop in four dollops, plip-plop,\nA whistling spout, then I stir till I drop!\nPinch of powdered grumble, a cackle, a cough,\nGammer's Cure-All! Now stand well off!"
+}
