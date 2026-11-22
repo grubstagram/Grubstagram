@@ -1,0 +1,79 @@
+{
+  "kind": "edible",
+  "theme": null,
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab376f2/G3tRMHhigaHDaDtAwV3GT_reel.mp4",
+  "title": "Lost Boys' Quince-Glazed Pork Tray",
+  "tagline": "A treehouse banquet where every dish on the tray is real.",
+  "servings": "Serves 4",
+  "time": "60 min",
+  "ingredients": [
+    {
+      "qty": "4 (about 200g each)",
+      "item": "bone-in pork loin chops"
+    },
+    {
+      "qty": "500g",
+      "item": "parsnips"
+    },
+    {
+      "qty": "300g",
+      "item": "Brussels sprouts"
+    },
+    {
+      "qty": "2",
+      "item": "firm pears"
+    },
+    {
+      "qty": "200g",
+      "item": "cooked peeled chestnuts"
+    },
+    {
+      "qty": "100g",
+      "item": "cavolo nero"
+    },
+    {
+      "qty": "100g",
+      "item": "quince paste (membrillo)"
+    },
+    {
+      "qty": "2 tbsp",
+      "item": "wholegrain mustard"
+    },
+    {
+      "qty": "4 tbsp",
+      "item": "olive oil"
+    },
+    {
+      "qty": "1 tsp salt and plenty of",
+      "item": "black pepper"
+    }
+  ],
+  "steps": [
+    "Heat the oven to 220°C (200°C fan). Cut parsnips into thick batons. Toss on a large tray with 2 tbsp oil, half the salt and pepper. Roast for 15 minutes.",
+    "Meanwhile, chop the quince paste small. Warm it in a small pan with the mustard and 1 tbsp oil over low heat, stirring for 2 minutes until loose and glossy.",
+    "Halve the sprouts. Core and quarter the pears. Add both to the tray with the chestnuts, stirring to coat in the parsnip oil. Season the chops with remaining salt and pepper.",
+    "Nestle the chops among the vegetables and brush generously with glaze. Roast for 12 minutes, then turn the chops, brush with more glaze and roast 10 minutes more.",
+    "Tear the cavolo nero from its stalks and toss with the last 1 tbsp oil. Scatter over the tray for the final 8 minutes, until the edges crisp.",
+    "Check the pork is cooked through, with clear juices and no pink. Rest the chops for 5 minutes, then serve straight from the tray with any glaze left over."
+  ],
+  "allergens": [
+    "mustard",
+    "tree nuts (chestnuts)"
+  ],
+  "image_prompt": "A large rustic roasting tray holding glossy quince-glazed bone-in pork chops surrounded by caramelised parsnip batons, halved Brussels sprouts, golden pear wedges, whole roasted chestnuts and crisp dark cavolo nero ribbons, sticky amber glaze pooling in the corners, a little steam rising.",
+  "alt_text": "A roasting tray of glazed pork chops with roasted parsnips, sprouts, pear wedges, chestnuts and crisp cavolo nero.",
+  "caption_hook": "The Lost Boys spent years pretending the table was full. Here's one that actually is, all on a single tray. What would you shove in the middle of yours?",
+  "hashtags": [
+    "#traybake",
+    "#seasonalcooking",
+    "#porkchops",
+    "#quince",
+    "#winterdinner",
+    "#onetraydinner",
+    "#britishfood",
+    "#YummersGrubbers"
+  ]
+}
