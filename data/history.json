@@ -308,5 +308,15 @@
     "course": "savoury",
     "forced": false,
     "dry_run": false
+  },
+  {
+    "date": "2026-11-23",
+    "kind": "not_edible",
+    "title": "Troll Table Gutter Crumble Pie",
+    "status": "drafted",
+    "inspiration": "make it a revolting fake DESSERT (a custard, pie, trifle, jelly or cake that is obviously not food), inspired by a troll family's Thanksgiving feast made from autumn leaves, garden debris and old boots",
+    "course": "dessert",
+    "forced": false,
+    "dry_run": false
   }
 ]

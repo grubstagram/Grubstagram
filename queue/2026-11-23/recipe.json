@@ -1,0 +1,67 @@
+{
+  "kind": "not_edible",
+  "theme": "Thanksgiving",
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Troll Table Gutter Crumble Pie",
+  "tagline": "A pudding for trolls, built entirely from the bottom of the garden.",
+  "servings": "Serves 1 hungry troll",
+  "time": "One year and a Tuesday",
+  "rhyme": "Stir the pot, stir the pot, in goes a boot,\nAdd a gutter-gunk dollop and a tatty tree root.\nTip in soggy leaves, brown and curled,\nAnd the smelliest socks in the whole wide world.\nPencil shavings next, and a bobble hat's bobble,\nStir till it glops and begins to wobble.\nTop it with twigs and a splat of pond slime,\nThen serve it to trolls at pudding time!",
+  "ingredients": [
+    {
+      "qty": "1",
+      "item": "old left boot, tongue still flapping"
+    },
+    {
+      "qty": "3 big handfuls",
+      "item": "soggy autumn leaves"
+    },
+    {
+      "qty": "1 bucket",
+      "item": "gutter gunk"
+    },
+    {
+      "qty": "1 gnarly",
+      "item": "garden-shed tree root"
+    },
+    {
+      "qty": "2",
+      "item": "odd socks, very well travelled"
+    },
+    {
+      "qty": "1 pocketful",
+      "item": "pencil shavings"
+    },
+    {
+      "qty": "1",
+      "item": "bobble from a lost woolly hat"
+    },
+    {
+      "qty": "6",
+      "item": "twigs, for crunch"
+    },
+    {
+      "qty": "1 splat",
+      "item": "green pond slime"
+    }
+  ],
+  "steps": [
+    "Line a pie dish with the boot, flat and wide,\nWith its tongue lolling out on the starboard side.",
+    "Pat in the leaves with a troll-sized shove,\nThe squelch will be heard in the room above.",
+    "Bury the socks and the pencil bits too,\nThen leave them to stew for a year or two.",
+    "Plop on the slime and the twigs on top,\nThen stand well back till the wobbling stops."
+  ],
+  "allergens": [],
+  "image_prompt": "A deep pie dish holding a lumpy brown pie made from a cracked old leather boot, heaped soggy leaves, and tangled roots. Green slime oozes over the top, with twigs sticking out and a tatty woolly bobble perched in the middle. A striped odd sock hangs over the rim.",
+  "alt_text": "A lumpy pie of old boot, soggy leaves and twigs, topped with green slime and a woolly bobble, with a sock draped over the dish.",
+  "caption_hook": "Today's pudding comes with a boot tongue and a lot of regret. The trolls are already fighting over the last twig.",
+  "hashtags": [
+    "#YummersGrubbers",
+    "#JokeRecipe",
+    "#WitchsSpell",
+    "#TrollFeast",
+    "#GrossOutDessert",
+    "#AutumnNonsense"
+  ]
+}
