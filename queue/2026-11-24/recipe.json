@@ -1,0 +1,79 @@
+{
+  "kind": "edible",
+  "theme": "Thanksgiving",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab3c956/LUs8DvJBgqejaUqt15e9u_reel.mp4",
+  "title": "Sweet Potato Pear Cornbread Cobbler",
+  "tagline": "Thanksgiving's best bits, folded into one bubbling pudding. Custard optional, seconds not.",
+  "servings": "Serves 6",
+  "time": "70 min",
+  "ingredients": [
+    {
+      "qty": "300g (1 medium)",
+      "item": "sweet potato, peeled and cut into 1.5cm cubes"
+    },
+    {
+      "qty": "3 (about 450g)",
+      "item": "firm ripe pears, cored and cut into chunks"
+    },
+    {
+      "qty": "4 tbsp",
+      "item": "maple syrup"
+    },
+    {
+      "qty": "1 tsp",
+      "item": "ground cinnamon"
+    },
+    {
+      "qty": "60g",
+      "item": "pecans"
+    },
+    {
+      "qty": "90g",
+      "item": "butter (30g melted, 60g cold and diced)"
+    },
+    {
+      "qty": "120g",
+      "item": "self-raising flour"
+    },
+    {
+      "qty": "60g",
+      "item": "fine cornmeal"
+    },
+    {
+      "qty": "100ml",
+      "item": "milk"
+    },
+    {
+      "qty": "1/4 tsp",
+      "item": "fine salt"
+    }
+  ],
+  "steps": [
+    "Heat the oven to 190°C (170°C fan). Toss the sweet potato in a 23cm baking dish with the melted butter, 2 tbsp maple syrup, half the cinnamon and half the salt.",
+    "Roast for 20 minutes, until the edges catch and a knife slides in easily. Roughly chop 40g of the pecans. Stir the pears and chopped pecans into the dish.",
+    "Meanwhile, rub the cold butter into the flour, cornmeal and remaining salt and cinnamon until it looks like coarse crumbs. Stir in the milk and 1 tbsp maple syrup to make a soft, sticky dough.",
+    "Dollop the dough over the fruit, leaving gaps for steam. Scatter over the remaining whole pecans and bake for 25 to 30 minutes, until deep golden and the filling bubbles at the edges.",
+    "Check a skewer pushed into the topping comes out clean and the sweet potato is soft. Rest for 10 minutes, then drizzle with the last tablespoon of maple syrup and serve warm."
+  ],
+  "allergens": [
+    "gluten",
+    "dairy",
+    "nuts"
+  ],
+  "image_prompt": "A round white baking dish of golden cornmeal cobbler with craggy biscuit dollops, whole pecans on top, bubbling amber maple juices at the edges, cubes of orange sweet potato and soft pear chunks visible, one scoop taken out, glossy maple drizzle.",
+  "alt_text": "A baking dish of golden cornbread cobbler topped with pecans, with maple juices bubbling around sweet potato and pear chunks.",
+  "caption_hook": "Pumpkin pie gets all the attention at Friendsgiving. This is the one people actually go back for.\nSweet potato, pear, pecans and a cornbread lid. Who's bringing the custard?",
+  "hashtags": [
+    "#friendsgiving",
+    "#cobbler",
+    "#sweetpotato",
+    "#pearrecipes",
+    "#autumnbaking",
+    "#pecan",
+    "#cornbread",
+    "#yummersgrubbers"
+  ]
+}

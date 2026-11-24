@@ -318,5 +318,15 @@
     "course": "dessert",
     "forced": false,
     "dry_run": false
+  },
+  {
+    "date": "2026-11-24",
+    "kind": "edible",
+    "title": "Sweet Potato Pear Cornbread Cobbler",
+    "status": "drafted",
+    "inspiration": "make it a DESSERT (a sweet bake, pudding, tart, cake, ice cream or similar), inspired by a Thanksgiving or Friendsgiving table: roast turkey crown, stuffing, sweet potato bakes, pecan or pumpkin pie, cornbread; lean on what's in season now in Europe: chestnuts, parsnips, Brussels sprouts, pears, cavolo nero, quince",
+    "course": "dessert",
+    "forced": false,
+    "dry_run": false
   }
 ]
