@@ -1,0 +1,65 @@
+{
+  "kind": "not_edible",
+  "theme": "Thanksgiving",
+  "dry_run": false,
+  "format": "carousel",
+  "title": "Grumblegut Under-Bridge Leaf Loaf",
+  "tagline": "Forty crunchy leaves, one wellington boot, and absolutely no manners.",
+  "servings": "Serves one troll family and their cousin",
+  "time": "3 weeks, plus a good sulk",
+  "ingredients": [
+    {
+      "qty": "40",
+      "item": "crispy soggy oak leaves, gutter-fresh"
+    },
+    {
+      "qty": "1",
+      "item": "left wellington boot, extra muddy"
+    },
+    {
+      "qty": "3 handfuls",
+      "item": "mouldy garden twigs"
+    },
+    {
+      "qty": "1 bucket",
+      "item": "puddle, brown and thoughtful"
+    },
+    {
+      "qty": "2",
+      "item": "odd gardening gloves, well chewed"
+    },
+    {
+      "qty": "1 tin",
+      "item": "rusty lid of regret"
+    },
+    {
+      "qty": "1 ball",
+      "item": "hairy garden string"
+    },
+    {
+      "qty": "1 pinch",
+      "item": "compost crumbs, extra crunchy"
+    }
+  ],
+  "steps": [
+    "Stuff the boot with leaves until it burps and groans,\nThen sit on the lid and give three troll moans.",
+    "Tip in the puddle, so brown and so deep,\nAnd stir with a twig till the lumps start to creep.",
+    "Knot up the gloves with the string in a bow,\nThey're the drumsticks, you see, so wiggle them so.",
+    "Sprinkle compost crumbs thick, like a grubby snowfall,\nThen bake in a hollow oak, nowhere at all.",
+    "Carve with a spade at the stroke of half-two,\nAnd serve to your cousin who's stuck to your shoe."
+  ],
+  "allergens": [],
+  "rhyme": "Into the pot goes a boot, left and sloppy,\nWith forty damp leaves all gooey and floppy!\nAdd a bucket of puddle, all brown and all slurpy,\nThen a bogey-green glove that goes burpy-burpy!\nTwist in some twigs that are furry with mould,\nAnd a sock-coloured string that's a hundred years old!\nSprinkle some crumbs from the compost heap's floor,\nStir it up, stir it up, grumble and snore!\nTroll family, troll family, gather to dine,\nElbows on table and wellies in line!",
+  "image_prompt": "A huge lumpy brown loaf shaped like a wellington boot, crammed with soggy autumn leaves poking out, sitting on a chipped platter. Two chewed gardening gloves rest on top like drumsticks, tied with hairy string. Muddy puddle gravy pools around twigs and compost crumbs, with a rusty tin lid beside.",
+  "alt_text": "A boot-shaped loaf stuffed with soggy leaves, topped with two old gardening gloves, surrounded by muddy puddle gravy, twigs and a rusty lid.",
+  "caption_hook": "Troll Thanksgiving is a sensitive time of year. Someone always cries into the gravy, and it's usually the boot.\n\nWho in your family would demand the second helping of leaf loaf?",
+  "hashtags": [
+    "#WitchsSpell",
+    "#JokeRecipe",
+    "#TrollThanksgiving",
+    "#GrossFood",
+    "#AutumnLeaves",
+    "#CauldronCooking",
+    "#YummersGrubbers"
+  ]
+}

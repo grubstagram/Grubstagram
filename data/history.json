@@ -328,5 +328,15 @@
     "course": "dessert",
     "forced": false,
     "dry_run": false
+  },
+  {
+    "date": "2026-11-25",
+    "kind": "not_edible",
+    "title": "Grumblegut Under-Bridge Leaf Loaf",
+    "status": "drafted",
+    "inspiration": "a troll family's Thanksgiving feast made from autumn leaves, garden debris and old boots",
+    "course": "savoury",
+    "forced": false,
+    "dry_run": false
   }
 ]
