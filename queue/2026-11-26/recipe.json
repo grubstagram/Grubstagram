@@ -1,0 +1,79 @@
+{
+  "kind": "edible",
+  "theme": "Thanksgiving",
+  "dry_run": false,
+  "format": "manual_reel",
+  "song": "Yummy - Justin Bieber",
+  "reel_url": "https://v3b.fal.media/files/b/0ab40b2b/7faDxgh7Hn750bmhzzcUA_reel.mp4",
+  "title": "Turkey Meatball Tray with Pears",
+  "tagline": "Thanksgiving dinner, shrunk to meatballs and sent to one tray.",
+  "servings": "Serves 4",
+  "time": "55 min",
+  "ingredients": [
+    {
+      "qty": "500 g",
+      "item": "turkey mince"
+    },
+    {
+      "qty": "50 g",
+      "item": "fresh breadcrumbs"
+    },
+    {
+      "qty": "15 g (a small bunch)",
+      "item": "fresh sage, finely chopped"
+    },
+    {
+      "qty": "400 g",
+      "item": "Brussels sprouts, halved"
+    },
+    {
+      "qty": "2",
+      "item": "firm pears, cored and cut into wedges"
+    },
+    {
+      "qty": "150 g",
+      "item": "cooked peeled chestnuts"
+    },
+    {
+      "qty": "2 tbsp",
+      "item": "wholegrain mustard"
+    },
+    {
+      "qty": "3 tbsp",
+      "item": "olive oil"
+    },
+    {
+      "qty": "150 ml",
+      "item": "dry cider"
+    },
+    {
+      "qty": "1 tsp salt plus a few grinds",
+      "item": "salt and black pepper"
+    }
+  ],
+  "steps": [
+    "Heat the oven to 220°C (200°C fan). Tip the sprouts, pear wedges and chestnuts onto a large tray with 2 tbsp olive oil, a pinch of salt and pepper. Roast for 15 minutes.",
+    "Meanwhile, mix the turkey mince, breadcrumbs, sage, 1 tbsp mustard, 1 tsp salt and plenty of pepper with your hands. Roll into 16 even balls.",
+    "Push the vegetables to the edges of the tray. Add the meatballs, drizzle with the remaining 1 tbsp oil, and roast for 15 minutes, until golden.",
+    "Stir the cider with the remaining 1 tbsp mustard. Pour it over the tray and roast for 10 minutes more, until the meatballs are cooked through with no pink inside.",
+    "Rest for 5 minutes, then spoon the sticky tray juices over everything and serve straight from the tray."
+  ],
+  "allergens": [
+    "gluten",
+    "mustard",
+    "sulphites"
+  ],
+  "image_prompt": "A large rustic roasting tray of golden-brown sage turkey meatballs nestled among caramelised halved Brussels sprouts, glossy pear wedges and whole roasted chestnuts, with sticky cider and mustard juices pooling at the bottom and a few fresh sage leaves scattered on top.",
+  "alt_text": "A roasting tray of golden turkey meatballs with roasted Brussels sprouts, pear wedges and chestnuts in glossy cider juices.",
+  "caption_hook": "All the bits you actually want from a Thanksgiving plate, minus the six-hour sulk in the kitchen. Stuffing flavours, rolled into meatballs.\n\nWhat's the one thing on your table that you'd happily eat on its own?",
+  "hashtags": [
+    "#yummersgrubbers",
+    "#turkeymeatballs",
+    "#traybake",
+    "#friendsgiving",
+    "#brusselssprouts",
+    "#autumncooking",
+    "#chestnuts",
+    "#weeknightdinner"
+  ]
+}
